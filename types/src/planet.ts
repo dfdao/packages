@@ -149,7 +149,6 @@ export type Planet = {
   invader?: EthAddress;
   capturer?: EthAddress;
   invadeStartBlock?: number;
-
   isTargetPlanet: boolean;
   isSpawnPlanet: boolean;
 };
