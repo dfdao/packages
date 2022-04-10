@@ -29,7 +29,9 @@ export const enum ContractMethodName {
   CAPTURE_PLANET = 'capturePlanet',
   CLAIM_VICTORY = "claimTargetPlanetVictory",
   CREATE_PLANET = "createPlanet",
-  CREATE_ARENA_PLANET = "createArenaPlanet",
+  CREATE_ARENA_PLANET = "createArenaPlanet",  
+  SET_MOVE_CAP = "setMoveCap"
+
 }
 
 /**
