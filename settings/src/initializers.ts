@@ -152,6 +152,8 @@ export const decodeInitializers = decoders.guard(
     TARGET_PLANETS: withDefault(decoders.boolean, false),
     TARGET_PLANET_HOLD_BLOCKS_REQUIRED: withDefault(decoders.number, 16),
 
+    MOVE_CAP_ENABLED: withDefault(decoders.boolean, false),
+    MOVE_CAP: withDefault(decoders.number, 1000),
   }),
   { style: 'simple' }
 );
