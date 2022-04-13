@@ -153,7 +153,7 @@ export const decodeInitializers = decoders.guard(
     TARGET_PLANETS: withDefault(decoders.boolean, false),
     TARGET_PLANET_HOLD_BLOCKS_REQUIRED: withDefault(decoders.number, 16),
 
-    MULTIPLIERS: withDefault<ExactArray8<number>>(
+    MODIFIERS: withDefault<ExactArray8<number>>(
       exactArray8(decoders.number),
       [100,100,100,100,100,100,100,100]
     )
