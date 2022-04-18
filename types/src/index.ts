@@ -43,6 +43,7 @@
  export * from './renderer';
  export * from './reveal';
  export * from './setting';
+ export * from './spaceships';
  export * from './transaction';
  export * from './transactions';
  export * from './upgrade';
