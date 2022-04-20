@@ -158,7 +158,7 @@ export const decodeInitializers = decoders.guard(
       [100,100,100,100,100,100,100,100]
     ),
 
-    SPACESHIPS: withDefault<ExactArray5<Boolean>>(
+    SPACESHIPS: withDefault<ExactArray5<boolean>>(
       exactArray5(decoders.boolean),
       [true, true, true, true, true]
     )
