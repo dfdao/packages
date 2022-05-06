@@ -22,4 +22,5 @@ export type Player = {
   spaceJunk: number;
   spaceJunkLimit: number;
   claimedShips: boolean;
+  team: number;
 };

@@ -1,13 +1,10 @@
 import * as decoders from 'decoders';
-import type { ExactArray10, ExactArray8, ExactArray4, ExactArray5, Tuple6 } from './decoder-helpers';
+import type { ExactArray10, ExactArray4, ExactArray5, ExactArray8, Tuple6 } from './decoder-helpers';
 import {
   array6,
   between,
-  exactArray10,
-  exactArray8,
-  exactArray4,
-  exactArray5,
-  withDefault,
+  exactArray10, exactArray4,
+  exactArray5, exactArray8, withDefault
 } from './decoder-helpers';
 
 type PlanetTypeWeights = ExactArray4<ExactArray10<ExactArray5<number>>>;
@@ -162,8 +159,8 @@ export const decodeInitializers = decoders.guard(
       [true, true, true, true, true]
     ),
 
-
-
+    TEAMS_ENABLED: withDefault(decoders.boolean, true),
+    NUM_TEAMS: withDefault(decoders.number, 2),
   }),
   { style: 'simple' }
 );

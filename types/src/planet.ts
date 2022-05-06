@@ -1,6 +1,7 @@
 import type { Biome, SpaceType } from './game_types';
 import type { ArtifactId, EthAddress, LocationId } from './identifier';
 import type { PlanetMessage } from './planetmessage';
+import { Player } from './player';
 import { TransactionCollection } from './transaction';
 import type { Upgrade, UpgradeState } from './upgrade';
 import type { Abstract } from './utility';
@@ -92,7 +93,7 @@ export type Planet = {
   locationId: LocationId;
   perlin: number;
   spaceType: SpaceType;
-  owner: EthAddress; // should never be null; all unowned planets should have 0 address
+  owner: Player; // should never be null; all unowned planets should have 0 address
   hatLevel: number;
 
   planetLevel: PlanetLevel;

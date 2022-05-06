@@ -1,12 +1,13 @@
-import type { ArtifactId, EthAddress, LocationId, VoyageId } from './identifier';
-import { Abstract } from './utility';
+import type { ArtifactId, LocationId, VoyageId } from './identifier';
+import { Player } from './player';
+import type { Abstract } from './utility';
 
 /**
  * Represents a voyage.
  */
 export interface QueuedArrival {
   eventId: VoyageId;
-  player: EthAddress;
+  player: Player;
   fromPlanet: LocationId;
   toPlanet: LocationId;
   energyArriving: number;
