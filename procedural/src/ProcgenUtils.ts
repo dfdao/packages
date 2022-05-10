@@ -222,15 +222,15 @@ export function hashToHue(hash: string): number {
   return baseHue;
 }
 
-export function getPlayerColor(player: Player | undefined, teamsEnabled: boolean): string {
-  if (!player || player.address == EMPTY_ADDRESS) return '#996666';
-  const input = teamsEnabled ? (player.team * 9941).toString() : player.address.slice(2);
+export function getPlayerColor(player: Player | undefined, teamsEnabled : boolean): string {
+  if(!player || player.address == EMPTY_ADDRESS) return '#996666';
+  const input = teamsEnabled ? (player.team *  9941).toString() : player.address.slice(2)
   return hslStr(hashToHue(input), 100, 70); // remove 0x
 }
 
 export function getPlayerColorVec(player: Player | undefined, teamsEnabled: boolean): RGBAVec {
   if (!player || player.address == EMPTY_ADDRESS) return [153, 153, 102, 255];
-  const value = teamsEnabled ? (player.team * 9941).toString() : player.address.slice(2);
+  const value = teamsEnabled ? (player.team *  9941).toString() : player.address.slice(2);
 
   if (!rgbsByHash.has(value)) {
     const noAlpha = hslToRgb([hashToHue(value), 100, 70]);

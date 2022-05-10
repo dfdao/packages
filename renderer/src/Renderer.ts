@@ -92,6 +92,7 @@ export interface RendererGameContext extends DiagnosticUpdater {
   getArtifactSending(planetId: LocationId): Artifact | undefined;
   getAbandonRangeChangePercent(): number;
   getCaptureZones(): Iterable<CaptureZone>;
+  getTeamsEnabled() : boolean;
 }
 
 export class Renderer {
