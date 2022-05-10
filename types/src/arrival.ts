@@ -1,5 +1,4 @@
-import type { ArtifactId, LocationId, VoyageId } from './identifier';
-import { Player } from './player';
+import type { ArtifactId, EthAddress, LocationId, VoyageId } from './identifier';
 import type { Abstract } from './utility';
 
 /**
@@ -7,7 +6,7 @@ import type { Abstract } from './utility';
  */
 export interface QueuedArrival {
   eventId: VoyageId;
-  player: Player;
+  player: EthAddress;
   fromPlanet: LocationId;
   toPlanet: LocationId;
   energyArriving: number;
