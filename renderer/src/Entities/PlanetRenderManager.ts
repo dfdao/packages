@@ -4,9 +4,9 @@ import {
   getRange,
   hasOwner,
   isLocatable,
-  isSpaceShip,
+  isSpaceShip
 } from '@darkforest_eth/gamelogic';
-import { getOwnerColorVec, getPlanetCosmetic } from '@darkforest_eth/procedural';
+import { getPlanetCosmetic, getPlayerColorVec } from '@darkforest_eth/procedural';
 import { isUnconfirmedMoveTx } from '@darkforest_eth/serde';
 import {
   Artifact,

@@ -1,6 +1,6 @@
 import { EMPTY_ADDRESS } from '@darkforest_eth/constants';
 import { formatNumber, hasOwner } from '@darkforest_eth/gamelogic';
-import { getOwnerColorVec } from '@darkforest_eth/procedural';
+import { getPlayerColorVec } from '@darkforest_eth/procedural';
 import {
   LocationId,
   Planet,
