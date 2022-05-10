@@ -8,7 +8,7 @@ import type { WorldLocation } from './world';
 //eslint-disable-next-line @projectsophon/typescript-enum/no-enum
 export const enum ContractMethodName {
   REVEAL_LOCATION = 'revealLocation',
-  INIT = 'initializePlayer',
+  INIT = 'arenaInitializePlayer',
   MOVE = 'move',
   UPGRADE = 'upgradePlanet',
   BUY_HAT = 'buyHat',

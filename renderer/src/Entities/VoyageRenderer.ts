@@ -14,13 +14,30 @@ import { engineConsts } from '../EngineConsts';
 import { Renderer } from '../Renderer';
 
 const { white, gold } = engineConsts.colors;
-const { enemyA, mineA, shipA } = engineConsts.colors.voyage;
+const { enemyA, mineA, shipA, helpA } = engineConsts.colors.voyage;
 
-function getVoyageColor(fromPlanet: Planet, toPlanet: Planet, isMine: boolean, isShip: boolean) {
+function getVoyageColor(
+  fromPlanet: Planet,
+  toPlanet: Planet,
+  sender: Player | undefined,
+  recipient: Player | undefined,
+  teamsEnabled: boolean,
+  isMine: boolean
+) {
+  const isShip = sender?.address === EMPTY_ADDRESS;
+
   if (isMine) {
     return mineA;
   }
+  if (isShip) {
+    return shipA;
+  }
 
+  const isHelp = teamsEnabled && sender && recipient && sender.team == recipient.team;
+
+  if (isHelp) {
+    return helpA;
+  }
   const isAttack = hasOwner(toPlanet) && fromPlanet.owner !== toPlanet.owner;
   if (isAttack) {
     if (isShip) {
@@ -30,7 +47,7 @@ function getVoyageColor(fromPlanet: Planet, toPlanet: Planet, isMine: boolean, i
     }
   }
 
-  return getOwnerColorVec(fromPlanet);
+  return getPlayerColorVec(sender, teamsEnabled);
 }
 
 /* responsible for calling renderers in order to draw voyages */
@@ -41,12 +58,7 @@ export class VoyageRenderer {
     this.renderer = renderer;
   }
 
-  drawFleet(
-    voyage: QueuedArrival,
-    _player: Player | undefined,
-    isMyVoyage: boolean,
-    isShipVoyage: boolean
-  ) {
+  drawFleet(voyage: QueuedArrival) {
     const {
       now: nowMs,
       context: gameUIManager,
@@ -59,19 +71,34 @@ export class VoyageRenderer {
     const fromPlanet = gameUIManager.getPlanetWithId(voyage.fromPlanet);
     const toLoc = gameUIManager.getLocationOfPlanet(voyage.toPlanet);
     const toPlanet = gameUIManager.getPlanetWithId(voyage.toPlanet);
+    const teamsEnabled = gameUIManager.getTeamsEnabled();
+    const sender = gameUIManager.getPlayer(voyage.player);
+    const recipient = gameUIManager.getPlayer(toPlanet?.owner);
+    const isMyVoyage =
+      voyage.player === gameUIManager.getAccount() ||
+      gameUIManager.getArtifactWithId(voyage.artifactId)?.controller ===
+        gameUIManager.getPlayer()?.address;
+    const isShipVoyage = voyage.player === EMPTY_ADDRESS;
+
     if (!fromPlanet || !toLoc) {
       // not enough info to draw anything
       return;
     } else if (!fromLoc && fromPlanet && toLoc && toPlanet) {
       // can draw a ring around dest, but don't know source location
-      const myMove = voyage.player === gameUIManager.getAccount();
-      const shipMove = voyage.player === EMPTY_ADDRESS;
+
       const now = nowMs / 1000;
       const timeLeft = voyage.arrivalTime - now;
       const radius = (timeLeft * fromPlanet.speed) / 100;
-      const color = getVoyageColor(fromPlanet, toPlanet, myMove, shipMove);
+      const color = getVoyageColor(
+        fromPlanet,
+        toPlanet,
+        sender,
+        recipient,
+        teamsEnabled,
+        isMyVoyage
+      );
 
-      const text = shipMove ? 'Ship' : `${Math.floor(voyage.energyArriving)}`;
+      const text = isShipVoyage ? 'Ship' : `${Math.floor(voyage.energyArriving)}`;
 
       cR.queueCircleWorld(toLoc.coords, radius, color, 0.7, 1, true);
       tR.queueTextWorld(
@@ -95,7 +122,14 @@ export class VoyageRenderer {
       const shipsLocation = { x: shipsLocationX, y: shipsLocationY };
 
       const timeLeftSeconds = Math.floor(voyage.arrivalTime - now);
-      const voyageColor = getVoyageColor(fromPlanet, toPlanet, isMyVoyage, isShipVoyage);
+      const voyageColor = getVoyageColor(
+        fromPlanet,
+        toPlanet,
+        sender,
+        recipient,
+        teamsEnabled,
+        isMyVoyage
+      );
 
       // alpha calculation
       const viewport = this.renderer.getViewport();
@@ -171,48 +205,42 @@ export class VoyageRenderer {
     for (const voyage of voyages) {
       const nowS = now / 1000;
       if (nowS < voyage.arrivalTime) {
-        const isMyVoyage =
-          voyage.player === gameUIManager.getAccount() ||
-          gameUIManager.getArtifactWithId(voyage.artifactId)?.controller ===
-            gameUIManager.getPlayer()?.address;
-        const isShipVoyage = voyage.player === EMPTY_ADDRESS;
-        const sender = gameUIManager.getPlayer(voyage.player);
-        this.drawVoyagePath(voyage.fromPlanet, voyage.toPlanet, true, isMyVoyage, isShipVoyage);
-        this.drawFleet(voyage, sender, isMyVoyage, isShipVoyage);
+        this.drawVoyagePath(voyage.fromPlanet, voyage.toPlanet, true);
+        this.drawFleet(voyage);
       }
     }
 
     const unconfirmedDepartures = gameUIManager.getUnconfirmedMoves();
     for (const unconfirmedMove of unconfirmedDepartures) {
-      this.drawVoyagePath(
-        unconfirmedMove.intent.from,
-        unconfirmedMove.intent.to,
-        false,
-        true,
-        // This false doesn't matter because we force isMyVoyage to true
-        false
-      );
+      this.drawVoyagePath(unconfirmedMove.intent.from, unconfirmedMove.intent.to, false);
     }
   }
 
-  private drawVoyagePath(
-    from: LocationId,
-    to: LocationId,
-    confirmed: boolean,
-    isMyVoyage: boolean,
-    isShipVoyage: boolean
-  ) {
+  private drawVoyagePath(from: LocationId, to: LocationId, confirmed: boolean) {
     const { context: gameUIManager } = this.renderer;
 
     const fromLoc = gameUIManager.getLocationOfPlanet(from);
     const fromPlanet = gameUIManager.getPlanetWithId(from);
     const toLoc = gameUIManager.getLocationOfPlanet(to);
     const toPlanet = gameUIManager.getPlanetWithId(to);
+
+    const sender = gameUIManager.getPlayer(fromPlanet?.owner);
+    const recipient = gameUIManager.getPlayer(toPlanet?.owner);
+
     if (!fromPlanet || !fromLoc || !toLoc || !toPlanet) {
       return;
     }
+    const teamsEnabled = gameUIManager.getTeamsEnabled();
+    const isMyVoyage = sender?.address === gameUIManager.getAccount();
 
-    const voyageColor = getVoyageColor(fromPlanet, toPlanet, isMyVoyage, isShipVoyage);
+    const voyageColor = getVoyageColor(
+      fromPlanet,
+      toPlanet,
+      sender,
+      recipient,
+      teamsEnabled,
+      isMyVoyage
+    );
 
     this.renderer.lineRenderer.queueLineWorld(
       fromLoc.coords,

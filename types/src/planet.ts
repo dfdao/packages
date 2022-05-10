@@ -93,7 +93,7 @@ export type Planet = {
   locationId: LocationId;
   perlin: number;
   spaceType: SpaceType;
-  owner: Player; // should never be null; all unowned planets should have 0 address
+  owner: EthAddress; // should never be null; all unowned planets should have 0 address
   hatLevel: number;
 
   planetLevel: PlanetLevel;

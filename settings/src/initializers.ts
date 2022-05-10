@@ -159,7 +159,7 @@ export const decodeInitializers = decoders.guard(
       [true, true, true, true, true]
     ),
 
-    TEAMS_ENABLED: withDefault(decoders.boolean, true),
+    TEAMS_ENABLED: withDefault(decoders.boolean, false),
     NUM_TEAMS: withDefault(decoders.number, 2),
   }),
   { style: 'simple' }

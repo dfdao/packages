@@ -49,6 +49,7 @@ export class PlanetRenderManager {
     const renderAtReducedQuality = renderInfo.radii.radiusPixels <= 5 && highPerfMode;
     const isHovering = uiManager.getHoveringOverPlanet()?.locationId === planet.locationId;
     const isSelected = uiManager.getSelectedPlanet()?.locationId === planet.locationId;
+    const teamsEnabled = uiManager.getTeamsEnabled();
 
     let textAlpha = 255;
     if (renderInfo.radii.radiusPixels < 2 * maxRadius) {
@@ -382,7 +383,9 @@ export class PlanetRenderManager {
     let energyString = energy <= 0 ? '' : formatNumber(energy);
     if (lockedEnergy > 0) energyString += ` (-${formatNumber(lockedEnergy)})`;
 
-    const playerColor = hasOwner(planet) ? getOwnerColorVec(planet) : barbsA;
+    const player = uiManager.getPlayer(planet.owner);
+    const teamsEnabled = uiManager.getTeamsEnabled();
+    const playerColor = hasOwner(planet) ? getPlayerColorVec(player, teamsEnabled) : barbsA;
     const color = uiManager.isOwnedByMe(planet) ? whiteA : playerColor;
     color[3] = alpha;
 
@@ -396,6 +399,8 @@ export class PlanetRenderManager {
     // now display atk string
     const fromPlanet = uiManager.getMouseDownPlanet();
     const toPlanet = uiManager.getHoveringOverPlanet();
+    const sender = uiManager.getPlayer(fromPlanet?.owner);
+    const recipient = uiManager.getPlayer(toPlanet?.owner);
 
     const myAtk = this.getMouseAtk();
 
@@ -405,9 +410,10 @@ export class PlanetRenderManager {
       toPlanet?.locationId === planet.locationId &&
       !uiManager.getIsChoosingTargetPlanet();
 
+    const isOwnedByTeam = sender?.team == recipient?.team;
     if (moveHereInProgress && myAtk && toPlanet) {
       let atkString = '';
-      if (uiManager.isOwnedByMe(planet) || planet.energy === 0) {
+      if (uiManager.isOwnedByMe(planet) || planet.energy === 0 || (teamsEnabled && isOwnedByTeam)) {
         atkString += ` (+${formatNumber(myAtk)})`;
       } else {
         atkString += ` (-${formatNumber((myAtk * 100) / toPlanet.defense)})`;

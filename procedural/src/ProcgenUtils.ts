@@ -16,6 +16,7 @@ import {
   LocationId,
   Planet,
   PlanetCosmeticInfo,
+  Player,
   RGBAVec,
   RGBVec,
   RuinsInfo,
@@ -221,29 +222,24 @@ export function hashToHue(hash: string): number {
   return baseHue;
 }
 
-export function getPlayerColor(player: EthAddress): string {
-  return hslStr(hashToHue(player.slice(2)), 100, 70); // remove 0x
+export function getPlayerColor(player: Player | undefined, teamsEnabled: boolean): string {
+  if (!player || player.address == EMPTY_ADDRESS) return '#996666';
+  const input = teamsEnabled ? (player.team * 9941).toString() : player.address.slice(2);
+  return hslStr(hashToHue(input), 100, 70); // remove 0x
 }
 
-export function getPlayerColorVec(player: EthAddress): RGBAVec {
-  if (!rgbsByHash.has(player)) {
-    const noAlpha = hslToRgb([hashToHue(player.slice(2)), 100, 70]);
+export function getPlayerColorVec(player: Player | undefined, teamsEnabled: boolean): RGBAVec {
+  if (!player || player.address == EMPTY_ADDRESS) return [153, 153, 102, 255];
+  const value = teamsEnabled ? (player.team * 9941).toString() : player.address.slice(2);
+
+  if (!rgbsByHash.has(value)) {
+    const noAlpha = hslToRgb([hashToHue(value), 100, 70]);
 
     const withAlpha = [...noAlpha, 1] as RGBAVec;
-    rgbsByHash.set(player, withAlpha);
+    rgbsByHash.set(value, withAlpha);
   }
 
-  return rgbsByHash.get(player) as RGBAVec;
-}
-
-export function getOwnerColorVec(planet: Planet): RGBAVec {
-  if (planet.owner === EMPTY_ADDRESS) return [153, 153, 102, 255];
-  return getPlayerColorVec(planet.owner);
-}
-
-export function getOwnerColor(planet: Planet): string {
-  if (planet.owner === EMPTY_ADDRESS) return '#996666';
-  return getPlayerColor(planet.owner);
+  return rgbsByHash.get(value) as RGBAVec;
 }
 
 export function getPlanetClass(planet: Planet): UpgradeBranchName {
