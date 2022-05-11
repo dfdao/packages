@@ -31,7 +31,7 @@ export interface ArenaLeaderboard {
 }
 
 export interface ArenaLeaderboardEntry {
-  ethAddress: EthAddress;
+  address: string;
   twitter?: string;
   games: number;
   wins: number;
