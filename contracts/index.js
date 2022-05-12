@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /**
  * This package contains deployed contract addresses, ABIs, and Typechain types
  * for the Dark Forest game.
