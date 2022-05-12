@@ -226,7 +226,7 @@ export type UnconfirmedCapturePlanet = TxIntent & {
  * @hidden
  */
  export declare type UnconfirmedClaimVictory = TxIntent & {
-  methodName: 'claimVictory';
+  methodName: 'claimTargetPlanetVictory';
   locationId: LocationId;
 };
 /**
