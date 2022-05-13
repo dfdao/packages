@@ -45,37 +45,43 @@ exports.LIB_ARTIFACT_UTILS_ADDRESS =
 /**
  * The name of the network where these contracts are deployed.
  */
-exports.NETWORK = 'hardhat';
+exports.NETWORK = 'gnosis_optimism';
 /**
  * The id of the network where these contracts are deployed.
  */
-exports.NETWORK_ID = 31337;
+exports.NETWORK_ID = 300;
 /**
  * The block in which the DarkForest contract was initialized.
  */
-exports.START_BLOCK = 0;
+exports.START_BLOCK = 48135;
 /**
  * The address for the DarkForest contract.
  */
-exports.CONTRACT_ADDRESS = '0x0184E55E6be5c73081E2BdA05d662014E77eA29F';
+exports.CONTRACT_ADDRESS = '0x9EED3460Ce72254f9F0ad5164C12F39E5E10A40C';
 /**
  * The address for the initalizer contract. Useful for lobbies.
  */
-exports.INIT_ADDRESS = '0x6610d3Db863c2e7c161ECA424e750254409190F2';
+exports.INIT_ADDRESS = '0x6b9EA68DbF64aFe8eeFED0169A8B4c5fa8c666cc';
 /**
  * The address for the Verifier library. Useful for lobbies.
  */
-exports.VERIFIER_ADDRESS = '0x96E8073F17aD38E2979bbfd0d083aDD08bc2ce2c';
+exports.VERIFIER_ADDRESS = '0xC6cDe623Dd2a027df6F7c13f7dD240E3A89CBA68';
 /**
  * The address for the LibGameUtils library. Useful for lobbies.
  */
-exports.LIB_GAME_UTILS_ADDRESS = '0xEb7081de74B805c45A0D93eec5cF143fbd176b40';
+exports.LIB_GAME_UTILS_ADDRESS = '0xFcEF980d2433E335D66a838B86cd213Aa710378D';
 /**
  * The address for the LibPlanet library. Useful for lobbies.
  */
-exports.LIB_PLANET_ADDRESS = '0xE16337E67a40988CBC71DD9CF07863437eB39c31';
+exports.LIB_PLANET_ADDRESS = '0x58eD9B2E7f1fEC6889D137Bc7Ced7ecD87aD06Ee';
 /**
  * The address for the LibArtifacts library. Useful for lobbies.
  */
-exports.LIB_ARTIFACT_UTILS_ADDRESS = '0x2dD98D00ee7652b057c87cBbf85BF6cAAbc73AA8';
-//# sourceMappingURL=index.js.map
+exports.LIB_ARTIFACT_UTILS_ADDRESS = '0x816a0EC0a526968a8d79e7D0e7113d5afAc25eD0';
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+exports.FAUCET_ADDRESS = void 0;
+/**
+ * The address for the Faucet contract. Useful for lobbies.
+ */
+exports.FAUCET_ADDRESS = '0xEb1E97445A9E8042a5120ECE339aB70b07307edf';
