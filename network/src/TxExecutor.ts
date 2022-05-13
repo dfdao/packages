@@ -296,7 +296,6 @@ export class TxExecutor {
    * with the game at the same time.
    */
   private async getNonce() {
-    const releaseMutex = await this.nonceMutex.acquire();
     const shouldRefreshNonce =
       this.nonce === undefined ||
       (this.supportMultipleWallets &&
@@ -311,8 +310,6 @@ export class TxExecutor {
 
     const nonce = this.nonce;
     if (this.nonce !== undefined) this.nonce++;
-
-    releaseMutex();
 
     return nonce;
   }
@@ -354,6 +351,8 @@ export class TxExecutor {
         await this.beforeTransaction(tx);
       }
 
+      const releaseMutex = await this.nonceMutex.acquire();
+
       const nonce = await this.getNonce();
 
       const requestWithDefaults = Object.assign(
@@ -372,6 +371,8 @@ export class TxExecutor {
         TxExecutor.TX_SUBMIT_TIMEOUT,
         `tx request ${tx.id} failed to submit: timed out}`
       );
+
+      releaseMutex();
 
       tx.state = EthTxStatus.Submit;
       tx.hash = submitted.hash;
