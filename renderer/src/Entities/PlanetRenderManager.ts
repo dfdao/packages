@@ -420,7 +420,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
       }
 
       tR.queueTextWorld(atkString, textLoc, color, 1);
-      if (planet.spaceJunk !== 0) {
+      if (planet.spaceJunk !== 0 && uiManager.getSpaceJunkEnabled()) {
         const spaceJunkString = `(+${planet.spaceJunk} junk)`;
         tR.queueTextWorld(
           spaceJunkString,
