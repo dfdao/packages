@@ -15,14 +15,16 @@ import {
   LocationId,
   Planet,
   PlanetRenderInfo,
+  PlanetRenderManagerType,
   PlanetType,
+  RendererType,
   TextAlign,
   TextAnchor,
   WorldCoords,
 } from '@darkforest_eth/types';
 import { engineConsts } from '../EngineConsts';
 import { Renderer } from '../Renderer';
-
+import { GameGLManager } from '../WebGL/GameGLManager';
 const { whiteA, barbsA, gold } = engineConsts.colors;
 const { maxRadius } = engineConsts.planet;
 
@@ -30,11 +32,12 @@ const { maxRadius } = engineConsts.planet;
  * this guy is always going to call things in worldcoords, we'll convert them
  * to CanvasCoords. responsible for rendering planets by calling primitive renderers
  */
-export class PlanetRenderManager {
+export class PlanetRenderManager implements PlanetRenderManagerType {
   renderer: Renderer;
 
-  constructor(renderer: Renderer) {
-    this.renderer = renderer;
+  rendererType = RendererType.PlanetManager;
+  constructor(gl: GameGLManager) {
+    this.renderer = gl.renderer;
   }
 
   queueLocation(
@@ -186,7 +189,10 @@ export class PlanetRenderManager {
     textAlpha: number
   ) {
     const { overlay2dRenderer: cM } = this.renderer;
-    if (renderInfo.planet.isTargetPlanet) cM.drawTarget(coords, radiusW, renderInfo, textAlpha);
+    if (renderInfo.planet.isTargetPlanet)
+      cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🎯`);
+    else if (renderInfo.planet.isSpawnPlanet)
+      cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🍼`);
     else if (renderInfo.planet.messages)
       cM.drawPlanetMessages(coords, radiusW, renderInfo, textAlpha);
   }
@@ -270,13 +276,13 @@ export class PlanetRenderManager {
     const { defense, range, speed } = engineConsts.colors.belt;
 
     for (let i = 0; i < planet.upgradeState[0]; i++) {
-      ringRenderer.queueBeltAtIdx(planet, center, radius, defense, idx++);
+      ringRenderer.queueRingAtIdx(planet, center, radius, defense, idx++);
     }
     for (let i = 0; i < planet.upgradeState[1]; i++) {
-      ringRenderer.queueBeltAtIdx(planet, center, radius, range, idx++);
+      ringRenderer.queueRingAtIdx(planet, center, radius, range, idx++);
     }
     for (let i = 0; i < planet.upgradeState[2]; i++) {
-      ringRenderer.queueBeltAtIdx(planet, center, radius, speed, idx++);
+      ringRenderer.queueRingAtIdx(planet, center, radius, speed, idx++);
     }
   }
 
@@ -421,7 +427,7 @@ export class PlanetRenderManager {
       }
 
       tR.queueTextWorld(atkString, textLoc, color, 1);
-      if (planet.spaceJunk !== 0) {
+      if (planet.spaceJunk !== 0 && uiManager.getSpaceJunkEnabled()) {
         const spaceJunkString = `(+${planet.spaceJunk} junk)`;
         tR.queueTextWorld(
           spaceJunkString,
