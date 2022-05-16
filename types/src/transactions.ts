@@ -8,7 +8,7 @@ import type { WorldLocation } from './world';
  */
 export type ContractMethodName =
   | 'revealLocation'
-  | 'initializePlayer'
+  | 'arenaInitializePlayer'
   | 'move'
   | 'upgradePlanet'
   | 'buyHat'
@@ -56,7 +56,7 @@ export type TxIntent = {
  * @hidden
  */
 export type UnconfirmedInit = TxIntent & {
-  methodName: 'initializePlayer';
+  methodName: 'arenaInitializePlayer';
   locationId: LocationId;
   location: WorldLocation;
 };
