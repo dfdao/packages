@@ -1,4 +1,4 @@
-import { EthAddress } from './identifier';
+import type { EthAddress } from './identifier';
 
 /**
  * Map from game version -> leaderboard.
@@ -25,3 +25,15 @@ export interface LeaderboardEntry {
   ethAddress: EthAddress;
   twitter?: string;
 }
+
+export interface ArenaLeaderboard {
+  entries: ArenaLeaderboardEntry[];
+}
+
+export interface ArenaLeaderboardEntry {
+  address: string;
+  twitter?: string;
+  games: number;
+  wins: number;
+}
+
