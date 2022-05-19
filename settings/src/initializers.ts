@@ -162,8 +162,9 @@ export const decodeInitializers = decoders.guard(
       [true, true, true, true, true]
     ),
 
-
-
+    NO_ADMIN: withDefault(decoders.boolean, false),
+    
+    INIT_PLANETS: withDefault(decoders.jsonArray, []),
   }),
   { style: 'simple' }
 );
