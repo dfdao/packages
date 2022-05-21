@@ -9,6 +9,7 @@ import {
   exactArray5,
   withDefault,
 } from './decoder-helpers';
+import { decodeArenaPlanet, ArenaPlanets } from './planets';
 
 type PlanetTypeWeights = ExactArray4<ExactArray10<ExactArray5<number>>>;
 
@@ -164,7 +165,7 @@ export const decodeInitializers = decoders.guard(
 
     NO_ADMIN: withDefault(decoders.boolean, false),
     
-    INIT_PLANETS: withDefault(decoders.jsonArray, []),
+    INIT_PLANETS: withDefault<ArenaPlanets>(decoders.array(decodeArenaPlanet), []),
   }),
   { style: 'simple' }
 );
