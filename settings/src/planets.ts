@@ -20,8 +20,8 @@ export const decodeAdminPlanets = decoders.guard(decoders.array(decodeAdminPlane
 
 export const decodeArenaPlanet = decoders.exact({
   location: decoders.string,
-  x: decoders.number,
-  y: decoders.number,
+  x: decoders.string, /* string bc converting to uint, but input can be negative */
+  y: decoders.string,
   perlin: decoders.number,
   level: decoders.number,
   planetType: decoders.number,
