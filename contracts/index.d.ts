@@ -33,40 +33,42 @@
 /**
  * The name of the network where these contracts are deployed.
  */
- export declare const NETWORK = 'gnosis_optimism';
- /**
-  * The id of the network where these contracts are deployed.
-  */
- export declare const NETWORK_ID = 300;
- /**
-  * The block in which the DarkForest contract was initialized.
-  */
- export declare const START_BLOCK = 48135;
- /**
-  * The address for the DarkForest contract.
-  */
- export declare const CONTRACT_ADDRESS = '0x9EED3460Ce72254f9F0ad5164C12F39E5E10A40C';
- /**
-  * The address for the initalizer contract. Useful for lobbies.
-  */
- export declare const INIT_ADDRESS = '0x6b9EA68DbF64aFe8eeFED0169A8B4c5fa8c666cc';
- /**
-  * The address for the Verifier library. Useful for lobbies.
-  */
- export declare const VERIFIER_ADDRESS = '0xC6cDe623Dd2a027df6F7c13f7dD240E3A89CBA68';
- /**
-  * The address for the LibGameUtils library. Useful for lobbies.
-  */
- export declare const LIB_GAME_UTILS_ADDRESS = '0xFcEF980d2433E335D66a838B86cd213Aa710378D';
- /**
-  * The address for the LibPlanet library. Useful for lobbies.
-  */
- export declare const LIB_PLANET_ADDRESS = '0x58eD9B2E7f1fEC6889D137Bc7Ced7ecD87aD06Ee';
- /**
-  * The address for the LibArtifacts library. Useful for lobbies.
-  */
- export declare const LIB_ARTIFACT_UTILS_ADDRESS = '0x816a0EC0a526968a8d79e7D0e7113d5afAc25eD0';
- /**
-  * The address for the Faucet contract. Useful for lobbies.
-  */
- export declare const FAUCET_ADDRESS = '0xEb1E97445A9E8042a5120ECE339aB70b07307edf';
+export declare const NETWORK = 'gnosis_optimism';
+/**
+ * The id of the network where these contracts are deployed.
+ */
+export declare const NETWORK_ID = 300;
+/**
+ * The block in which the DarkForest contract was initialized.
+ */
+export declare const START_BLOCK = 116430;
+/**
+ * The address for the DarkForest contract.
+ */
+export declare const CONTRACT_ADDRESS = '0x833FD91693fbaaC1863160a53b853B5c39eaD204';
+/**
+ * The address for the initalizer contract. Useful for lobbies.
+ */
+export declare const INIT_ADDRESS = '0x05EAB6557FFA47353Aba8c9bc59B25C4c0489092';
+/**
+ * The address for the Verifier library. Useful for lobbies.
+ */
+export declare const VERIFIER_ADDRESS = '0x4BcEB998d2519919fab14918D294a3051F2c87F8';
+/**
+ * The address for the LibGameUtils library. Useful for lobbies.
+ */
+export declare const LIB_GAME_UTILS_ADDRESS = '0xB0f32D2612FB3692a92E8aFF3BB145d27FC8eC08';
+/**
+ * The address for the LibPlanet library. Useful for lobbies.
+ */
+export declare const LIB_PLANET_ADDRESS = '0xBaD307Cc38C96D45eD00395f525E7FBF76539534';
+/**
+ * The address for the LibArtifacts library. Useful for lobbies.
+ */
+export declare const LIB_ARTIFACT_UTILS_ADDRESS = '0x58d708cE1DC15A0aD620C3fe410e27a9213a15Cc';
+//# sourceMappingURL=index.d.ts.map
+/**
+ * The address for the Faucet contract. Useful for lobbies.
+ */
+export declare const FAUCET_ADDRESS = '0xEb1E97445A9E8042a5120ECE339aB70b07307edf';
+//# sourceMappingURL=index.d.ts.map
