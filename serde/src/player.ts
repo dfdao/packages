@@ -4,6 +4,9 @@ import { address } from './address';
 import { locationIdFromEthersBN } from './location';
 
 export type RawPlayer = Awaited<ReturnType<DarkForest['players']>>;
+
+export type RawArenaPlayer = Awaited<ReturnType<DarkForest['arenaPlayers']>>;
+
 /**
  * Converts the raw typechain result of a call which fetches a
  * `PlayerTypes.Player` struct, and converts it into an object
@@ -12,7 +15,7 @@ export type RawPlayer = Awaited<ReturnType<DarkForest['players']>>;
  * @param rawPlayer result of an ethers.js contract call which returns a raw
  * `PlayerTypes.Player` struct, typed with typechain.
  */
-export function decodePlayer(rawPlayer: RawPlayer): Player {
+export function decodePlayer(rawPlayer: RawPlayer, rawArenaPlayer: RawArenaPlayer): Player {
   return {
     address: address(rawPlayer.player),
     initTimestamp: rawPlayer.initTimestamp.toNumber(),
@@ -23,5 +26,7 @@ export function decodePlayer(rawPlayer: RawPlayer): Player {
     spaceJunk: rawPlayer.spaceJunk.toNumber(),
     spaceJunkLimit: rawPlayer.spaceJunkLimit.toNumber(),
     claimedShips: rawPlayer.claimedShips,
+    moves: rawArenaPlayer.moves.toNumber()
+
   };
 }
