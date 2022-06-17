@@ -171,6 +171,14 @@ export const decodeInitializers = decoders.guard(
 
     CONFIRM_START: withDefault(decoders.boolean, false),
 
+    TARGETS_REQUIRED_FOR_VICTORY: withDefault(decoders.number, 1),
+
+    BLOCKLIST: withDefault(decoders.array(decoders.array(decoders.string)), []),
+
+    BLOCK_MOVES: withDefault(decoders.boolean, false),
+
+    BLOCK_CAPTURE: withDefault(decoders.boolean, false),
+
   }),
   { style: 'simple' }
 );
