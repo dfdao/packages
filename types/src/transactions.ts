@@ -235,3 +235,18 @@ export type UnconfirmedCapturePlanet = TxIntent & {
  export declare type UnconfirmedCreateArenaPlanet = TxIntent & {
   methodName: 'createArenaPlanet';
 };
+
+/**
+ * @hidden
+ */
+ export declare type UnconfirmedReady = TxIntent & {
+  methodName: 'ready';
+};
+
+/**
+ * @hidden
+ */
+ export declare type UnconfirmedNotReady = TxIntent & {
+  methodName: 'notReady';
+};
+
