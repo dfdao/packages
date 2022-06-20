@@ -33,7 +33,7 @@
 /**
  * The name of the network where these contracts are deployed.
  */
-export declare const NETWORK = "gnosis_optimism";
+export declare const NETWORK = 'gnosis_optimism';
 /**
  * The id of the network where these contracts are deployed.
  */
@@ -41,33 +41,29 @@ export declare const NETWORK_ID = 300;
 /**
  * The block in which the DarkForest contract was initialized.
  */
-export declare const START_BLOCK = 48135;
+export declare const START_BLOCK = 1244504;
 /**
  * The address for the DarkForest contract.
  */
-export declare const CONTRACT_ADDRESS = "0x9EED3460Ce72254f9F0ad5164C12F39E5E10A40C";
+export declare const CONTRACT_ADDRESS = '0x11ed2d0C0505505e2F4d5420821647e137d82F2D';
 /**
  * The address for the initalizer contract. Useful for lobbies.
  */
-export declare const INIT_ADDRESS = "0x6c9a62B7295850669F4a5FB08f7AF03a5181073A";
+export declare const INIT_ADDRESS = '0x0d8c86Ce5AC4199D5955c6C9FeD42da52391d836';
 /**
  * The address for the Verifier library. Useful for lobbies.
  */
-export declare const VERIFIER_ADDRESS = "0xC6cDe623Dd2a027df6F7c13f7dD240E3A89CBA68";
+export declare const VERIFIER_ADDRESS = '0x4F911B31c7419E0fC90dC24C362Bf40427806064';
 /**
  * The address for the LibGameUtils library. Useful for lobbies.
  */
-export declare const LIB_GAME_UTILS_ADDRESS = "0xFcEF980d2433E335D66a838B86cd213Aa710378D";
+export declare const LIB_GAME_UTILS_ADDRESS = '0xfA2734D197B54D0E09f2bF7Bd12ACAcf02Ece822';
 /**
  * The address for the LibPlanet library. Useful for lobbies.
  */
-export declare const LIB_PLANET_ADDRESS = "0x58eD9B2E7f1fEC6889D137Bc7Ced7ecD87aD06Ee";
+export declare const LIB_PLANET_ADDRESS = '0x0655a00a23844E6779b9d8c824676078eaAcB56A';
 /**
  * The address for the LibArtifacts library. Useful for lobbies.
  */
-export declare const LIB_ARTIFACT_UTILS_ADDRESS = "0x816a0EC0a526968a8d79e7D0e7113d5afAc25eD0";
-/**
- * The address for the Faucet contract. Useful for lobbies.
- */
-export declare const FAUCET_ADDRESS = "0xEb1E97445A9E8042a5120ECE339aB70b07307edf";
+export declare const LIB_ARTIFACT_UTILS_ADDRESS = '0xcE9c3Ad735431E5C37294E37374f0B57A4FeaA60';
 //# sourceMappingURL=index.d.ts.map
