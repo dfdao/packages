@@ -44,6 +44,21 @@ export class DarkForestTextInput extends LitElement {
       background: ${unsafeCSS(dfstyles.colors.backgroundlight)};
       color: ${unsafeCSS(dfstyles.colors.text)};
     }
+
+    .portal {
+      background: ${unsafeCSS(dfstyles.colors.textLight)};
+      color: #423F3F;
+      font-weight: 500;
+      border: 1px solid ${unsafeCSS(dfstyles.colors.borderDarkest)};
+      padding-block: 4px;
+
+    }
+
+    .portal:hover,
+    .portal:focus {
+      background: ${unsafeCSS(dfstyles.colors.dfwhite)};
+      color: ${unsafeCSS(dfstyles.colors.borderDarkest)};
+    }
   `;
 
   // Defining element properties without a decorator
@@ -63,6 +78,9 @@ export class DarkForestTextInput extends LitElement {
     readonly: {
       type: Boolean,
     },
+    portal: {
+      type: Boolean,
+    }
   };
 
   // Properties defined above will have a getter/setter created on the component,
@@ -72,13 +90,15 @@ export class DarkForestTextInput extends LitElement {
   value = '';
   selected = false;
   readonly = false;
+  portal = false;
 
   private _inputRef = createRef<HTMLInputElement>();
 
   render() {
+    console.log(`portal: ${this.portal}`)
     return html`<input
       ${ref(this._inputRef)}
-      class="input"
+      class=${this.portal ? "input portal" : "input"}
       type="text"
       placeholder=${this.placeholder}
       ?readonly=${this.readonly}
