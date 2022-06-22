@@ -44,9 +44,9 @@ export interface LiveMatch {
 
 export interface LiveMatchEntry {
   firstMover: {
-    address: string
+    address: string;
   };
   id: string;
   startTime: number;
-  twitter? : string
+  twitter?: string;
 }
