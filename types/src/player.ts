@@ -24,4 +24,5 @@ export type Player = {
   claimedShips: boolean;
 
   moves: number;
+  team: number;
 };

@@ -1,13 +1,10 @@
 import * as decoders from 'decoders';
-import type { ExactArray10, ExactArray8, ExactArray4, ExactArray5, Tuple6 } from './decoder-helpers';
+import type { ExactArray10, ExactArray4, ExactArray5, ExactArray8, Tuple6 } from './decoder-helpers';
 import {
   array6,
   between,
-  exactArray10,
-  exactArray8,
-  exactArray4,
-  exactArray5,
-  withDefault,
+  exactArray10, exactArray4,
+  exactArray5, exactArray8, withDefault
 } from './decoder-helpers';
 import { decodeArenaPlanet, ArenaPlanets, decodeBlockItem, InitBlocklist } from './planets';
 
