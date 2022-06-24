@@ -178,6 +178,12 @@ export const decodeInitializers = decoders.guard(
 
     BLOCK_CAPTURE: withDefault(decoders.boolean, false),
 
+    TEAMS_ENABLED: withDefault(decoders.boolean, false),
+
+    NUM_TEAMS: withDefault(decoders.number, 0),
+
+    RANKED: withDefault(decoders.boolean, false),
+
   }),
   { style: 'simple' }
 );
