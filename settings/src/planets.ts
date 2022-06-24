@@ -30,8 +30,21 @@ export const decodeArenaPlanet = decoders.exact({
   isSpawnPlanet: decoders.boolean,
 });
 
-export type ArenaPlanets = ReturnType<typeof decodeArenaPlanets>;
-
 export const decodeArenaPlanets = decoders.guard(decoders.array(decodeArenaPlanet), {
   style: 'simple',
 });
+
+export type ArenaPlanets = ReturnType<typeof decodeArenaPlanets>;
+
+export const decodeBlockItem = decoders.exact({
+  destId: decoders.string, /* string bc converting to uint, but input can be negative */
+  srcId: decoders.string,
+});
+
+export const decodeInitBlocklist = decoders.guard(decoders.array(decodeBlockItem), {
+  style: 'simple',
+});
+
+export type InitBlocklist = ReturnType<typeof decodeInitBlocklist>;
+
+

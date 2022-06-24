@@ -1,15 +1,12 @@
 import * as decoders from 'decoders';
-import type { ExactArray10, ExactArray8, ExactArray4, ExactArray5, Tuple6 } from './decoder-helpers';
+import type { ExactArray10, ExactArray4, ExactArray5, ExactArray8, Tuple6 } from './decoder-helpers';
 import {
   array6,
   between,
-  exactArray10,
-  exactArray8,
-  exactArray4,
-  exactArray5,
-  withDefault,
+  exactArray10, exactArray4,
+  exactArray5, exactArray8, withDefault
 } from './decoder-helpers';
-import { decodeArenaPlanet, ArenaPlanets } from './planets';
+import { decodeArenaPlanet, ArenaPlanets, decodeBlockItem, InitBlocklist } from './planets';
 
 type PlanetTypeWeights = ExactArray4<ExactArray10<ExactArray5<number>>>;
 
@@ -65,7 +62,6 @@ export const decodeInitializers = decoders.guard(
     PHOTOID_ACTIVATION_DELAY: withDefault(decoders.number, 60 * 60 * 12),
     SPAWN_RIM_AREA: withDefault(decoders.number, 0),
     LOCATION_REVEAL_COOLDOWN: withDefault(decoders.number, 60 * 60 * 24),
-    CLAIM_PLANET_COOLDOWN: withDefault(decoders.number, 60 * 60 * 3),
     PLANET_TYPE_WEIGHTS: withDefault<PlanetTypeWeights>(
       exactArray4(exactArray10(exactArray5(between(decoders.number, 0, 255)))),
       [
@@ -173,11 +169,17 @@ export const decodeInitializers = decoders.guard(
 
     TARGETS_REQUIRED_FOR_VICTORY: withDefault(decoders.number, 1),
 
-    BLOCKLIST: withDefault(decoders.array(decoders.array(decoders.string)), []),
+    INIT_BLOCKLIST: withDefault<InitBlocklist>(decoders.array(decodeBlockItem), []),
 
     BLOCK_MOVES: withDefault(decoders.boolean, false),
 
     BLOCK_CAPTURE: withDefault(decoders.boolean, false),
+
+    TEAMS_ENABLED: withDefault(decoders.boolean, false),
+
+    NUM_TEAMS: withDefault(decoders.number, 0),
+
+    RANKED: withDefault(decoders.boolean, false),
 
   }),
   { style: 'simple' }
