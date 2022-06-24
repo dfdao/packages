@@ -9,7 +9,7 @@ import {
   exactArray5,
   withDefault,
 } from './decoder-helpers';
-import { decodeArenaPlanet, ArenaPlanets } from './planets';
+import { decodeArenaPlanet, ArenaPlanets, decodeBlockItem, InitBlocklist } from './planets';
 
 type PlanetTypeWeights = ExactArray4<ExactArray10<ExactArray5<number>>>;
 
@@ -65,7 +65,6 @@ export const decodeInitializers = decoders.guard(
     PHOTOID_ACTIVATION_DELAY: withDefault(decoders.number, 60 * 60 * 12),
     SPAWN_RIM_AREA: withDefault(decoders.number, 0),
     LOCATION_REVEAL_COOLDOWN: withDefault(decoders.number, 60 * 60 * 24),
-    CLAIM_PLANET_COOLDOWN: withDefault(decoders.number, 60 * 60 * 3),
     PLANET_TYPE_WEIGHTS: withDefault<PlanetTypeWeights>(
       exactArray4(exactArray10(exactArray5(between(decoders.number, 0, 255)))),
       [
@@ -173,7 +172,7 @@ export const decodeInitializers = decoders.guard(
 
     TARGETS_REQUIRED_FOR_VICTORY: withDefault(decoders.number, 1),
 
-    BLOCKLIST: withDefault(decoders.array(decoders.array(decoders.string)), []),
+    INIT_BLOCKLIST: withDefault<InitBlocklist>(decoders.array(decodeBlockItem), []),
 
     BLOCK_MOVES: withDefault(decoders.boolean, false),
 
