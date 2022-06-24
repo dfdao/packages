@@ -25,4 +25,6 @@ export type Player = {
 
   moves: number;
   team: number;
+
+  ready: boolean;
 };

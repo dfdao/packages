@@ -27,6 +27,7 @@ export function decodePlayer(rawPlayer: RawPlayer, rawArenaPlayer : RawArenaPlay
     spaceJunkLimit: rawPlayer.spaceJunkLimit.toNumber(),
     claimedShips: rawPlayer.claimedShips,
     moves: rawArenaPlayer.moves.toNumber(),
-    team: rawArenaPlayer.team.toNumber()
+    team: rawArenaPlayer.team.toNumber(),
+    ready: rawArenaPlayer.ready,
   };
 }
