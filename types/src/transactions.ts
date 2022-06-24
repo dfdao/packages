@@ -8,7 +8,7 @@ import type { WorldLocation } from './world';
  */
 export type ContractMethodName =
   | 'revealLocation'
-  | 'arenaInitializePlayer'
+  | 'initializePlayer'
   | 'move'
   | 'upgradePlanet'
   | 'buyHat'
