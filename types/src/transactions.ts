@@ -56,7 +56,7 @@ export type TxIntent = {
  * @hidden
  */
 export type UnconfirmedInit = TxIntent & {
-  methodName: 'arenaInitializePlayer';
+  methodName: 'initializePlayer';
   locationId: LocationId;
   location: WorldLocation;
 };
