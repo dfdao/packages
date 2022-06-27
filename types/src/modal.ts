@@ -136,6 +136,7 @@ export const TooltipName = {
   Capturable: 'Capturable' as TooltipName,
   TargetPlanet: 'TargetPlanet' as TooltipName,
   SpawnPlanet: 'SpawnPlanet' as TooltipName,
+  Blocked: 'Blocked' as TooltipName,
   /**
    * So that you can render a tooltip without anything, and control its contents entirely via the
    * {@link TooltipTriggerProps#extraContent} prop field.

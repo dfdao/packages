@@ -4,7 +4,7 @@ import {
   getRange,
   hasOwner,
   isLocatable,
-  isSpaceShip
+  isSpaceShip,
 } from '@darkforest_eth/gamelogic';
 import { getPlanetCosmetic, getPlayerColorVec } from '@darkforest_eth/procedural';
 import { isUnconfirmedMoveTx } from '@darkforest_eth/serde';
@@ -63,7 +63,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     const artifacts = uiManager
       .getArtifactsWithIds(planet.heldArtifactIds)
       .filter((a) => !!a) as Artifact[];
-    const player = uiManager.getPlayer(planet.owner)
+    const player = uiManager.getPlayer(planet.owner);
     const color = uiManager.isOwnedByMe(planet) ? whiteA : getPlayerColorVec(player, teamsEnabled);
 
     // draw planet body
@@ -189,7 +189,11 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     textAlpha: number
   ) {
     const { overlay2dRenderer: cM } = this.renderer;
-    if (renderInfo.planet.isTargetPlanet)
+    if (renderInfo.blocked && renderInfo.planet.isTargetPlanet) {
+      cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🚫🎯`);
+    } else if (renderInfo.blocked) {
+      cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🚫`);
+    } else if (renderInfo.planet.isTargetPlanet)
       cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🎯`);
     else if (renderInfo.planet.isSpawnPlanet)
       cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🍼`);
@@ -390,8 +394,8 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     let energyString = energy <= 0 ? '' : formatNumber(energy);
     if (lockedEnergy > 0) energyString += ` (-${formatNumber(lockedEnergy)})`;
 
-    const player = uiManager.getPlayer(planet.owner)
-    const teamsEnabled = uiManager.getTeamsEnabled()
+    const player = uiManager.getPlayer(planet.owner);
+    const teamsEnabled = uiManager.getTeamsEnabled();
     const playerColor = hasOwner(planet) ? getPlayerColorVec(player, teamsEnabled) : barbsA;
     const color = uiManager.isOwnedByMe(planet) ? whiteA : playerColor;
     color[3] = alpha;
@@ -420,7 +424,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     const isOwnedByTeam = sender?.team == recipient?.team;
     if (moveHereInProgress && myAtk && toPlanet) {
       let atkString = '';
-      if (uiManager.isOwnedByMe(planet) || planet.energy === 0 || teamsEnabled && isOwnedByTeam ) {
+      if (uiManager.isOwnedByMe(planet) || planet.energy === 0 || (teamsEnabled && isOwnedByTeam)) {
         atkString += ` (+${formatNumber(myAtk)})`;
       } else {
         atkString += ` (-${formatNumber((myAtk * 100) / toPlanet.defense)})`;
