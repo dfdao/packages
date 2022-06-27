@@ -27,7 +27,7 @@ export type ContractMethodName =
   | 'createLobby'
   | 'invadePlanet'
   | 'capturePlanet'
-  | "claimTargetPlanetVictory"
+  | "claimVictory"
   | "createPlanet"
   | "createArenaPlanet";
 
@@ -226,8 +226,7 @@ export type UnconfirmedCapturePlanet = TxIntent & {
  * @hidden
  */
  export declare type UnconfirmedClaimVictory = TxIntent & {
-  methodName: 'claimTargetPlanetVictory';
-  locationId: LocationId;
+  methodName: 'claimVictory';
 };
 /**
  * @hidden
