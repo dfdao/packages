@@ -248,13 +248,15 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
   }
 
   // calculates attack value of mouse-drag action
-  private getMouseAtk(): number | undefined {
+  private getMouseAtk(): number | 'blocked' | undefined {
     const { context } = this.renderer;
 
     const fromPlanet = context.getMouseDownPlanet();
     const toPlanet = context.getHoveringOverPlanet();
 
     if (!fromPlanet || !toPlanet) return undefined;
+    const player = context.getAccount();
+    if(context.playerMoveBlocked(player || EMPTY_ADDRESS, toPlanet.locationId)) return 'blocked';
 
     let effectiveEnergy = fromPlanet.energy;
     for (const unconfirmedMove of fromPlanet.transactions?.getTransactions(isUnconfirmedMoveTx) ??
@@ -424,7 +426,9 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     const isOwnedByTeam = sender?.team == recipient?.team;
     if (moveHereInProgress && myAtk && toPlanet) {
       let atkString = '';
-      if (uiManager.isOwnedByMe(planet) || planet.energy === 0 || (teamsEnabled && isOwnedByTeam)) {
+      if(myAtk == 'blocked') {
+        atkString = 'BLOCKED';
+      } else if (uiManager.isOwnedByMe(planet) || planet.energy === 0 || (teamsEnabled && isOwnedByTeam)) {
         atkString += ` (+${formatNumber(myAtk)})`;
       } else {
         atkString += ` (-${formatNumber((myAtk * 100) / toPlanet.defense)})`;
