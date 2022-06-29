@@ -6,7 +6,7 @@ import {
   exactArray10, exactArray4,
   exactArray5, exactArray8, withDefault
 } from './decoder-helpers';
-import { decodeArenaPlanet, ArenaPlanets, decodeBlockItem, InitBlocklist } from './planets';
+import { decodeArenaPlanet, ArenaPlanets } from './planets';
 
 type PlanetTypeWeights = ExactArray4<ExactArray10<ExactArray5<number>>>;
 
@@ -168,8 +168,6 @@ export const decodeInitializers = decoders.guard(
     CONFIRM_START: withDefault(decoders.boolean, false),
 
     TARGETS_REQUIRED_FOR_VICTORY: withDefault(decoders.number, 1),
-
-    INIT_BLOCKLIST: withDefault<InitBlocklist>(decoders.array(decodeBlockItem), []),
 
     BLOCK_MOVES: withDefault(decoders.boolean, false),
 

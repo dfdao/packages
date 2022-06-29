@@ -28,6 +28,7 @@ export const decodeArenaPlanet = decoders.exact({
   requireValidLocationId: decoders.boolean,
   isTargetPlanet: decoders.boolean,
   isSpawnPlanet: decoders.boolean,
+  blockedPlanetIds: decoders.array(decoders.string),
 });
 
 export const decodeArenaPlanets = decoders.guard(decoders.array(decodeArenaPlanet), {
@@ -35,16 +36,4 @@ export const decodeArenaPlanets = decoders.guard(decoders.array(decodeArenaPlane
 });
 
 export type ArenaPlanets = ReturnType<typeof decodeArenaPlanets>;
-
-export const decodeBlockItem = decoders.exact({
-  destId: decoders.string, /* string bc converting to uint, but input can be negative */
-  srcId: decoders.string,
-});
-
-export const decodeInitBlocklist = decoders.guard(decoders.array(decodeBlockItem), {
-  style: 'simple',
-});
-
-export type InitBlocklist = ReturnType<typeof decodeInitBlocklist>;
-
 

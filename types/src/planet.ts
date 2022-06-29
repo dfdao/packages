@@ -152,6 +152,7 @@ export type Planet = {
   invadeStartBlock?: number;
   isTargetPlanet: boolean;
   isSpawnPlanet: boolean;
+  blockedPlanetIds: LocationId[];
 };
 
 /**
