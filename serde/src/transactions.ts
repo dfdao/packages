@@ -110,7 +110,7 @@ export function isUnconfirmedInvadePlanet(txIntent: TxIntent): txIntent is Uncon
 export function isUnconfirmedClaimVictory(
   txIntent: TxIntent
 ): txIntent is UnconfirmedClaimVictory {
-  return txIntent.methodName === 'claimTargetPlanetVictory';
+  return txIntent.methodName === 'claimVictory';
 }
 
 export function isUnconfirmedRevealTx(tx: Transaction): tx is Transaction<UnconfirmedReveal> {

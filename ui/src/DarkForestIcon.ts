@@ -1,6 +1,6 @@
 import { Abstract } from '@darkforest_eth/types';
 import { css, LitElement, nothing, svg, unsafeCSS } from 'lit';
-import * as dfstyles from './styles';
+import { colors} from './styles';
 
 export type IconType = Abstract<string, 'IconType'>;
 
@@ -53,6 +53,7 @@ export const IconType = {
   Destroyed: 'Destroyed' as IconType,
   TargetPlanet: 'TargetPlanet' as IconType,
   SpawnPlanet: 'SpawnPlanet' as IconType,
+  Blocked: 'Blocked' as IconType,
 } as const;
 
 export class DarkForestIcon extends LitElement {
@@ -77,7 +78,7 @@ export class DarkForestIcon extends LitElement {
     }
 
     path {
-      fill: var(--df-icon-color, ${unsafeCSS(dfstyles.colors.text)});
+      fill: var(--df-icon-color, ${unsafeCSS(colors.text)});
     }
   `;
 
@@ -190,6 +191,8 @@ export class DarkForestIcon extends LitElement {
         return TargetPlanet();
       case IconType.SpawnPlanet:
         return SpawnPlanet();
+      case IconType.Blocked:
+        return Blocked();
       default:
         console.warn(`Invalid icon name: ${this.type}`);
         return nothing;
@@ -631,4 +634,9 @@ function SpawnPlanet() {
         <path d="M458.5 26.53c-8.8.12-18.1 2.88-25.1 6.84-12.5 7.02-23 28.72-29 43.11a64 48 45 0 0-54.3-3.36L438.9 162a64 48 45 0 0-3.4-54.4c14.4-5.9 36.1-16.52 43.1-28.97 7.5-13.11 10.7-34.58 0-45.26-5-5-12.3-6.95-20.1-6.84zM331.6 80.05L299 112.6 399.4 213l32.6-32.5zm-61 42.55c-13.5-.3-32.9 6-57.1 30.3L32.42 334c-3.54 3.5-5.85 9.7-5.85 16.2s2.31 12.7 5.85 16.2L145.6 479.6c3.5 3.6 9.7 5.9 16.3 5.9 6.5 0 12.7-2.3 16.2-5.9l4.9-5-27.5-27.5 12.8-12.8 27.5 27.5 21.1-21.1-27.5-27.5 12.8-12.8 27.5 27.5 21.2-21.1-50.2-50.2 12.8-12.8 50.2 50.2 21.1-21.2-27.5-27.5 12.8-12.8 27.5 27.5 21.2-21.1-27.6-27.6 12.8-12.8 27.6 27.6 21.1-21.2-50.2-50.1 12.8-12.8 50 49.9c35.6-39.2 23.1-64.5 16.4-71.1l-90.5-90.5c-3.1-3.1-10.1-7.4-20.6-7.7z"></path>
     </svg>
   `;
+}
+
+function Blocked() {
+  return svg`
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="height: 512px; width: 512px;"><g class="" transform="translate(0,-1)" style=""><path d="M256 16C123.45 16 16 123.45 16 256s107.45 240 240 240 240-107.45 240-240S388.55 16 256 16zm0 60c99.41 0 180 80.59 180 180s-80.59 180-180 180S76 355.41 76 256 156.59 76 256 76zm-80.625 60c-.97-.005-2.006.112-3.063.313v-.032c-18.297 3.436-45.264 34.743-33.375 46.626l73.157 73.125-73.156 73.126c-14.63 14.625 29.275 58.534 43.906 43.906L256 299.906l73.156 73.156c14.63 14.628 58.537-29.28 43.906-43.906l-73.156-73.125 73.156-73.124c14.63-14.625-29.275-58.5-43.906-43.875L256 212.157l-73.156-73.125c-2.06-2.046-4.56-3.015-7.47-3.03z" fill="#ff0000" fill-opacity="1" transform="translate(0, 512) scale(1, -1) rotate(0, 256, 256) skewX(0) skewY(0)"></path></g></svg>`;
 }
