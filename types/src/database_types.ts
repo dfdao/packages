@@ -27,6 +27,8 @@ export interface LeaderboardEntry {
   time: number;
   ethAddress: EthAddress;
   twitter?: string;
+  startTime: number;
+  endTime: number;
 }
 
 export interface ArenaLeaderboard {
