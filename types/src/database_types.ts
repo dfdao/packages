@@ -50,3 +50,10 @@ export interface LiveMatchEntry {
   startTime: number;
   twitter?: string;
 }
+
+export interface ExtendedMatchEntry extends LiveMatchEntry {
+  creator: EthAddress;
+  players?: {
+    address: string;
+  }[];
+}
