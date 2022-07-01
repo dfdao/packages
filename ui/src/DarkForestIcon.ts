@@ -1,6 +1,6 @@
 import { Abstract } from '@darkforest_eth/types';
 import { css, LitElement, nothing, svg, unsafeCSS } from 'lit';
-import { colors} from './styles';
+import dfstyles from './styles';
 
 export type IconType = Abstract<string, 'IconType'>;
 
@@ -78,7 +78,7 @@ export class DarkForestIcon extends LitElement {
     }
 
     path {
-      fill: var(--df-icon-color, ${unsafeCSS(colors.text)});
+      fill: var(--df-icon-color, ${unsafeCSS(dfstyles.colors.text)});
     }
   `;
 

@@ -40,3 +40,22 @@ export interface ArenaLeaderboardEntry {
   wins: number;
 }
 
+export interface LiveMatch {
+  entries: LiveMatchEntry[];
+}
+
+export interface LiveMatchEntry {
+  firstMover: {
+    address: string;
+  };
+  id: string;
+  startTime: number;
+  twitter?: string;
+}
+
+export interface ExtendedMatchEntry extends LiveMatchEntry {
+  creator: EthAddress;
+  players?: {
+    address: string;
+  }[];
+}

@@ -32,6 +32,7 @@
  export * from './event';
  export * from './game_types';
  export * from './gas_prices';
+ export * from './graph_types';
  export * from './hat';
  export * from './identifier';
  export * from './modal';

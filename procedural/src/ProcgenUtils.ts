@@ -121,6 +121,7 @@ export const grayColors: PlanetCosmeticInfo = {
   hatType: HatType.GraduationCap,
 };
 const namesById = new Map<LocationId, string>();
+const configsById = new Map<string, string>();
 const taglinesById = new Map<LocationId, string>();
 const huesByHash = new Map<string, number>();
 const rgbsByHash = new Map<string, RGBAVec>();
@@ -286,6 +287,20 @@ export function planetRandom(loc: LocationId) {
   };
 }
 
+export function configRandom(config: string) {
+  // shouldn't need to clone since loc is primitive but just to be safe
+  const realHash = config.substring(4, config.length);
+
+  let count = 0;
+  const countOffset = parseInt('0x' + realHash.substring(0, 10));
+
+  return () => {
+    count++;
+    const ret = seededRandom(count + countOffset);
+    return ret;
+  };
+}
+
 export function planetRandomInt(loc: LocationId) {
   const rand = planetRandom(loc);
   return () => Math.floor(rand() * 2 ** 24);
@@ -436,6 +451,28 @@ export function getPlanetTitle(planet: Planet | undefined) {
 export function getPlanetName(planet: Planet | undefined): string {
   if (!planet) return 'Unknown';
   return getPlanetNameHash(planet.locationId);
+}
+
+export function getConfigName(config: string):  string {
+  const name = configsById.get(config);
+  if (name) return name;
+
+  let planetName = '';
+
+  const rand = configRandom(config)
+  const randInt = () => Math.floor(rand() * 2 ** 24);
+
+  if (randInt() % 1024 === 0) {
+    planetName = 'Clown Town';
+  } else {
+    const word1 = planetNameWords[randInt() % planetNameWords.length];
+    const word2 = planetNameWords[randInt() % planetNameWords.length];
+    planetName = titleCase(`${word1} ${word2}`);
+  }
+
+  configsById.set(config, planetName);
+
+  return planetName;
 }
 
 export function getPlanetNameHash(locId: LocationId): string {
