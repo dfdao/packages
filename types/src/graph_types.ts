@@ -57,13 +57,24 @@ export interface GraphConfig {
   // # RANDOM_ARTIFACTS,
   NO_ADMIN: boolean;
   // # INIT_PLANETS,
+  CONFIRM_START: boolean;
+  TARGETS_REQUIRED_FOR_VICTORY: number;
+  BLOCK_CAPTURE: boolean;
+  BLOCK_MOVES: boolean;
+  TEAMS_ENABLED: boolean;
+  NUM_TEAMS: number;
+  RANKED: boolean;
+  WHITELIST_ENABLED: boolean;
+  RANDOM_ARTIFACTS: boolean;
+  START_PAUSED: boolean;
+  PLANET_TYPE_WEIGHTS: number[];
 }
 
 export interface GraphPlanet {
   x: number;
   y: number;
   level: number;
-  planetType: number;
+  planetType: "PLANET" | "SILVER_MINE" | "RUINS" | "TRADING_POST" | "SILVER_BANK";
   locationDec: string;
   perlin: number;
   targetPlanet: boolean;
