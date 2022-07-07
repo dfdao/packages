@@ -190,7 +190,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
   ) {
     const { overlay2dRenderer: cM } = this.renderer;
     if (renderInfo.blocked && renderInfo.planet.isTargetPlanet) {
-      cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🚫🎯`);
+      cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🏠`);
     } else if (renderInfo.blocked) {
       cM.drawEmoji(coords, radiusW, renderInfo, textAlpha, `🚫`);
     } else if (renderInfo.planet.isTargetPlanet)
