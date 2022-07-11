@@ -54,7 +54,9 @@ export const IconType = {
   TargetPlanet: 'TargetPlanet' as IconType,
   SpawnPlanet: 'SpawnPlanet' as IconType,
   Blocked: 'Blocked' as IconType,
-  Dfdao: 'Dfdao' as IconType
+  Maximize: 'Maximize' as IconType,
+  Minimize: 'Minimize' as IconType,
+  Dfdao: 'Dfdao' as IconType,
 } as const;
 
 export class DarkForestIcon extends LitElement {
@@ -194,6 +196,10 @@ export class DarkForestIcon extends LitElement {
         return SpawnPlanet();
       case IconType.Blocked:
         return Blocked();
+      case IconType.Maximize:
+        return Maximize();
+        case IconType.Minimize:
+          return Minimize();
       case IconType.Dfdao:
         return Dfdao();
       default:
@@ -644,6 +650,16 @@ function Blocked() {
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="height: 512px; width: 512px;"><g class="" transform="translate(0,-1)" style=""><path d="M256 16C123.45 16 16 123.45 16 256s107.45 240 240 240 240-107.45 240-240S388.55 16 256 16zm0 60c99.41 0 180 80.59 180 180s-80.59 180-180 180S76 355.41 76 256 156.59 76 256 76zm-80.625 60c-.97-.005-2.006.112-3.063.313v-.032c-18.297 3.436-45.264 34.743-33.375 46.626l73.157 73.125-73.156 73.126c-14.63 14.625 29.275 58.534 43.906 43.906L256 299.906l73.156 73.156c14.63 14.628 58.537-29.28 43.906-43.906l-73.156-73.125 73.156-73.124c14.63-14.625-29.275-58.5-43.906-43.875L256 212.157l-73.156-73.125c-2.06-2.046-4.56-3.015-7.47-3.03z" fill="#ff0000" fill-opacity="1" transform="translate(0, 512) scale(1, -1) rotate(0, 256, 256) skewX(0) skewY(0)"></path></g></svg>`;
 }
 
+function Maximize() {
+  return svg`
+  <svg class="feather feather-maximize-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>`;
+}
+
+function Minimize() {
+  return svg`
+  <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.0735 2L21.4877 3.41421L15.6378 9.26416H18.1824V11.2642H12.1824V5.26416H14.1824V7.89111L20.0735 2Z" fill="currentColor"/><path d="M11.1824 12.2642V18.2642H9.1824V15.8422L3.41421 21.6104L2 20.1962L7.93203 14.2642H5.1824V12.2642H11.1824Z" fill="currentColor"/></svg>
+  `
+}
 function Dfdao() {
   return svg`
   
