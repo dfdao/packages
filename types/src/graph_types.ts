@@ -77,6 +77,11 @@ export interface GraphPlanet {
   perlin: BigNumber;
   targetPlanet: boolean;
   spawnPlanet: boolean;
+  blockedPlanetIds: {
+    locationDec: BigNumber
+    x: number,
+    y: number
+  }[]
 }
 
 export interface RawAccount {
