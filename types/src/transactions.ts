@@ -29,7 +29,9 @@ export type ContractMethodName =
   | 'capturePlanet'
   | "claimVictory"
   | "createPlanet"
-  | "createArenaPlanet";
+  | "createArenaPlanet"
+  | "ready"
+  | "notReady";
 
 
 export type EthTxStatus =
