@@ -1,11 +1,5 @@
-import {
-  ExactArray10,
-  ExactArray5,
-  ExactArray8,
-  Tuple6,
-} from '@darkforest_eth/settings/dist/decoder-helpers';
-
 import { BigNumber } from 'ethers';
+import { ExactArray10, ExactArray5, ExactArray8, Tuple6 } from './decoder-helpers';
 
 export interface GraphConfig {
   // # CLAIM_PLANET_COOLDOWN,

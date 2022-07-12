@@ -28,6 +28,7 @@
  export * from './capture_zones';
  export * from './claim';
  export * from './database_types';
+ export * from './decoder-helpers';
  export * from './diagnostics';
  export * from './event';
  export * from './game_types';

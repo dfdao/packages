@@ -1,11 +1,11 @@
 import * as decoders from 'decoders';
-import type { ExactArray10, ExactArray4, ExactArray5, ExactArray8, Tuple6 } from './decoder-helpers';
+import type { ExactArray10, ExactArray4, ExactArray5, ExactArray8, Tuple6 } from '@darkforest_eth/types';
 import {
   array6,
   between,
   exactArray10, exactArray4,
   exactArray5, exactArray8, withDefault
-} from './decoder-helpers';
+} from '@darkforest_eth/types';
 import { decodeArenaPlanet, ArenaPlanets } from './planets';
 
 type PlanetTypeWeights = ExactArray4<ExactArray10<ExactArray5<number>>>;
