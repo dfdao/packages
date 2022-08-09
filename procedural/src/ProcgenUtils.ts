@@ -1,12 +1,7 @@
-import {
-  EMPTY_ADDRESS,
-  HAT_SIZES,
-  MAX_PLANET_LEVEL,
-  MIN_PLANET_LEVEL,
-} from '@darkforest_eth/constants';
-import { getPlanetRank, isLocatable } from '@darkforest_eth/gamelogic';
-import { seededRandom } from '@darkforest_eth/hashing';
-import { hashToInt } from '@darkforest_eth/serde';
+import { EMPTY_ADDRESS, HAT_SIZES, MAX_PLANET_LEVEL, MIN_PLANET_LEVEL } from '@dfdao/constants';
+import { getPlanetRank, isLocatable } from '@dfdao/gamelogic';
+import { seededRandom } from '@dfdao/hashing';
+import { hashToInt } from '@dfdao/serde';
 import {
   ArtifactId,
   Biome,
@@ -21,7 +16,7 @@ import {
   RGBVec,
   RuinsInfo,
   UpgradeBranchName,
-} from '@darkforest_eth/types';
+} from '@dfdao/types';
 import Noise from './Noise';
 import {
   blurb2grammar,
@@ -223,15 +218,15 @@ export function hashToHue(hash: string): number {
   return baseHue;
 }
 
-export function getPlayerColor(player: Player | undefined, teamsEnabled : boolean): string {
-  if(!player || player.address == EMPTY_ADDRESS) return '#996666';
-  const input = teamsEnabled ? (player.team *  9941).toString() : player.address.slice(2)
+export function getPlayerColor(player: Player | undefined, teamsEnabled: boolean): string {
+  if (!player || player.address == EMPTY_ADDRESS) return '#996666';
+  const input = teamsEnabled ? (player.team * 9941).toString() : player.address.slice(2);
   return hslStr(hashToHue(input), 100, 70); // remove 0x
 }
 
 export function getPlayerColorVec(player: Player | undefined, teamsEnabled: boolean): RGBAVec {
   if (!player || player.address == EMPTY_ADDRESS) return [153, 153, 102, 255];
-  const value = teamsEnabled ? (player.team *  9941).toString() : player.address.slice(2);
+  const value = teamsEnabled ? (player.team * 9941).toString() : player.address.slice(2);
 
   if (!rgbsByHash.has(value)) {
     const noAlpha = hslToRgb([hashToHue(value), 100, 70]);
@@ -453,13 +448,13 @@ export function getPlanetName(planet: Planet | undefined): string {
   return getPlanetNameHash(planet.locationId);
 }
 
-export function getConfigName(config: string):  string {
+export function getConfigName(config: string): string {
   const name = configsById.get(config);
   if (name) return name;
 
   let planetName = '';
 
-  const rand = configRandom(config)
+  const rand = configRandom(config);
   const randInt = () => Math.floor(rand() * 2 ** 24);
 
   if (randInt() % 1024 === 0) {

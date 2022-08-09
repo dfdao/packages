@@ -51,7 +51,7 @@ import {
   WorldLocation,
   Wormhole,
   WormholeRendererType,
-} from '@darkforest_eth/types';
+} from '@dfdao/types';
 import autoBind from 'auto-bind';
 import { AsteroidRenderer } from './Entities/AsteroidRenderer';
 import { BackgroundRenderer } from './Entities/BackgroundRenderer';
@@ -155,9 +155,9 @@ export interface RendererGameContext extends DiagnosticUpdater {
   getArtifactSending(planetId: LocationId): Artifact | undefined;
   getAbandonRangeChangePercent(): number;
   getCaptureZones(): Iterable<CaptureZone>;
-  getTeamsEnabled() : boolean;
+  getTeamsEnabled(): boolean;
   getSpaceJunkEnabled(): boolean;
-  playerMoveBlocked(player: EthAddress, planet: LocationId) : boolean;
+  playerMoveBlocked(player: EthAddress, planet: LocationId): boolean;
 }
 
 export class Renderer {

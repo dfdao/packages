@@ -6,7 +6,7 @@ import {
   Transaction,
   TransactionId,
   TxIntent,
-} from '@darkforest_eth/types';
+} from '@dfdao/types';
 import { Mutex } from 'async-mutex';
 import { providers } from 'ethers';
 import deferred from 'p-defer';
@@ -342,7 +342,6 @@ export class TxExecutor {
     let tx_hash: string | undefined = undefined;
 
     const time_exec_called = Date.now();
-
 
     tx.state = 'Processing';
 

@@ -76,7 +76,6 @@ export interface PerlinConfig {
   floor: boolean;
 }
 
-
 /**
  * Blocks move from one planet to another
  */

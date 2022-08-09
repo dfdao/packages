@@ -1,11 +1,11 @@
-import { EMPTY_ADDRESS } from '@darkforest_eth/constants';
+import { EMPTY_ADDRESS } from '@dfdao/constants';
 import {
   EmojiFlagBody,
   LocatablePlanet,
   Planet,
   PlanetMessage,
   PlanetMessageType,
-} from '@darkforest_eth/types';
+} from '@dfdao/types';
 
 export const getPlanetRank = (planet: Planet | undefined): number => {
   if (!planet) return 0;
@@ -36,14 +36,13 @@ export function isLocatable(planet?: Planet): planet is LocatablePlanet {
   return planet !== undefined && (planet as LocatablePlanet).location !== undefined;
 }
 
-export function  isSpawnPlanet(planet?: Planet): boolean {
+export function isSpawnPlanet(planet?: Planet): boolean {
   return planet !== undefined && planet.isSpawnPlanet;
 }
 
-export function  isTargetPlanet(planet?: Planet): boolean {
+export function isTargetPlanet(planet?: Planet): boolean {
   return planet !== undefined && planet.isTargetPlanet;
 }
-
 
 /**
  * Gets the time (ms) until we can broadcast the coordinates of a planet.

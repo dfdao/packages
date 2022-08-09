@@ -1,5 +1,5 @@
-import type { DarkForest } from '@darkforest_eth/contracts/typechain';
-import type { Player } from '@darkforest_eth/types';
+import type { DarkForest } from '@dfdao/contracts/typechain';
+import type { Player } from '@dfdao/types';
 import { address } from './address';
 import { locationIdFromEthersBN } from './location';
 
@@ -10,12 +10,12 @@ export type RawArenaPlayer = Awaited<ReturnType<DarkForest['arenaPlayers']>>;
 /**
  * Converts the raw typechain result of a call which fetches a
  * `PlayerTypes.Player` struct, and converts it into an object
- * with type `Player` (see @darkforest_eth/types) that can be used by a client.
+ * with type `Player` (see @dfdao/types) that can be used by a client.
  *
  * @param rawPlayer result of an ethers.js contract call which returns a raw
  * `PlayerTypes.Player` struct, typed with typechain.
  */
-export function decodePlayer(rawPlayer: RawPlayer, rawArenaPlayer : RawArenaPlayer): Player {
+export function decodePlayer(rawPlayer: RawPlayer, rawArenaPlayer: RawArenaPlayer): Player {
   return {
     address: address(rawPlayer.player),
     initTimestamp: rawPlayer.initTimestamp.toNumber(),

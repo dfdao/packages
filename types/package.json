@@ -1,6 +1,6 @@
 {
-  "name": "@darkforest_eth/types",
-  "version": "6.7.29",
+  "name": "@dfdao/types",
+  "version": "6.7.32",
   "license": "MIT",
   "author": "0xPARC <ivan@0xPARC.org>",
   "engines": {

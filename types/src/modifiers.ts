@@ -14,7 +14,7 @@ export const ModifierType = {
   Range: 4 as ModifierType,
   Speed: 5 as ModifierType,
   Defense: 6 as ModifierType,
-  Pirates: 7 as ModifierType
+  Pirates: 7 as ModifierType,
   // Don't forget to update MIN_ARTIFACT_RARITY and/or MAX_ARTIFACT_RARITY in the `constants` package
 } as const;
 
@@ -29,5 +29,5 @@ export const ModifierTypeNames = {
   [ModifierType.Range]: 'Range',
   [ModifierType.Speed]: 'Speed',
   [ModifierType.Defense]: 'Defense',
-  [ModifierType.Pirates]: 'Pirates'
+  [ModifierType.Pirates]: 'Pirates',
 } as const;

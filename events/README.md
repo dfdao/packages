@@ -1,4 +1,4 @@
-# @darkforest_eth/events
+# @dfdao/events
 
 This package contains a typed, single pub/sub pattern used in the Dark Forest game.
 Inspired by https://www.npmjs.com/package/monomitter
@@ -9,36 +9,36 @@ You can install this package using [`npm`](https://www.npmjs.com) or
 [`yarn`](https://classic.yarnpkg.com/lang/en/) by running:
 
 ```bash
-npm install --save @darkforest_eth/events
+npm install --save @dfdao/events
 ```
 
 ```bash
-yarn add @darkforest_eth/events
+yarn add @dfdao/events
 ```
 
 When using this in a plugin, you might want to load it with [skypack](https://www.skypack.dev)
 
 ```js
-import * as events from 'http://cdn.skypack.dev/@darkforest_eth/events';
+import * as events from 'http://cdn.skypack.dev/@dfdao/events';
 ```
 
 ## Table of contents
 
 ### Type aliases
 
-- [Callback](README.md#callback)
-- [Monomitter](README.md#monomitter)
-- [Subscription](README.md#subscription)
+- [Callback](undefined)
+- [Monomitter](undefined)
+- [Subscription](undefined)
 
 ### Functions
 
-- [monomitter](README.md#monomitter)
+- [monomitter](undefined)
 
 ## Type aliases
 
 ### Callback
 
-Ƭ **Callback**<`T`\>: (`data`: `T`) => `void`
+Ƭ **Callback**: Function
 
 #### Type parameters
 
@@ -48,23 +48,23 @@ import * as events from 'http://cdn.skypack.dev/@darkforest_eth/events';
 
 #### Type declaration
 
-▸ (`data`): `void`
+▸ (`data`): void
 
 ##### Parameters
 
 | Name   | Type |
 | :----- | :--- |
-| `data` | `T`  |
+| `data` | T    |
 
 ##### Returns
 
-`void`
+void
 
 ---
 
 ### Monomitter
 
-Ƭ **Monomitter**<`T`\>: `Object`
+Ƭ **Monomitter**: `Object`
 
 #### Type parameters
 
@@ -74,11 +74,11 @@ import * as events from 'http://cdn.skypack.dev/@darkforest_eth/events';
 
 #### Type declaration
 
-| Name        | Type                                                                                       |
-| :---------- | :----------------------------------------------------------------------------------------- |
-| `clear`     | () => `void`                                                                               |
-| `publish`   | (`data`: `T`) => `void`                                                                    |
-| `subscribe` | (`cb`: [`Callback`](README.md#callback)<`T`\>) => [`Subscription`](README.md#subscription) |
+| Name        | Type             |
+| :---------- | :--------------- |
+| `clear`     | Method clear     |
+| `publish`   | Method publish   |
+| `subscribe` | Method subscribe |
 
 ---
 
@@ -88,15 +88,15 @@ import * as events from 'http://cdn.skypack.dev/@darkforest_eth/events';
 
 #### Type declaration
 
-| Name          | Type         |
-| :------------ | :----------- |
-| `unsubscribe` | () => `void` |
+| Name          | Type               |
+| :------------ | :----------------- |
+| `unsubscribe` | Method unsubscribe |
 
 ## Functions
 
 ### monomitter
 
-▸ **monomitter**<`T`\>(`emitLatestOnSubscribe?`): [`Monomitter`](README.md#monomitter)<`T`\>
+▸ **monomitter**<`T`\>(`emitLatestOnSubscribe?`): Monomitter<T\>
 
 Constructs a new event emitter, whose purpose is to emit values of the given type.
 
@@ -108,10 +108,10 @@ Constructs a new event emitter, whose purpose is to emit values of the given typ
 
 #### Parameters
 
-| Name                    | Type      | Default value | Description                                                                                      |
-| :---------------------- | :-------- | :------------ | :----------------------------------------------------------------------------------------------- |
-| `emitLatestOnSubscribe` | `boolean` | `false`       | if this is true, upon subscription immediately emit the most recently set value, if there is one |
+| Name                    | Type    | Default value | Description                                                                                      |
+| :---------------------- | :------ | :------------ | :----------------------------------------------------------------------------------------------- |
+| `emitLatestOnSubscribe` | boolean | `false`       | if this is true, upon subscription immediately emit the most recently set value, if there is one |
 
 #### Returns
 
-[`Monomitter`](README.md#monomitter)<`T`\>
+Monomitter<T\>

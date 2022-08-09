@@ -1,6 +1,6 @@
 {
-  "name": "@darkforest_eth/events",
-  "version": "6.7.29",
+  "name": "@dfdao/events",
+  "version": "6.7.31",
   "license": "MIT",
   "author": "0xPARC <ivan@0xPARC.org>",
   "engines": {

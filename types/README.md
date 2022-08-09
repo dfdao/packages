@@ -1,4 +1,4 @@
-# @darkforest_eth/types
+# @dfdao/types
 
 This package contains commonly-used data types in the Dark Forest webclient,
 also accessible in node.js server environments.
@@ -9,215 +9,764 @@ You can install this package using [`npm`](https://www.npmjs.com) or
 [`yarn`](https://classic.yarnpkg.com/lang/en/) by running:
 
 ```bash
-npm install --save @darkforest_eth/types
+npm install --save @dfdao/types
 ```
 
 ```bash
-yarn add @darkforest_eth/types
+yarn add @dfdao/types
 ```
 
 When using this in a plugin, you might want to load it with [skypack](https://www.skypack.dev)
 
 ```js
-import * as types from 'http://cdn.skypack.dev/@darkforest_eth/types';
+import * as types from 'http://cdn.skypack.dev/@dfdao/types';
 ```
 
 ## Table of contents
 
 ### Classes
 
-- [DFAnimation](classes/DFAnimation.md)
-- [DFStatefulAnimation](classes/DFStatefulAnimation.md)
+- [DFAnimation](undefined)
+- [DFStatefulAnimation](undefined)
 
 ### Interfaces
 
-- [ArrivalWithTimer](interfaces/ArrivalWithTimer.md)
-- [AsteroidRendererType](interfaces/AsteroidRendererType.md)
-- [BackgroundRendererType](interfaces/BackgroundRendererType.md)
-- [BaseRenderer](interfaces/BaseRenderer.md)
-- [BeltRendererType](interfaces/BeltRendererType.md)
-- [BlackDomainRendererType](interfaces/BlackDomainRendererType.md)
-- [CanvasCoords](interfaces/CanvasCoords.md)
-- [CaptureZoneRendererType](interfaces/CaptureZoneRendererType.md)
-- [Chunk](interfaces/Chunk.md)
-- [CircleRendererType](interfaces/CircleRendererType.md)
-- [DeleteMessagesRequest](interfaces/DeleteMessagesRequest.md)
-- [DiagnosticUpdater](interfaces/DiagnosticUpdater.md)
-- [Diagnostics](interfaces/Diagnostics.md)
-- [EmojiFlagBody](interfaces/EmojiFlagBody.md)
-- [GameViewport](interfaces/GameViewport.md)
-- [GasPrices](interfaces/GasPrices.md)
-- [IRendererConfig](interfaces/IRendererConfig.md)
-- [Leaderboard](interfaces/Leaderboard.md)
-- [LeaderboardEntry](interfaces/LeaderboardEntry.md)
-- [LineRendererType](interfaces/LineRendererType.md)
-- [MineBodyRendererType](interfaces/MineBodyRendererType.md)
-- [MineRendererType](interfaces/MineRendererType.md)
-- [ModalPosition](interfaces/ModalPosition.md)
-- [NetworkEvent](interfaces/NetworkEvent.md)
-- [PerlinConfig](interfaces/PerlinConfig.md)
-- [PerlinRendererType](interfaces/PerlinRendererType.md)
-- [PersistedTransaction](interfaces/PersistedTransaction.md)
-- [PlanetCosmeticInfo](interfaces/PlanetCosmeticInfo.md)
-- [PlanetDefaults](interfaces/PlanetDefaults.md)
-- [PlanetMessage](interfaces/PlanetMessage.md)
-- [PlanetMessageRequest](interfaces/PlanetMessageRequest.md)
-- [PlanetMessageResponse](interfaces/PlanetMessageResponse.md)
-- [PlanetRenderInfo](interfaces/PlanetRenderInfo.md)
-- [PlanetRenderManagerType](interfaces/PlanetRenderManagerType.md)
-- [PlanetRendererType](interfaces/PlanetRendererType.md)
-- [PostMessageRequest](interfaces/PostMessageRequest.md)
-- [QuasarBodyRendererType](interfaces/QuasarBodyRendererType.md)
-- [QuasarRayRendererType](interfaces/QuasarRayRendererType.md)
-- [QuasarRendererType](interfaces/QuasarRendererType.md)
-- [QueuedArrival](interfaces/QueuedArrival.md)
-- [Radii](interfaces/Radii.md)
-- [RectRendererType](interfaces/RectRendererType.md)
-- [Rectangle](interfaces/Rectangle.md)
-- [RenderedArtifact](interfaces/RenderedArtifact.md)
-- [RingRendererType](interfaces/RingRendererType.md)
-- [RuinsRendererType](interfaces/RuinsRendererType.md)
-- [SignedMessage](interfaces/SignedMessage.md)
-- [SpaceRendererType](interfaces/SpaceRendererType.md)
-- [SpacetimeRipRendererType](interfaces/SpacetimeRipRendererType.md)
-- [SpriteRendererType](interfaces/SpriteRendererType.md)
-- [TextRendererType](interfaces/TextRendererType.md)
-- [Transaction](interfaces/Transaction.md)
-- [TransactionCollection](interfaces/TransactionCollection.md)
-- [UIRendererType](interfaces/UIRendererType.md)
-- [UnminedRendererType](interfaces/UnminedRendererType.md)
-- [VoyageRendererType](interfaces/VoyageRendererType.md)
-- [WormholeRendererType](interfaces/WormholeRendererType.md)
+- [ArenaLeaderboard](undefined)
+- [ArenaLeaderboardEntry](undefined)
+- [ArrivalWithTimer](undefined)
+- [AsteroidRendererType](undefined)
+- [BackgroundRendererType](undefined)
+- [BaseRenderer](undefined)
+- [BeltRendererType](undefined)
+- [BlackDomainRendererType](undefined)
+- [CanvasCoords](undefined)
+- [CaptureZoneRendererType](undefined)
+- [Chunk](undefined)
+- [CircleRendererType](undefined)
+- [DeleteMessagesRequest](undefined)
+- [DiagnosticUpdater](undefined)
+- [Diagnostics](undefined)
+- [EmojiFlagBody](undefined)
+- [ExtendedMatchEntry](undefined)
+- [GameViewport](undefined)
+- [GasPrices](undefined)
+- [GraphArena](undefined)
+- [GraphConfig](undefined)
+- [GraphPlanet](undefined)
+- [IRendererConfig](undefined)
+- [Leaderboard](undefined)
+- [LeaderboardEntry](undefined)
+- [LineRendererType](undefined)
+- [LiveMatch](undefined)
+- [LiveMatchEntry](undefined)
+- [MineBodyRendererType](undefined)
+- [MineRendererType](undefined)
+- [ModalPosition](undefined)
+- [NetworkEvent](undefined)
+- [PerlinConfig](undefined)
+- [PerlinRendererType](undefined)
+- [PersistedTransaction](undefined)
+- [PlanetCosmeticInfo](undefined)
+- [PlanetDefaults](undefined)
+- [PlanetMessage](undefined)
+- [PlanetMessageRequest](undefined)
+- [PlanetMessageResponse](undefined)
+- [PlanetRenderInfo](undefined)
+- [PlanetRenderManagerType](undefined)
+- [PlanetRendererType](undefined)
+- [PostMessageRequest](undefined)
+- [QuasarBodyRendererType](undefined)
+- [QuasarRayRendererType](undefined)
+- [QuasarRendererType](undefined)
+- [QueuedArrival](undefined)
+- [Radii](undefined)
+- [RawAccount](undefined)
+- [RectRendererType](undefined)
+- [Rectangle](undefined)
+- [RenderedArtifact](undefined)
+- [RingRendererType](undefined)
+- [RuinsRendererType](undefined)
+- [SignedMessage](undefined)
+- [SpaceRendererType](undefined)
+- [SpacetimeRipRendererType](undefined)
+- [SpriteRendererType](undefined)
+- [TextRendererType](undefined)
+- [Transaction](undefined)
+- [TransactionCollection](undefined)
+- [UIRendererType](undefined)
+- [UnminedRendererType](undefined)
+- [VoyageRendererType](undefined)
+- [WormholeRendererType](undefined)
 
 ### Type aliases
 
-- [Abstract](README.md#abstract)
-- [ArrivalType](README.md#arrivaltype)
-- [Artifact](README.md#artifact)
-- [ArtifactId](README.md#artifactid)
-- [ArtifactPointValues](README.md#artifactpointvalues)
-- [ArtifactRarity](README.md#artifactrarity)
-- [ArtifactType](README.md#artifacttype)
-- [AttribProps](README.md#attribprops)
-- [AttribType](README.md#attribtype)
-- [AutoGasSetting](README.md#autogassetting)
-- [Biome](README.md#biome)
-- [CaptureZone](README.md#capturezone)
-- [ClaimedCoords](README.md#claimedcoords)
-- [ClaimedLocation](README.md#claimedlocation)
-- [ContractMethodName](README.md#contractmethodname)
-- [CursorState](README.md#cursorstate)
-- [DrawMode](README.md#drawmode)
-- [EthAddress](README.md#ethaddress)
-- [EthTxStatus](README.md#ethtxstatus)
-- [HSLVec](README.md#hslvec)
-- [HatType](README.md#hattype)
-- [LocatablePlanet](README.md#locatableplanet)
-- [LocationId](README.md#locationid)
-- [ModalId](README.md#modalid)
-- [ModalManagerEvent](README.md#modalmanagerevent)
-- [ModalName](README.md#modalname)
-- [ModalPositions](README.md#modalpositions)
-- [NFTMetadata](README.md#nftmetadata)
-- [NetworkHealthSummary](README.md#networkhealthsummary)
-- [Planet](README.md#planet)
-- [PlanetBonus](README.md#planetbonus)
-- [PlanetLevel](README.md#planetlevel)
-- [PlanetMessageBody](README.md#planetmessagebody)
-- [PlanetMessageType](README.md#planetmessagetype)
-- [PlanetType](README.md#planettype)
-- [Player](README.md#player)
-- [PluginId](README.md#pluginid)
-- [RGBAVec](README.md#rgbavec)
-- [RGBVec](README.md#rgbvec)
-- [RegisterResponse](README.md#registerresponse)
-- [RenderZIndex](README.md#renderzindex)
-- [RendererProgram](README.md#rendererprogram)
-- [RendererType](README.md#renderertype)
-- [RevealedCoords](README.md#revealedcoords)
-- [RevealedLocation](README.md#revealedlocation)
-- [RuinsInfo](README.md#ruinsinfo)
-- [Scaling](README.md#scaling)
-- [Setting](README.md#setting)
-- [SpaceColorConfiguration](README.md#spacecolorconfiguration)
-- [SpaceType](README.md#spacetype)
-- [TextAlign](README.md#textalign)
-- [TextAnchor](README.md#textanchor)
-- [TooltipName](README.md#tooltipname)
-- [TransactionId](README.md#transactionid)
-- [Translation](README.md#translation)
-- [UniformJSType](README.md#uniformjstype)
-- [UniformProps](README.md#uniformprops)
-- [UniformType](README.md#uniformtype)
-- [Upgrade](README.md#upgrade)
-- [UpgradeBranchName](README.md#upgradebranchname)
-- [UpgradeBranches](README.md#upgradebranches)
-- [UpgradeLevels](README.md#upgradelevels)
-- [UpgradeState](README.md#upgradestate)
-- [Vec3](README.md#vec3)
-- [VoyageId](README.md#voyageid)
-- [WhitelistStatusResponse](README.md#whiteliststatusresponse)
-- [WorldCoords](README.md#worldcoords)
-- [WorldLocation](README.md#worldlocation)
-- [Wormhole](README.md#wormhole)
+- [Abstract](undefined)
+- [AdminPlanet](undefined)
+- [ArrivalType](undefined)
+- [Artifact](undefined)
+- [ArtifactId](undefined)
+- [ArtifactPointValues](undefined)
+- [ArtifactRarity](undefined)
+- [ArtifactType](undefined)
+- [AttribProps](undefined)
+- [AttribType](undefined)
+- [AutoGasSetting](undefined)
+- [Biome](undefined)
+- [BlocklistMap](undefined)
+- [CaptureZone](undefined)
+- [ClaimedCoords](undefined)
+- [ClaimedLocation](undefined)
+- [CursorState](undefined)
+- [DrawMode](undefined)
+- [EthAddress](undefined)
+- [EthTxStatus](undefined)
+- [ExactArray10](undefined)
+- [ExactArray4](undefined)
+- [ExactArray5](undefined)
+- [ExactArray8](undefined)
+- [HSLVec](undefined)
+- [HatType](undefined)
+- [LocatablePlanet](undefined)
+- [LocationId](undefined)
+- [ModalId](undefined)
+- [ModalManagerEvent](undefined)
+- [ModalName](undefined)
+- [ModalPositions](undefined)
+- [ModifierType](undefined)
+- [NFTMetadata](undefined)
+- [NetworkHealthSummary](undefined)
+- [Planet](undefined)
+- [PlanetBonus](undefined)
+- [PlanetLevel](undefined)
+- [PlanetMessageBody](undefined)
+- [PlanetMessageType](undefined)
+- [PlanetType](undefined)
+- [Player](undefined)
+- [PluginId](undefined)
+- [RGBAVec](undefined)
+- [RGBVec](undefined)
+- [RegisterResponse](undefined)
+- [RenderZIndex](undefined)
+- [RendererProgram](undefined)
+- [RendererType](undefined)
+- [RevealedCoords](undefined)
+- [RevealedLocation](undefined)
+- [RuinsInfo](undefined)
+- [Scaling](undefined)
+- [Setting](undefined)
+- [SpaceColorConfiguration](undefined)
+- [SpaceType](undefined)
+- [SpaceshipType](undefined)
+- [TextAlign](undefined)
+- [TextAnchor](undefined)
+- [TooltipName](undefined)
+- [TransactionId](undefined)
+- [Translation](undefined)
+- [Tuple6](undefined)
+- [UniformJSType](undefined)
+- [UniformProps](undefined)
+- [UniformType](undefined)
+- [Upgrade](undefined)
+- [UpgradeBranchName](undefined)
+- [UpgradeBranches](undefined)
+- [UpgradeLevels](undefined)
+- [UpgradeState](undefined)
+- [Vec3](undefined)
+- [VoyageId](undefined)
+- [WhitelistStatusResponse](undefined)
+- [WorldCoords](undefined)
+- [WorldLocation](undefined)
+- [Wormhole](undefined)
 
 ### Variables
 
-- [ArrivalType](README.md#arrivaltype)
-- [ArtifactRarity](README.md#artifactrarity)
-- [ArtifactRarityNames](README.md#artifactraritynames)
-- [ArtifactType](README.md#artifacttype)
-- [ArtifactTypeNames](README.md#artifacttypenames)
-- [AttribType](README.md#attribtype)
-- [AutoGasSetting](README.md#autogassetting)
-- [Biome](README.md#biome)
-- [BiomeNames](README.md#biomenames)
-- [CursorState](README.md#cursorstate)
-- [DrawMode](README.md#drawmode)
-- [HatType](README.md#hattype)
-- [ModalManagerEvent](README.md#modalmanagerevent)
-- [ModalName](README.md#modalname)
-- [PlanetLevel](README.md#planetlevel)
-- [PlanetLevelNames](README.md#planetlevelnames)
-- [PlanetMessageType](README.md#planetmessagetype)
-- [PlanetType](README.md#planettype)
-- [PlanetTypeNames](README.md#planettypenames)
-- [RenderZIndex](README.md#renderzindex)
-- [RendererType](README.md#renderertype)
-- [Setting](README.md#setting)
-- [SpaceType](README.md#spacetype)
-- [SpaceTypeNames](README.md#spacetypenames)
-- [TextAlign](README.md#textalign)
-- [TextAnchor](README.md#textanchor)
-- [TooltipName](README.md#tooltipname)
-- [UniformType](README.md#uniformtype)
-- [UpgradeBranchName](README.md#upgradebranchname)
+- [ArrivalType](undefined)
+- [ArtifactRarity](undefined)
+- [ArtifactRarityNames](undefined)
+- [ArtifactType](undefined)
+- [ArtifactTypeNames](undefined)
+- [AttribType](undefined)
+- [AutoGasSetting](undefined)
+- [Biome](undefined)
+- [BiomeNames](undefined)
+- [CursorState](undefined)
+- [DrawMode](undefined)
+- [HatType](undefined)
+- [ModalManagerEvent](undefined)
+- [ModalName](undefined)
+- [ModifierType](undefined)
+- [ModifierTypeNames](undefined)
+- [PlanetLevel](undefined)
+- [PlanetLevelNames](undefined)
+- [PlanetMessageType](undefined)
+- [PlanetType](undefined)
+- [PlanetTypeNames](undefined)
+- [RenderZIndex](undefined)
+- [RendererType](undefined)
+- [Setting](undefined)
+- [SpaceType](undefined)
+- [SpaceTypeNames](undefined)
+- [SpaceshipType](undefined)
+- [SpaceshipTypeDesc](undefined)
+- [SpaceshipTypeNames](undefined)
+- [TextAlign](undefined)
+- [TextAnchor](undefined)
+- [TooltipName](undefined)
+- [UniformType](undefined)
+- [UpgradeBranchName](undefined)
 
 ### Functions
 
-- [artifactNameFromArtifact](README.md#artifactnamefromartifact)
+- [array6](undefined)
+- [artifactNameFromArtifact](undefined)
+- [between](undefined)
+- [exactArray10](undefined)
+- [exactArray4](undefined)
+- [exactArray5](undefined)
+- [exactArray8](undefined)
+- [withDefault](undefined)
+
+## Classes
+
+### DFAnimation
+
+• **DFAnimation**: Class DFAnimation
+
+---
+
+### DFStatefulAnimation
+
+• **DFStatefulAnimation**: Class DFStatefulAnimation<T\>
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `T`  |
+
+## Interfaces
+
+### ArenaLeaderboard
+
+• **ArenaLeaderboard**: Interface ArenaLeaderboard
+
+---
+
+### ArenaLeaderboardEntry
+
+• **ArenaLeaderboardEntry**: Interface ArenaLeaderboardEntry
+
+---
+
+### ArrivalWithTimer
+
+• **ArrivalWithTimer**: Interface ArrivalWithTimer
+
+Convenience type for storing a voyage and a reference to a timeout that is triggered on voyage
+arrival (in case the timeout needs to be cancelled).
+
+---
+
+### AsteroidRendererType
+
+• **AsteroidRendererType**: Interface AsteroidRendererType
+
+---
+
+### BackgroundRendererType
+
+• **BackgroundRendererType**: Interface BackgroundRendererType
+
+---
+
+### BaseRenderer
+
+• **BaseRenderer**: Interface BaseRenderer
+
+The purpose of this interface is for type checking
+It make sures that the variable is a type of renderer
+
+---
+
+### BeltRendererType
+
+• **BeltRendererType**: Interface BeltRendererType
+
+---
+
+### BlackDomainRendererType
+
+• **BlackDomainRendererType**: Interface BlackDomainRendererType
+
+---
+
+### CanvasCoords
+
+• **CanvasCoords**: Interface CanvasCoords
+
+---
+
+### CaptureZoneRendererType
+
+• **CaptureZoneRendererType**: Interface CaptureZoneRendererType
+
+---
+
+### Chunk
+
+• **Chunk**: Interface Chunk
+
+Represents a fully mined aligned square.
+
+---
+
+### CircleRendererType
+
+• **CircleRendererType**: Interface CircleRendererType
+
+---
+
+### DeleteMessagesRequest
+
+• **DeleteMessagesRequest**: Interface DeleteMessagesRequest
+
+Asks the webserver to delete some messages.
+
+---
+
+### DiagnosticUpdater
+
+• **DiagnosticUpdater**: Interface DiagnosticUpdater
+
+Various parts of our codebase need to be able to self-report diagnostics. To enable them to do
+so, you must provide them with an object that conforms to this interface. Currently, the only
+implementation of this function is `GameManager`. However, in the future, we might want to stream
+a sample of these diagnostic updates to our backend, so that we can analyze performance, catch
+bugs, etc.
+
+---
+
+### Diagnostics
+
+• **Diagnostics**: Interface Diagnostics
+
+---
+
+### EmojiFlagBody
+
+• **EmojiFlagBody**: Interface EmojiFlagBody
+
+Owners of planets can post emojis on the planet.
+
+---
+
+### ExtendedMatchEntry
+
+• **ExtendedMatchEntry**: Interface ExtendedMatchEntry
+
+---
+
+### GameViewport
+
+• **GameViewport**: Interface GameViewport
+
+---
+
+### GasPrices
+
+• **GasPrices**: Interface GasPrices
+
+These are measured in gwei.
+
+---
+
+### GraphArena
+
+• **GraphArena**: Interface GraphArena
+
+---
+
+### GraphConfig
+
+• **GraphConfig**: Interface GraphConfig
+
+---
+
+### GraphPlanet
+
+• **GraphPlanet**: Interface GraphPlanet
+
+---
+
+### IRendererConfig
+
+• **IRendererConfig**: Interface IRendererConfig
+
+---
+
+### Leaderboard
+
+• **Leaderboard**: Interface Leaderboard
+
+---
+
+### LeaderboardEntry
+
+• **LeaderboardEntry**: Interface LeaderboardEntry
+
+---
+
+### LineRendererType
+
+• **LineRendererType**: Interface LineRendererType
+
+---
+
+### LiveMatch
+
+• **LiveMatch**: Interface LiveMatch
+
+---
+
+### LiveMatchEntry
+
+• **LiveMatchEntry**: Interface LiveMatchEntry
+
+---
+
+### MineBodyRendererType
+
+• **MineBodyRendererType**: Interface MineBodyRendererType
+
+---
+
+### MineRendererType
+
+• **MineRendererType**: Interface MineRendererType
+
+---
+
+### ModalPosition
+
+• **ModalPosition**: Interface ModalPosition
+
+Contains metadata on modals in the game. Meant to store coordinates and state. Is
+uniquely identified by a ModalId, which typically either the modalId of a given modal pane, or
+plugin id.
+
+---
+
+### NetworkEvent
+
+• **NetworkEvent**: Interface NetworkEvent
+
+Each time a transaction either reverts or confirms we send an event to the webserver with this
+diagnostic info about the transaction, so that we can analyze the performance of the network in
+aggregate across our player-base.
+
+---
+
+### PerlinConfig
+
+• **PerlinConfig**: Interface PerlinConfig
+
+Various configuration used for calculating perlin.
+Always make sure these values match the contracts you are working with
+or else your transactions **will** be reverted.
+
+---
+
+### PerlinRendererType
+
+• **PerlinRendererType**: Interface PerlinRendererType
+
+Perlin Renderer is only used when disable fancy space effects is true
+
+---
+
+### PersistedTransaction
+
+• **PersistedTransaction**: Interface PersistedTransaction<T\>
+
+#### Type parameters
+
+| Name | Type                                |
+| :--- | :---------------------------------- |
+| `T`  | extends TxIntent \| unknownTxIntent |
+
+---
+
+### PlanetCosmeticInfo
+
+• **PlanetCosmeticInfo**: Interface PlanetCosmeticInfo
+
+---
+
+### PlanetDefaults
+
+• **PlanetDefaults**: Interface PlanetDefaults
+
+A structure with default stats of planets in nebula at corresponding levels. For
+example, silverCap[4] refers to the default silver capacity of a level 4
+planet in nebula with no modifiers.
+
+---
+
+### PlanetMessage
+
+• **PlanetMessage**: Interface PlanetMessage<T\>
+
+We can save these to and retrieve these from the database.
+
+#### Type parameters
+
+| Name | Type                      |
+| :--- | :------------------------ |
+| `T`  | extends PlanetMessageBody |
+
+---
+
+### PlanetMessageRequest
+
+• **PlanetMessageRequest**: Interface PlanetMessageRequest
+
+Asks the webserver to get all the the messages posted to some set of planets.
+
+---
+
+### PlanetMessageResponse
+
+• **PlanetMessageResponse**: Interface PlanetMessageResponse
+
+Contains the answer to the above question.
+
+---
+
+### PlanetRenderInfo
+
+• **PlanetRenderInfo**: Interface PlanetRenderInfo
+
+---
+
+### PlanetRenderManagerType
+
+• **PlanetRenderManagerType**: Interface PlanetRenderManagerType
+
+---
+
+### PlanetRendererType
+
+• **PlanetRendererType**: Interface PlanetRendererType
+
+---
+
+### PostMessageRequest
+
+• **PostMessageRequest**: Interface PostMessageRequest<T\>
+
+Asks the webserver to post an emoji to a particular planet.
+
+#### Type parameters
+
+| Name | Type                      |
+| :--- | :------------------------ |
+| `T`  | extends PlanetMessageBody |
+
+---
+
+### QuasarBodyRendererType
+
+• **QuasarBodyRendererType**: Interface QuasarBodyRendererType
+
+---
+
+### QuasarRayRendererType
+
+• **QuasarRayRendererType**: Interface QuasarRayRendererType
+
+---
+
+### QuasarRendererType
+
+• **QuasarRendererType**: Interface QuasarRendererType
+
+---
+
+### QueuedArrival
+
+• **QueuedArrival**: Interface QueuedArrival
+
+Represents a voyage.
+
+---
+
+### Radii
+
+• **Radii**: Interface Radii
+
+---
+
+### RawAccount
+
+• **RawAccount**: Interface RawAccount
+
+---
+
+### RectRendererType
+
+• **RectRendererType**: Interface RectRendererType
+
+---
+
+### Rectangle
+
+• **Rectangle**: Interface Rectangle
+
+Ok, this is gonna sound weird, but all rectangles are squares. Also, we only permit side lengths
+that are powers of two, and ALSO!! The side lengths must be between {@link MIN_CHUNK_SIZE} and
+{@link MAX_CHUNK_SIZE}.
+
+---
+
+### RenderedArtifact
+
+• **RenderedArtifact**: Interface RenderedArtifact
+
+---
+
+### RingRendererType
+
+• **RingRendererType**: Interface RingRendererType
+
+---
+
+### RuinsRendererType
+
+• **RuinsRendererType**: Interface RuinsRendererType
+
+---
+
+### SignedMessage
+
+• **SignedMessage**: Interface SignedMessage<T\>
+
+A signed message contains some sort of message, as well as its signature and the address that
+claims to have signed this message.
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `T`  |
+
+---
+
+### SpaceRendererType
+
+• **SpaceRendererType**: Interface SpaceRendererType
+
+---
+
+### SpacetimeRipRendererType
+
+• **SpacetimeRipRendererType**: Interface SpacetimeRipRendererType
+
+---
+
+### SpriteRendererType
+
+• **SpriteRendererType**: Interface SpriteRendererType
+
+---
+
+### TextRendererType
+
+• **TextRendererType**: Interface TextRendererType
+
+---
+
+### Transaction
+
+• **Transaction**: Interface Transaction<T\>
+
+Represents a transaction that the game would like to submit to the blockchain.
+
+#### Type parameters
+
+| Name | Type                     |
+| :--- | :----------------------- |
+| `T`  | extends TxIntentTxIntent |
+
+---
+
+### TransactionCollection
+
+• **TransactionCollection**: Interface TransactionCollection
+
+---
+
+### UIRendererType
+
+• **UIRendererType**: Interface UIRendererType
+
+---
+
+### UnminedRendererType
+
+• **UnminedRendererType**: Interface UnminedRendererType
+
+---
+
+### VoyageRendererType
+
+• **VoyageRendererType**: Interface VoyageRendererType
+
+---
+
+### WormholeRendererType
+
+• **WormholeRendererType**: Interface WormholeRendererType
 
 ## Type aliases
 
 ### Abstract
 
-Ƭ **Abstract**<`Type`, `Token`\>: `Type` & `Tagged`<`Token`\>
+Ƭ **Abstract**: Type & Tagged<Token\>
 
 An abstract type used to differentiate between common types, like `number` or `string`.
 The `Token` type parameter is the key to vary upon and should be unique unless being used to subtype.
 
 #### Type parameters
 
-| Name    | Type      |
-| :------ | :-------- |
-| `Type`  | `Type`    |
-| `Token` | `unknown` |
+| Name    | Type    |
+| :------ | :------ |
+| `Type`  | `Type`  |
+| `Token` | unknown |
+
+---
+
+### AdminPlanet
+
+Ƭ **AdminPlanet**: `Object`
+
+#### Type declaration
+
+| Name                     | Type    |
+| :----------------------- | :------ |
+| `isSpawnPlanet`          | boolean |
+| `isTargetPlanet`         | boolean |
+| `level`                  | number  |
+| `planetType`             | number  |
+| `requireValidLocationId` | boolean |
+| `revealLocation`         | boolean |
+| `x`                      | number  |
+| `y`                      | number  |
 
 ---
 
 ### ArrivalType
 
-Ƭ **ArrivalType**: [`Abstract`](README.md#abstract)<`number`, `"ArrivalType"`\>
+Ƭ **ArrivalType**: Abstract<number, "ArrivalType"\>
 
 Abstract type representing an arrival type.
 
@@ -235,33 +784,33 @@ client that can't send transactions, these fields should be ignored.
 
 #### Type declaration
 
-| Name                 | Type                                                           |
-| :------------------- | :------------------------------------------------------------- |
-| `activations`        | `number`                                                       |
-| `artifactType`       | [`ArtifactType`](README.md#artifacttype)                       |
-| `controller`         | [`EthAddress`](README.md#ethaddress)                           |
-| `currentOwner`       | [`EthAddress`](README.md#ethaddress)                           |
-| `discoverer`         | [`EthAddress`](README.md#ethaddress)                           |
-| `id`                 | [`ArtifactId`](README.md#artifactid)                           |
-| `isInititalized`     | `boolean`                                                      |
-| `lastActivated`      | `number`                                                       |
-| `lastDeactivated`    | `number`                                                       |
-| `mintedAtTimestamp`  | `number`                                                       |
-| `onPlanetId?`        | [`LocationId`](README.md#locationid)                           |
-| `onVoyageId?`        | [`VoyageId`](README.md#voyageid)                               |
-| `planetBiome`        | [`Biome`](README.md#biome)                                     |
-| `planetDiscoveredOn` | [`LocationId`](README.md#locationid)                           |
-| `rarity`             | [`ArtifactRarity`](README.md#artifactrarity)                   |
-| `timeDelayedUpgrade` | [`Upgrade`](README.md#upgrade)                                 |
-| `transactions?`      | [`TransactionCollection`](interfaces/TransactionCollection.md) |
-| `upgrade`            | [`Upgrade`](README.md#upgrade)                                 |
-| `wormholeTo?`        | [`LocationId`](README.md#locationid)                           |
+| Name                 | Type                  |
+| :------------------- | :-------------------- |
+| `activations`        | number                |
+| `artifactType`       | ArtifactType          |
+| `controller`         | EthAddress            |
+| `currentOwner`       | EthAddress            |
+| `discoverer`         | EthAddress            |
+| `id`                 | ArtifactId            |
+| `isInititalized`     | boolean               |
+| `lastActivated`      | number                |
+| `lastDeactivated`    | number                |
+| `mintedAtTimestamp`  | number                |
+| `onPlanetId?`        | LocationId            |
+| `onVoyageId?`        | VoyageId              |
+| `planetBiome`        | Biome                 |
+| `planetDiscoveredOn` | LocationId            |
+| `rarity`             | ArtifactRarity        |
+| `timeDelayedUpgrade` | Upgrade               |
+| `transactions?`      | TransactionCollection |
+| `upgrade`            | Upgrade               |
+| `wormholeTo?`        | LocationId            |
 
 ---
 
 ### ArtifactId
 
-Ƭ **ArtifactId**: [`Abstract`](README.md#abstract)<`string`, `"ArtifactId"`\>
+Ƭ **ArtifactId**: Abstract<string, "ArtifactId"\>
 
 A unique identifier for a Dark Forest NFT artifact. This is a 64-character
 lowercase hex string not prefixed with 0x. ArtifactIDs should only be
@@ -273,19 +822,19 @@ in `serde`.
 
 ### ArtifactPointValues
 
-Ƭ **ArtifactPointValues**: `Object`
+Ƭ **ArtifactPointValues**: Object
 
 mapping from ArtifactRarity to points earned for finding this artifact.
 
 #### Index signature
 
-▪ [ArtifactRarity: `number`]: `number`
+▪ [ArtifactRarity: number]: number
 
 ---
 
 ### ArtifactRarity
 
-Ƭ **ArtifactRarity**: [`Abstract`](README.md#abstract)<`number`, `"ArtifactRarity"`\>
+Ƭ **ArtifactRarity**: Abstract<number, "ArtifactRarity"\>
 
 Abstract type representing an artifact rarity level.
 
@@ -293,7 +842,7 @@ Abstract type representing an artifact rarity level.
 
 ### ArtifactType
 
-Ƭ **ArtifactType**: [`Abstract`](README.md#abstract)<`number`, `"ArtifactType"`\>
+Ƭ **ArtifactType**: Abstract<number, "ArtifactType"\>
 
 Abstract type representing an artifact type.
 
@@ -305,24 +854,24 @@ Abstract type representing an artifact type.
 
 #### Type declaration
 
-| Name        | Type                                 |
-| :---------- | :----------------------------------- |
-| `dim`       | `number`                             |
-| `name`      | `string`                             |
-| `normalize` | `boolean`                            |
-| `type`      | [`AttribType`](README.md#attribtype) |
+| Name        | Type       |
+| :---------- | :--------- |
+| `dim`       | number     |
+| `name`      | string     |
+| `normalize` | boolean    |
+| `type`      | AttribType |
 
 ---
 
 ### AttribType
 
-Ƭ **AttribType**: [`Abstract`](README.md#abstract)<`number`, `"AttribType"`\>
+Ƭ **AttribType**: Abstract<number, "AttribType"\>
 
 ---
 
 ### AutoGasSetting
 
-Ƭ **AutoGasSetting**: [`Abstract`](README.md#abstract)<`string`, `"AutoGasSetting"`\>
+Ƭ **AutoGasSetting**: Abstract<string, "AutoGasSetting"\>
 
 The user can choose to have the client automatically choose a gas price for their transactions,
 depending on how much they are willing to pay and how fast they want their transactions to confirm.
@@ -331,9 +880,17 @@ depending on how much they are willing to pay and how fast they want their trans
 
 ### Biome
 
-Ƭ **Biome**: [`Abstract`](README.md#abstract)<`number`, `"Biome"`\>
+Ƭ **Biome**: Abstract<number, "Biome"\>
 
 Abstract type representing a biome.
+
+---
+
+### BlocklistMap
+
+Ƭ **BlocklistMap**: Map<LocationId, Map<LocationId, boolean\>\>
+
+Blocks move from one planet to another
 
 ---
 
@@ -343,16 +900,16 @@ Abstract type representing a biome.
 
 #### Type declaration
 
-| Name     | Type                                   |
-| :------- | :------------------------------------- |
-| `coords` | [`WorldCoords`](README.md#worldcoords) |
-| `radius` | `number`                               |
+| Name     | Type        |
+| :------- | :---------- |
+| `coords` | WorldCoords |
+| `radius` | number      |
 
 ---
 
 ### ClaimedCoords
 
-Ƭ **ClaimedCoords**: [`WorldCoords`](README.md#worldcoords) & { `hash`: [`LocationId`](README.md#locationid) ; `revealer`: [`EthAddress`](README.md#ethaddress) ; `score`: `number` }
+Ƭ **ClaimedCoords**: WorldCoords & Object
 
 Represents a planet location that has been broadcast on-chain
 
@@ -360,31 +917,25 @@ Represents a planet location that has been broadcast on-chain
 
 ### ClaimedLocation
 
-Ƭ **ClaimedLocation**: [`WorldLocation`](README.md#worldlocation) & { `revealer`: [`EthAddress`](README.md#ethaddress) }
-
----
-
-### ContractMethodName
-
-Ƭ **ContractMethodName**: `"revealLocation"` \| `"initializePlayer"` \| `"move"` \| `"upgradePlanet"` \| `"buyHat"` \| `"transferPlanet"` \| `"findArtifact"` \| `"prospectPlanet"` \| `"depositArtifact"` \| `"withdrawArtifact"` \| `"activateArtifact"` \| `"deactivateArtifact"` \| `"withdrawSilver"` \| `"useKey"` \| `"adminUseKey"` \| `"addKeys"` \| `"giveSpaceShips"` \| `"createLobby"` \| `"invadePlanet"` \| `"capturePlanet"`
+Ƭ **ClaimedLocation**: WorldLocation & Object
 
 ---
 
 ### CursorState
 
-Ƭ **CursorState**: [`Abstract`](README.md#abstract)<`string`, `"CursorState"`\>
+Ƭ **CursorState**: Abstract<string, "CursorState"\>
 
 ---
 
 ### DrawMode
 
-Ƭ **DrawMode**: [`Abstract`](README.md#abstract)<`number`, `"DrawMode"`\>
+Ƭ **DrawMode**: Abstract<number, "DrawMode"\>
 
 ---
 
 ### EthAddress
 
-Ƭ **EthAddress**: [`Abstract`](README.md#abstract)<`string`, `"EthAddress"`\>
+Ƭ **EthAddress**: Abstract<string, "EthAddress"\>
 
 This is expected to be a 40-character, lowercase hex string, prefixed with 0x
 (so 42 characters in total). EthAddress should only ever be instantiated
@@ -394,25 +945,73 @@ through the `address` function in `serde`.
 
 ### EthTxStatus
 
-Ƭ **EthTxStatus**: `"Init"` \| `"Processing"` \| `"Prioritized"` \| `"Submit"` \| `"Confirm"` \| `"Fail"` \| `"Cancel"`
+Ƭ **EthTxStatus**: "Init" \| "Processing" \| "Prioritized" \| "Submit" \| "Confirm" \| "Fail" \| "Cancel"
+
+---
+
+### ExactArray10
+
+Ƭ **ExactArray10**: [A, A, A, A, A, A, A, A, A, A]
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+---
+
+### ExactArray4
+
+Ƭ **ExactArray4**: [A, A, A, A]
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+---
+
+### ExactArray5
+
+Ƭ **ExactArray5**: [A, A, A, A, A]
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+---
+
+### ExactArray8
+
+Ƭ **ExactArray8**: [A, A, A, A, A, A, A, A]
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
 
 ---
 
 ### HSLVec
 
-Ƭ **HSLVec**: readonly [`number`, `number`, `number`]
+Ƭ **HSLVec**: readonly [number, number, number]
 
 ---
 
 ### HatType
 
-Ƭ **HatType**: [`Abstract`](README.md#abstract)<`string`, `"HatType"`\>
+Ƭ **HatType**: Abstract<string, "HatType"\>
 
 ---
 
 ### LocatablePlanet
 
-Ƭ **LocatablePlanet**: [`Planet`](README.md#planet) & { `biome`: [`Biome`](README.md#biome) ; `location`: [`WorldLocation`](README.md#worldlocation) }
+Ƭ **LocatablePlanet**: Planet & Object
 
 A planet whose coordinates are known to the client.
 
@@ -420,7 +1019,7 @@ A planet whose coordinates are known to the client.
 
 ### LocationId
 
-Ƭ **LocationId**: [`Abstract`](README.md#abstract)<`string`, `"LocationId"`\>
+Ƭ **LocationId**: Abstract<string, "LocationId"\>
 
 a unique identifier for a location in the universe (corresponding to some
 underlying coordinates (x, y)). This is a 64-character lowercase hex string
@@ -432,7 +1031,7 @@ not prefixed with 0x. LocationIDs should only be instantiated through
 
 ### ModalId
 
-Ƭ **ModalId**: [`ModalName`](README.md#modalname) \| [`PluginId`](README.md#pluginid)
+Ƭ **ModalId**: ModalName \| PluginId
 
 Modals can either be built into the game, or spawned by a plugin.
 
@@ -440,13 +1039,13 @@ Modals can either be built into the game, or spawned by a plugin.
 
 ### ModalManagerEvent
 
-Ƭ **ModalManagerEvent**: [`Abstract`](README.md#abstract)<`string`, `"ModalManagerEvent"`\>
+Ƭ **ModalManagerEvent**: Abstract<string, "ModalManagerEvent"\>
 
 ---
 
 ### ModalName
 
-Ƭ **ModalName**: [`Abstract`](README.md#abstract)<`string`, `"ModalName"`\>
+Ƭ **ModalName**: Abstract<string, "ModalName"\>
 
 Modals built into the game have a human-readable name.
 
@@ -454,7 +1053,13 @@ Modals built into the game have a human-readable name.
 
 ### ModalPositions
 
-Ƭ **ModalPositions**: `Map`<[`ModalId`](README.md#modalid), [`ModalPosition`](interfaces/ModalPosition.md)\>
+Ƭ **ModalPositions**: Map<ModalId, ModalPosition\>
+
+---
+
+### ModifierType
+
+Ƭ **ModifierType**: Abstract<number, "ModifierType"\>
 
 ---
 
@@ -464,18 +1069,18 @@ Modals built into the game have a human-readable name.
 
 #### Type declaration
 
-| Name          | Type             |
-| :------------ | :--------------- |
-| `attributes`  | `NFTAttribute`[] |
-| `description` | `string`         |
-| `image`       | `string`         |
-| `name`        | `string`         |
+| Name          | Type           |
+| :------------ | :------------- |
+| `attributes`  | NFTAttribute[] |
+| `description` | string         |
+| `image`       | string         |
+| `name`        | string         |
 
 ---
 
 ### NetworkHealthSummary
 
-Ƭ **NetworkHealthSummary**: [[`AutoGasSetting`](README.md#autogassetting), `number`][]
+Ƭ **NetworkHealthSummary**: [AutoGasSetting, number][]
 
 On the server we keep track of how fast each auto gas setting confirms in practice.
 
@@ -496,60 +1101,63 @@ DarkForest contract (or even any collection of objects).
 
 #### Type declaration
 
-| Name                      | Type                                                               |
-| :------------------------ | :----------------------------------------------------------------- |
-| `bonus`                   | [`PlanetBonus`](README.md#planetbonus)                             |
-| `capturer?`               | [`EthAddress`](README.md#ethaddress)                               |
-| `claimer?`                | [`EthAddress`](README.md#ethaddress)                               |
-| `coordsRevealed`          | `boolean`                                                          |
-| `defense`                 | `number`                                                           |
-| `destroyed`               | `boolean`                                                          |
-| `emojiBobAnimation?`      | [`DFAnimation`](classes/DFAnimation.md)                            |
-| `emojiZoopAnimation?`     | [`DFAnimation`](classes/DFAnimation.md)                            |
-| `emojiZoopOutAnimation?`  | [`DFStatefulAnimation`](classes/DFStatefulAnimation.md)<`string`\> |
-| `energy`                  | `number`                                                           |
-| `energyCap`               | `number`                                                           |
-| `energyGrowth`            | `number`                                                           |
-| `hasTriedFindingArtifact` | `boolean`                                                          |
-| `hatLevel`                | `number`                                                           |
-| `heldArtifactIds`         | [`ArtifactId`](README.md#artifactid)[]                             |
-| `invadeStartBlock?`       | `number`                                                           |
-| `invader?`                | [`EthAddress`](README.md#ethaddress)                               |
-| `isHomePlanet`            | `boolean`                                                          |
-| `isInContract`            | `boolean`                                                          |
-| `lastLoadedServerState?`  | `number`                                                           |
-| `lastUpdated`             | `number`                                                           |
-| `loadingServerState`      | `boolean`                                                          |
-| `localPhotoidUpgrade?`    | [`Upgrade`](README.md#upgrade)                                     |
-| `locationId`              | [`LocationId`](README.md#locationid)                               |
-| `messages?`               | [`PlanetMessage`](interfaces/PlanetMessage.md)<`unknown`\>[]       |
-| `needsServerRefresh`      | `boolean`                                                          |
-| `owner`                   | [`EthAddress`](README.md#ethaddress)                               |
-| `pausers`                 | `number`                                                           |
-| `perlin`                  | `number`                                                           |
-| `planetLevel`             | [`PlanetLevel`](README.md#planetlevel)                             |
-| `planetType`              | [`PlanetType`](README.md#planettype)                               |
-| `prospectedBlockNumber?`  | `number`                                                           |
-| `range`                   | `number`                                                           |
-| `revealer?`               | [`EthAddress`](README.md#ethaddress)                               |
-| `silver`                  | `number`                                                           |
-| `silverCap`               | `number`                                                           |
-| `silverGrowth`            | `number`                                                           |
-| `silverSpent`             | `number`                                                           |
-| `spaceJunk`               | `number`                                                           |
-| `spaceType`               | [`SpaceType`](README.md#spacetype)                                 |
-| `speed`                   | `number`                                                           |
-| `syncedWithContract`      | `boolean`                                                          |
-| `transactions?`           | [`TransactionCollection`](interfaces/TransactionCollection.md)     |
-| `unconfirmedAddEmoji`     | `boolean`                                                          |
-| `unconfirmedClearEmoji`   | `boolean`                                                          |
-| `upgradeState`            | [`UpgradeState`](README.md#upgradestate)                           |
+| Name                      | Type                         |
+| :------------------------ | :--------------------------- |
+| `blockedPlanetIds`        | LocationId[]                 |
+| `bonus`                   | PlanetBonus                  |
+| `capturer?`               | EthAddress                   |
+| `claimer?`                | EthAddress                   |
+| `coordsRevealed`          | boolean                      |
+| `defense`                 | number                       |
+| `destroyed`               | boolean                      |
+| `emojiBobAnimation?`      | DFAnimation                  |
+| `emojiZoopAnimation?`     | DFAnimation                  |
+| `emojiZoopOutAnimation?`  | DFStatefulAnimation<string\> |
+| `energy`                  | number                       |
+| `energyCap`               | number                       |
+| `energyGrowth`            | number                       |
+| `hasTriedFindingArtifact` | boolean                      |
+| `hatLevel`                | number                       |
+| `heldArtifactIds`         | ArtifactId[]                 |
+| `invadeStartBlock?`       | number                       |
+| `invader?`                | EthAddress                   |
+| `isHomePlanet`            | boolean                      |
+| `isInContract`            | boolean                      |
+| `isSpawnPlanet`           | boolean                      |
+| `isTargetPlanet`          | boolean                      |
+| `lastLoadedServerState?`  | number                       |
+| `lastUpdated`             | number                       |
+| `loadingServerState`      | boolean                      |
+| `localPhotoidUpgrade?`    | Upgrade                      |
+| `locationId`              | LocationId                   |
+| `messages?`               | PlanetMessage<unknown\>[]    |
+| `needsServerRefresh`      | boolean                      |
+| `owner`                   | EthAddress                   |
+| `pausers`                 | number                       |
+| `perlin`                  | number                       |
+| `planetLevel`             | PlanetLevel                  |
+| `planetType`              | PlanetType                   |
+| `prospectedBlockNumber?`  | number                       |
+| `range`                   | number                       |
+| `revealer?`               | EthAddress                   |
+| `silver`                  | number                       |
+| `silverCap`               | number                       |
+| `silverGrowth`            | number                       |
+| `silverSpent`             | number                       |
+| `spaceJunk`               | number                       |
+| `spaceType`               | SpaceType                    |
+| `speed`                   | number                       |
+| `syncedWithContract`      | boolean                      |
+| `transactions?`           | TransactionCollection        |
+| `unconfirmedAddEmoji`     | boolean                      |
+| `unconfirmedClearEmoji`   | boolean                      |
+| `upgradeState`            | UpgradeState                 |
 
 ---
 
 ### PlanetBonus
 
-Ƭ **PlanetBonus**: [`boolean`, `boolean`, `boolean`, `boolean`, `boolean`, `boolean`]
+Ƭ **PlanetBonus**: [boolean, boolean, boolean, boolean, boolean, boolean]
 
 A list of five flags, indicating whether the planet has an attached comet
 doubling each of five stats: (in order) [energyCap, energyGrowth, range,
@@ -559,7 +1167,7 @@ speed, defense]
 
 ### PlanetLevel
 
-Ƭ **PlanetLevel**: [`Abstract`](README.md#abstract)<`number`, `"PlanetLevel"`\>
+Ƭ **PlanetLevel**: Abstract<number, "PlanetLevel"\>
 
 Abstract type representing a planet level.
 
@@ -567,7 +1175,7 @@ Abstract type representing a planet level.
 
 ### PlanetMessageBody
 
-Ƭ **PlanetMessageBody**: [`EmojiFlagBody`](interfaces/EmojiFlagBody.md) \| `unknown`
+Ƭ **PlanetMessageBody**: EmojiFlagBody \| unknown
 
 Thinking about future message types.
 
@@ -575,7 +1183,7 @@ Thinking about future message types.
 
 ### PlanetMessageType
 
-Ƭ **PlanetMessageType**: [`Abstract`](README.md#abstract)<`string`, `"PlanetMessageType"`\>
+Ƭ **PlanetMessageType**: Abstract<string, "PlanetMessageType"\>
 
 Abstract type representing a type of planet message.
 
@@ -583,7 +1191,7 @@ Abstract type representing a type of planet message.
 
 ### PlanetType
 
-Ƭ **PlanetType**: [`Abstract`](README.md#abstract)<`number`, `"PlanetType"`\>
+Ƭ **PlanetType**: Abstract<number, "PlanetType"\>
 
 Abstract type representing a planet type.
 
@@ -598,36 +1206,39 @@ struct
 
 #### Type declaration
 
-| Name                  | Type                                 | Description          |
-| :-------------------- | :----------------------------------- | :------------------- |
-| `address`             | [`EthAddress`](README.md#ethaddress) | -                    |
-| `claimedShips`        | `boolean`                            | -                    |
-| `homePlanetId`        | [`LocationId`](README.md#locationid) | -                    |
-| `initTimestamp`       | `number`                             | seconds (not millis) |
-| `lastClaimTimestamp`  | `number`                             | -                    |
-| `lastRevealTimestamp` | `number`                             | seconds (not millis) |
-| `score`               | `number`                             | -                    |
-| `spaceJunk`           | `number`                             | -                    |
-| `spaceJunkLimit`      | `number`                             | -                    |
-| `twitter?`            | `string`                             | -                    |
+| Name                  | Type       | Description          |
+| :-------------------- | :--------- | :------------------- |
+| `address`             | EthAddress | -                    |
+| `claimedShips`        | boolean    | -                    |
+| `homePlanetId`        | LocationId | -                    |
+| `initTimestamp`       | number     | seconds (not millis) |
+| `lastClaimTimestamp`  | number     | -                    |
+| `lastRevealTimestamp` | number     | seconds (not millis) |
+| `moves`               | number     | -                    |
+| `ready`               | boolean    | -                    |
+| `score`               | number     | -                    |
+| `spaceJunk`           | number     | -                    |
+| `spaceJunkLimit`      | number     | -                    |
+| `team`                | number     | -                    |
+| `twitter?`            | string     | -                    |
 
 ---
 
 ### PluginId
 
-Ƭ **PluginId**: [`Abstract`](README.md#abstract)<`string`, `"PluginId"`\>
+Ƭ **PluginId**: Abstract<string, "PluginId"\>
 
 ---
 
 ### RGBAVec
 
-Ƭ **RGBAVec**: [`number`, `number`, `number`, `number`]
+Ƭ **RGBAVec**: [number, number, number, number]
 
 ---
 
 ### RGBVec
 
-Ƭ **RGBVec**: [`number`, `number`, `number`]
+Ƭ **RGBVec**: [number, number, number]
 
 ---
 
@@ -637,17 +1248,17 @@ struct
 
 #### Type declaration
 
-| Name         | Type      |
-| :----------- | :-------- |
-| `error?`     | `string`  |
-| `inProgress` | `boolean` |
-| `success?`   | `boolean` |
+| Name         | Type    |
+| :----------- | :------ |
+| `error?`     | string  |
+| `inProgress` | boolean |
+| `success?`   | boolean |
 
 ---
 
 ### RenderZIndex
 
-Ƭ **RenderZIndex**: [`Abstract`](README.md#abstract)<`number`, `"RenderZIndex"`\>
+Ƭ **RenderZIndex**: Abstract<number, "RenderZIndex"\>
 
 ---
 
@@ -657,18 +1268,18 @@ struct
 
 #### Type declaration
 
-| Name             | Type                                                           |
-| :--------------- | :------------------------------------------------------------- |
-| `attribs`        | { `[key: string]`: [`AttribProps`](README.md#attribprops); }   |
-| `fragmentShader` | `string`                                                       |
-| `uniforms`       | { `[key: string]`: [`UniformProps`](README.md#uniformprops); } |
-| `vertexShader`   | `string`                                                       |
+| Name             | Type   |
+| :--------------- | :----- |
+| `attribs`        | Object |
+| `fragmentShader` | string |
+| `uniforms`       | Object |
+| `vertexShader`   | string |
 
 ---
 
 ### RendererType
 
-Ƭ **RendererType**: [`Abstract`](README.md#abstract)<`number`, `"RendererType"`\>
+Ƭ **RendererType**: Abstract<number, "RendererType"\>
 
 Enum for determining the type of renderer
 Each renderer should contain a variable called 'rendererType'
@@ -678,7 +1289,7 @@ Each renderer should contain a variable called 'rendererType'
 
 ### RevealedCoords
 
-Ƭ **RevealedCoords**: [`WorldCoords`](README.md#worldcoords) & { `hash`: [`LocationId`](README.md#locationid) ; `revealer`: [`EthAddress`](README.md#ethaddress) }
+Ƭ **RevealedCoords**: WorldCoords & Object
 
 Represents a planet location that has been broadcast on-chain
 
@@ -686,17 +1297,17 @@ Represents a planet location that has been broadcast on-chain
 
 ### RevealedLocation
 
-Ƭ **RevealedLocation**: [`WorldLocation`](README.md#worldlocation) & { `revealer`: [`EthAddress`](README.md#ethaddress) }
+Ƭ **RevealedLocation**: WorldLocation & Object
 
 ---
 
 ### RuinsInfo
 
-Ƭ **RuinsInfo**: `Object`
+Ƭ **RuinsInfo**: Object
 
 #### Index signature
 
-▪ [PlanetLevel: `number`]: { `props`: [`number`, `number`, `number`, `number`] ; `weights`: [`number`, `number`, `number`, `number`] }
+▪ [PlanetLevel: number]: Object
 
 ---
 
@@ -706,16 +1317,16 @@ Represents a planet location that has been broadcast on-chain
 
 #### Type declaration
 
-| Name | Type     |
-| :--- | :------- |
-| `x`  | `number` |
-| `y`  | `number` |
+| Name | Type   |
+| :--- | :----- |
+| `x`  | number |
+| `y`  | number |
 
 ---
 
 ### Setting
 
-Ƭ **Setting**: [`Abstract`](README.md#abstract)<`string`, `"Setting"`\>
+Ƭ **Setting**: Abstract<string, "Setting"\>
 
 ---
 
@@ -725,45 +1336,51 @@ Represents a planet location that has been broadcast on-chain
 
 #### Type declaration
 
-| Name                | Type     |
-| :------------------ | :------- |
-| `deadSpaceColor?`   | `string` |
-| `deepSpaceColor?`   | `string` |
-| `innerNebulaColor?` | `string` |
-| `nebulaColor?`      | `string` |
-| `spaceColor?`       | `string` |
+| Name                | Type   |
+| :------------------ | :----- |
+| `deadSpaceColor?`   | string |
+| `deepSpaceColor?`   | string |
+| `innerNebulaColor?` | string |
+| `nebulaColor?`      | string |
+| `spaceColor?`       | string |
 
 ---
 
 ### SpaceType
 
-Ƭ **SpaceType**: [`Abstract`](README.md#abstract)<`number`, `"SpaceType"`\>
+Ƭ **SpaceType**: Abstract<number, "SpaceType"\>
 
 Abstract type representing a type of space.
 
 ---
 
+### SpaceshipType
+
+Ƭ **SpaceshipType**: Abstract<number, "SpaceshipType"\>
+
+---
+
 ### TextAlign
 
-Ƭ **TextAlign**: [`Abstract`](README.md#abstract)<`number`, `"TextAlign"`\>
+Ƭ **TextAlign**: Abstract<number, "TextAlign"\>
 
 ---
 
 ### TextAnchor
 
-Ƭ **TextAnchor**: [`Abstract`](README.md#abstract)<`number`, `"TextAnchor"`\>
+Ƭ **TextAnchor**: Abstract<number, "TextAnchor"\>
 
 ---
 
 ### TooltipName
 
-Ƭ **TooltipName**: [`Abstract`](README.md#abstract)<`string`, `"TooltipName"`\>
+Ƭ **TooltipName**: Abstract<string, "TooltipName"\>
 
 ---
 
 ### TransactionId
 
-Ƭ **TransactionId**: `number`
+Ƭ **TransactionId**: number
 
 A unique incrementing number that identifies a transaction.
 
@@ -775,16 +1392,28 @@ A unique incrementing number that identifies a transaction.
 
 #### Type declaration
 
-| Name | Type     |
-| :--- | :------- |
-| `x`  | `number` |
-| `y`  | `number` |
+| Name | Type   |
+| :--- | :----- |
+| `x`  | number |
+| `y`  | number |
+
+---
+
+### Tuple6
+
+Ƭ **Tuple6**: [A, A, A, A, A, A]
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
 
 ---
 
 ### UniformJSType
 
-Ƭ **UniformJSType**: `mat4` \| `mat3` \| `number` \| [`Vec3`](README.md#vec3)
+Ƭ **UniformJSType**: mat4 \| mat3 \| number \| Vec3
 
 ---
 
@@ -794,16 +1423,16 @@ A unique incrementing number that identifies a transaction.
 
 #### Type declaration
 
-| Name   | Type                                   |
-| :----- | :------------------------------------- |
-| `name` | `string`                               |
-| `type` | [`UniformType`](README.md#uniformtype) |
+| Name   | Type        |
+| :----- | :---------- |
+| `name` | string      |
+| `type` | UniformType |
 
 ---
 
 ### UniformType
 
-Ƭ **UniformType**: [`Abstract`](README.md#abstract)<`number`, `"UniformType"`\>
+Ƭ **UniformType**: Abstract<number, "UniformType"\>
 
 ---
 
@@ -817,19 +1446,19 @@ planet.
 
 #### Type declaration
 
-| Name                  | Type     |
-| :-------------------- | :------- |
-| `defMultiplier`       | `number` |
-| `energyCapMultiplier` | `number` |
-| `energyGroMultiplier` | `number` |
-| `rangeMultiplier`     | `number` |
-| `speedMultiplier`     | `number` |
+| Name                  | Type   |
+| :-------------------- | :----- |
+| `defMultiplier`       | number |
+| `energyCapMultiplier` | number |
+| `energyGroMultiplier` | number |
+| `rangeMultiplier`     | number |
+| `speedMultiplier`     | number |
 
 ---
 
 ### UpgradeBranchName
 
-Ƭ **UpgradeBranchName**: [`Abstract`](README.md#abstract)<`number`, `"UpgradeBranchName"`\>
+Ƭ **UpgradeBranchName**: Abstract<number, "UpgradeBranchName"\>
 
 Abstract type representing an upgrade branch.
 
@@ -837,7 +1466,7 @@ Abstract type representing an upgrade branch.
 
 ### UpgradeBranches
 
-Ƭ **UpgradeBranches**: [[`UpgradeLevels`](README.md#upgradelevels), [`UpgradeLevels`](README.md#upgradelevels), [`UpgradeLevels`](README.md#upgradelevels)]
+Ƭ **UpgradeBranches**: [UpgradeLevels, UpgradeLevels, UpgradeLevels]
 
 Stores the stat effects of upgrades of all three branches: defense, range,
 speed.
@@ -846,7 +1475,7 @@ speed.
 
 ### UpgradeLevels
 
-Ƭ **UpgradeLevels**: [[`Upgrade`](README.md#upgrade), [`Upgrade`](README.md#upgrade), [`Upgrade`](README.md#upgrade), [`Upgrade`](README.md#upgrade)]
+Ƭ **UpgradeLevels**: [Upgrade, Upgrade, Upgrade, Upgrade]
 
 On a single upgrade branch, the stat effects of the four upgrades.
 
@@ -854,7 +1483,7 @@ On a single upgrade branch, the stat effects of the four upgrades.
 
 ### UpgradeState
 
-Ƭ **UpgradeState**: [`number`, `number`, `number`]
+Ƭ **UpgradeState**: [number, number, number]
 
 How many times a planet has been upgraded along each of the three branches:
 defense, range, and speed
@@ -863,13 +1492,13 @@ defense, range, and speed
 
 ### Vec3
 
-Ƭ **Vec3**: [`number`, `number`, `number`]
+Ƭ **Vec3**: [number, number, number]
 
 ---
 
 ### VoyageId
 
-Ƭ **VoyageId**: [`Abstract`](README.md#abstract)<`string`, `"VoyageId"`\>
+Ƭ **VoyageId**: Abstract<string, "VoyageId"\>
 
 a voyage UID. these start at 1 and auto-increment in the contract. this is
 immutable and the only place a VoyageId should ever be created is on
@@ -883,12 +1512,12 @@ initial deserialization of a QueuedArrival from contract data (see `serde`)
 
 #### Type declaration
 
-| Name          | Type      | Description                                                        |
-| :------------ | :-------- | :----------------------------------------------------------------- |
-| `failedAt?`   | `string`  | Failure timestamp.                                                 |
-| `position?`   | `string`  | The address' position in the queue.                                |
-| `txHash?`     | `string`  | If successful, the hash of the whitelist registration transaction. |
-| `whitelisted` | `boolean` | -                                                                  |
+| Name          | Type    | Description                                                        |
+| :------------ | :------ | :----------------------------------------------------------------- |
+| `failedAt?`   | string  | Failure timestamp.                                                 |
+| `position?`   | string  | The address' position in the queue.                                |
+| `txHash?`     | string  | If successful, the hash of the whitelist registration transaction. |
+| `whitelisted` | boolean | -                                                                  |
 
 ---
 
@@ -900,10 +1529,10 @@ Represents the coordinates of a location in the world.
 
 #### Type declaration
 
-| Name | Type     |
-| :--- | :------- |
-| `x`  | `number` |
-| `y`  | `number` |
+| Name | Type   |
+| :--- | :----- |
+| `x`  | number |
+| `y`  | number |
 
 ---
 
@@ -918,12 +1547,12 @@ these coordinates, and the biomebase perlin value at these coordinates
 
 #### Type declaration
 
-| Name        | Type                                   |
-| :---------- | :------------------------------------- |
-| `biomebase` | `number`                               |
-| `coords`    | [`WorldCoords`](README.md#worldcoords) |
-| `hash`      | [`LocationId`](README.md#locationid)   |
-| `perlin`    | `number`                               |
+| Name        | Type        |
+| :---------- | :---------- |
+| `biomebase` | number      |
+| `coords`    | WorldCoords |
+| `hash`      | LocationId  |
+| `perlin`    | number      |
 
 ---
 
@@ -933,10 +1562,10 @@ these coordinates, and the biomebase perlin value at these coordinates
 
 #### Type declaration
 
-| Name   | Type                                 |
-| :----- | :----------------------------------- |
-| `from` | [`LocationId`](README.md#locationid) |
-| `to`   | [`LocationId`](README.md#locationid) |
+| Name   | Type       |
+| :----- | :--------- |
+| `from` | LocationId |
+| `to`   | LocationId |
 
 ## Variables
 
@@ -948,12 +1577,12 @@ Enumeration of arrival types.
 
 #### Type declaration
 
-| Name       | Type                                   |
-| :--------- | :------------------------------------- |
-| `Normal`   | [`ArrivalType`](README.md#arrivaltype) |
-| `Photoid`  | [`ArrivalType`](README.md#arrivaltype) |
-| `Unknown`  | [`ArrivalType`](README.md#arrivaltype) |
-| `Wormhole` | [`ArrivalType`](README.md#arrivaltype) |
+| Name       | Type        |
+| :--------- | :---------- |
+| `Normal`   | ArrivalType |
+| `Photoid`  | ArrivalType |
+| `Unknown`  | ArrivalType |
+| `Wormhole` | ArrivalType |
 
 ---
 
@@ -965,20 +1594,20 @@ Enumeration of artifact rarity levels. Common = 1, Mythic = 5
 
 #### Type declaration
 
-| Name        | Type                                         |
-| :---------- | :------------------------------------------- |
-| `Common`    | [`ArtifactRarity`](README.md#artifactrarity) |
-| `Epic`      | [`ArtifactRarity`](README.md#artifactrarity) |
-| `Legendary` | [`ArtifactRarity`](README.md#artifactrarity) |
-| `Mythic`    | [`ArtifactRarity`](README.md#artifactrarity) |
-| `Rare`      | [`ArtifactRarity`](README.md#artifactrarity) |
-| `Unknown`   | [`ArtifactRarity`](README.md#artifactrarity) |
+| Name        | Type           |
+| :---------- | :------------- |
+| `Common`    | ArtifactRarity |
+| `Epic`      | ArtifactRarity |
+| `Legendary` | ArtifactRarity |
+| `Mythic`    | ArtifactRarity |
+| `Rare`      | ArtifactRarity |
+| `Unknown`   | ArtifactRarity |
 
 ---
 
 ### ArtifactRarityNames
 
-• `Const` **ArtifactRarityNames**: `Object`
+• `Const` **ArtifactRarityNames**: Object
 
 Mapping from ArtifactRarity to pretty-printed names.
 
@@ -992,29 +1621,29 @@ Enumeration of artifact types.
 
 #### Type declaration
 
-| Name              | Type                                     |
-| :---------------- | :--------------------------------------- |
-| `BlackDomain`     | [`ArtifactType`](README.md#artifacttype) |
-| `BloomFilter`     | [`ArtifactType`](README.md#artifacttype) |
-| `Colossus`        | [`ArtifactType`](README.md#artifacttype) |
-| `Monolith`        | [`ArtifactType`](README.md#artifacttype) |
-| `PhotoidCannon`   | [`ArtifactType`](README.md#artifacttype) |
-| `PlanetaryShield` | [`ArtifactType`](README.md#artifacttype) |
-| `Pyramid`         | [`ArtifactType`](README.md#artifacttype) |
-| `ShipCrescent`    | [`ArtifactType`](README.md#artifacttype) |
-| `ShipGear`        | [`ArtifactType`](README.md#artifacttype) |
-| `ShipMothership`  | [`ArtifactType`](README.md#artifacttype) |
-| `ShipTitan`       | [`ArtifactType`](README.md#artifacttype) |
-| `ShipWhale`       | [`ArtifactType`](README.md#artifacttype) |
-| `Spaceship`       | [`ArtifactType`](README.md#artifacttype) |
-| `Unknown`         | [`ArtifactType`](README.md#artifacttype) |
-| `Wormhole`        | [`ArtifactType`](README.md#artifacttype) |
+| Name              | Type         |
+| :---------------- | :----------- |
+| `BlackDomain`     | ArtifactType |
+| `BloomFilter`     | ArtifactType |
+| `Colossus`        | ArtifactType |
+| `Monolith`        | ArtifactType |
+| `PhotoidCannon`   | ArtifactType |
+| `PlanetaryShield` | ArtifactType |
+| `Pyramid`         | ArtifactType |
+| `ShipCrescent`    | ArtifactType |
+| `ShipGear`        | ArtifactType |
+| `ShipMothership`  | ArtifactType |
+| `ShipTitan`       | ArtifactType |
+| `ShipWhale`       | ArtifactType |
+| `Spaceship`       | ArtifactType |
+| `Unknown`         | ArtifactType |
+| `Wormhole`        | ArtifactType |
 
 ---
 
 ### ArtifactTypeNames
 
-• `Const` **ArtifactTypeNames**: `Object`
+• `Const` **ArtifactTypeNames**: Object
 
 Mapping from ArtifactType to pretty-printed names.
 
@@ -1026,10 +1655,10 @@ Mapping from ArtifactType to pretty-printed names.
 
 #### Type declaration
 
-| Name    | Type                                 |
-| :------ | :----------------------------------- |
-| `Float` | [`AttribType`](README.md#attribtype) |
-| `UByte` | [`AttribType`](README.md#attribtype) |
+| Name    | Type       |
+| :------ | :--------- |
+| `Float` | AttribType |
+| `UByte` | AttribType |
 
 ---
 
@@ -1039,11 +1668,11 @@ Mapping from ArtifactType to pretty-printed names.
 
 #### Type declaration
 
-| Name      | Type                                         |
-| :-------- | :------------------------------------------- |
-| `Average` | [`AutoGasSetting`](README.md#autogassetting) |
-| `Fast`    | [`AutoGasSetting`](README.md#autogassetting) |
-| `Slow`    | [`AutoGasSetting`](README.md#autogassetting) |
+| Name      | Type           |
+| :-------- | :------------- |
+| `Average` | AutoGasSetting |
+| `Fast`    | AutoGasSetting |
+| `Slow`    | AutoGasSetting |
 
 ---
 
@@ -1055,25 +1684,25 @@ Enumeration of the biomes in the game. OCEAN = 1, CORRUPTED = 10
 
 #### Type declaration
 
-| Name        | Type                       |
-| :---------- | :------------------------- |
-| `CORRUPTED` | [`Biome`](README.md#biome) |
-| `DESERT`    | [`Biome`](README.md#biome) |
-| `FOREST`    | [`Biome`](README.md#biome) |
-| `GRASSLAND` | [`Biome`](README.md#biome) |
-| `ICE`       | [`Biome`](README.md#biome) |
-| `LAVA`      | [`Biome`](README.md#biome) |
-| `OCEAN`     | [`Biome`](README.md#biome) |
-| `SWAMP`     | [`Biome`](README.md#biome) |
-| `TUNDRA`    | [`Biome`](README.md#biome) |
-| `UNKNOWN`   | [`Biome`](README.md#biome) |
-| `WASTELAND` | [`Biome`](README.md#biome) |
+| Name        | Type  |
+| :---------- | :---- |
+| `CORRUPTED` | Biome |
+| `DESERT`    | Biome |
+| `FOREST`    | Biome |
+| `GRASSLAND` | Biome |
+| `ICE`       | Biome |
+| `LAVA`      | Biome |
+| `OCEAN`     | Biome |
+| `SWAMP`     | Biome |
+| `TUNDRA`    | Biome |
+| `UNKNOWN`   | Biome |
+| `WASTELAND` | Biome |
 
 ---
 
 ### BiomeNames
 
-• `Const` **BiomeNames**: `Object`
+• `Const` **BiomeNames**: Object
 
 Mapping from Biome to pretty-printed names.
 
@@ -1085,11 +1714,11 @@ Mapping from Biome to pretty-printed names.
 
 #### Type declaration
 
-| Name                | Type                                   |
-| :------------------ | :------------------------------------- |
-| `Normal`            | [`CursorState`](README.md#cursorstate) |
-| `TargetingExplorer` | [`CursorState`](README.md#cursorstate) |
-| `TargetingForces`   | [`CursorState`](README.md#cursorstate) |
+| Name                | Type        |
+| :------------------ | :---------- |
+| `Normal`            | CursorState |
+| `TargetingExplorer` | CursorState |
+| `TargetingForces`   | CursorState |
 
 ---
 
@@ -1099,11 +1728,11 @@ Mapping from Biome to pretty-printed names.
 
 #### Type declaration
 
-| Name        | Type                             |
-| :---------- | :------------------------------- |
-| `Lines`     | [`DrawMode`](README.md#drawmode) |
-| `Points`    | [`DrawMode`](README.md#drawmode) |
-| `Triangles` | [`DrawMode`](README.md#drawmode) |
+| Name        | Type     |
+| :---------- | :------- |
+| `Lines`     | DrawMode |
+| `Points`    | DrawMode |
+| `Triangles` | DrawMode |
 
 ---
 
@@ -1113,18 +1742,18 @@ Mapping from Biome to pretty-printed names.
 
 #### Type declaration
 
-| Name            | Type                           |
-| :-------------- | :----------------------------- |
-| `ChefHat`       | [`HatType`](README.md#hattype) |
-| `CowboyHat`     | [`HatType`](README.md#hattype) |
-| `Fez`           | [`HatType`](README.md#hattype) |
-| `Fish`          | [`HatType`](README.md#hattype) |
-| `GraduationCap` | [`HatType`](README.md#hattype) |
-| `PartyHat`      | [`HatType`](README.md#hattype) |
-| `PopeHat`       | [`HatType`](README.md#hattype) |
-| `SantaHat`      | [`HatType`](README.md#hattype) |
-| `Squid`         | [`HatType`](README.md#hattype) |
-| `TopHat`        | [`HatType`](README.md#hattype) |
+| Name            | Type    |
+| :-------------- | :------ |
+| `ChefHat`       | HatType |
+| `CowboyHat`     | HatType |
+| `Fez`           | HatType |
+| `Fish`          | HatType |
+| `GraduationCap` | HatType |
+| `PartyHat`      | HatType |
+| `PopeHat`       | HatType |
+| `SantaHat`      | HatType |
+| `Squid`         | HatType |
+| `TopHat`        | HatType |
 
 ---
 
@@ -1134,10 +1763,10 @@ Mapping from Biome to pretty-printed names.
 
 #### Type declaration
 
-| Name                 | Type     |
-| :------------------- | :------- |
-| `MiningCoordsUpdate` | `string` |
-| `StateChanged`       | `string` |
+| Name                 | Type   |
+| :------------------- | :----- |
+| `MiningCoordsUpdate` | string |
+| `StateChanged`       | string |
 
 ---
 
@@ -1147,32 +1776,65 @@ Mapping from Biome to pretty-printed names.
 
 #### Type declaration
 
-| Name                   | Type                               |
-| :--------------------- | :--------------------------------- |
-| `ArtifactConversation` | [`ModalName`](README.md#modalname) |
-| `ArtifactDetails`      | [`ModalName`](README.md#modalname) |
-| `Broadcast`            | [`ModalName`](README.md#modalname) |
-| `Diagnostics`          | [`ModalName`](README.md#modalname) |
-| `Hats`                 | [`ModalName`](README.md#modalname) |
-| `Help`                 | [`ModalName`](README.md#modalname) |
-| `Leaderboard`          | [`ModalName`](README.md#modalname) |
-| `ManageAccount`        | [`ModalName`](README.md#modalname) |
-| `ManageArtifacts`      | [`ModalName`](README.md#modalname) |
-| `MapShare`             | [`ModalName`](README.md#modalname) |
-| `Onboarding`           | [`ModalName`](README.md#modalname) |
-| `PlanetContextPane`    | [`ModalName`](README.md#modalname) |
-| `PlanetDetails`        | [`ModalName`](README.md#modalname) |
-| `PlanetDex`            | [`ModalName`](README.md#modalname) |
-| `PluginEditor`         | [`ModalName`](README.md#modalname) |
-| `PluginWarning`        | [`ModalName`](README.md#modalname) |
-| `Plugins`              | [`ModalName`](README.md#modalname) |
-| `Private`              | [`ModalName`](README.md#modalname) |
-| `Settings`             | [`ModalName`](README.md#modalname) |
-| `TransactionLog`       | [`ModalName`](README.md#modalname) |
-| `TwitterVerify`        | [`ModalName`](README.md#modalname) |
-| `UpgradeDetails`       | [`ModalName`](README.md#modalname) |
-| `WithdrawSilver`       | [`ModalName`](README.md#modalname) |
-| `YourArtifacts`        | [`ModalName`](README.md#modalname) |
+| Name                   | Type      |
+| :--------------------- | :-------- |
+| `ArtifactConversation` | ModalName |
+| `ArtifactDetails`      | ModalName |
+| `Broadcast`            | ModalName |
+| `Diagnostics`          | ModalName |
+| `Hats`                 | ModalName |
+| `Help`                 | ModalName |
+| `Leaderboard`          | ModalName |
+| `ManageAccount`        | ModalName |
+| `ManageArtifacts`      | ModalName |
+| `MapShare`             | ModalName |
+| `Onboarding`           | ModalName |
+| `PlanetContextPane`    | ModalName |
+| `PlanetDetails`        | ModalName |
+| `PlanetDex`            | ModalName |
+| `PluginEditor`         | ModalName |
+| `PluginWarning`        | ModalName |
+| `Plugins`              | ModalName |
+| `Private`              | ModalName |
+| `Settings`             | ModalName |
+| `Survey`               | ModalName |
+| `TransactionLog`       | ModalName |
+| `TwitterVerify`        | ModalName |
+| `UpgradeDetails`       | ModalName |
+| `WaitingRoom`          | ModalName |
+| `WithdrawSilver`       | ModalName |
+| `YourArtifacts`        | ModalName |
+
+---
+
+### ModifierType
+
+• **ModifierType**: `Object`
+
+Enumeration of artifact rarity levels. Common = 1, Mythic = 5
+
+# popCap, popGrowth, silverCap, silverGrowth, range, speed, defense
+
+#### Type declaration
+
+| Name               | Type         |
+| :----------------- | :----------- |
+| `Defense`          | ModifierType |
+| `Pirates`          | ModifierType |
+| `PopulationCap`    | ModifierType |
+| `PopulationGrowth` | ModifierType |
+| `Range`            | ModifierType |
+| `SilverCap`        | ModifierType |
+| `SilverGrowth`     | ModifierType |
+| `Speed`            | ModifierType |
+
+---
+
+### ModifierTypeNames
+
+• `Const` **ModifierTypeNames**: Object
+
+Mapping from ArtifactRarity to pretty-printed names.
 
 ---
 
@@ -1184,24 +1846,24 @@ Enumeration of the possible planet levels.
 
 #### Type declaration
 
-| Name    | Type                                   |
-| :------ | :------------------------------------- |
-| `EIGHT` | [`PlanetLevel`](README.md#planetlevel) |
-| `FIVE`  | [`PlanetLevel`](README.md#planetlevel) |
-| `FOUR`  | [`PlanetLevel`](README.md#planetlevel) |
-| `NINE`  | [`PlanetLevel`](README.md#planetlevel) |
-| `ONE`   | [`PlanetLevel`](README.md#planetlevel) |
-| `SEVEN` | [`PlanetLevel`](README.md#planetlevel) |
-| `SIX`   | [`PlanetLevel`](README.md#planetlevel) |
-| `THREE` | [`PlanetLevel`](README.md#planetlevel) |
-| `TWO`   | [`PlanetLevel`](README.md#planetlevel) |
-| `ZERO`  | [`PlanetLevel`](README.md#planetlevel) |
+| Name    | Type        |
+| :------ | :---------- |
+| `EIGHT` | PlanetLevel |
+| `FIVE`  | PlanetLevel |
+| `FOUR`  | PlanetLevel |
+| `NINE`  | PlanetLevel |
+| `ONE`   | PlanetLevel |
+| `SEVEN` | PlanetLevel |
+| `SIX`   | PlanetLevel |
+| `THREE` | PlanetLevel |
+| `TWO`   | PlanetLevel |
+| `ZERO`  | PlanetLevel |
 
 ---
 
 ### PlanetLevelNames
 
-• `Const` **PlanetLevelNames**: `Object`
+• `Const` **PlanetLevelNames**: Object
 
 Mapping from PlanetLevel to pretty-printed names.
 
@@ -1215,9 +1877,9 @@ Each message type has a corresponding entry here.
 
 #### Type declaration
 
-| Name        | Type                                               |
-| :---------- | :------------------------------------------------- |
-| `EmojiFlag` | [`PlanetMessageType`](README.md#planetmessagetype) |
+| Name        | Type              |
+| :---------- | :---------------- |
+| `EmojiFlag` | PlanetMessageType |
 
 ---
 
@@ -1229,19 +1891,19 @@ Enumeration of the planet types. (PLANET = 0, SILVER_BANK = 4)
 
 #### Type declaration
 
-| Name           | Type                                 |
-| :------------- | :----------------------------------- |
-| `PLANET`       | [`PlanetType`](README.md#planettype) |
-| `RUINS`        | [`PlanetType`](README.md#planettype) |
-| `SILVER_BANK`  | [`PlanetType`](README.md#planettype) |
-| `SILVER_MINE`  | [`PlanetType`](README.md#planettype) |
-| `TRADING_POST` | [`PlanetType`](README.md#planettype) |
+| Name           | Type       |
+| :------------- | :--------- |
+| `PLANET`       | PlanetType |
+| `RUINS`        | PlanetType |
+| `SILVER_BANK`  | PlanetType |
+| `SILVER_MINE`  | PlanetType |
+| `TRADING_POST` | PlanetType |
 
 ---
 
 ### PlanetTypeNames
 
-• `Const` **PlanetTypeNames**: `Object`
+• `Const` **PlanetTypeNames**: Object
 
 Mapping from PlanetType to pretty-printed names.
 
@@ -1253,15 +1915,15 @@ Mapping from PlanetType to pretty-printed names.
 
 #### Type declaration
 
-| Name         | Type                                     |
-| :----------- | :--------------------------------------- |
-| `Background` | [`RenderZIndex`](README.md#renderzindex) |
-| `DEFAULT`    | [`RenderZIndex`](README.md#renderzindex) |
-| `MAX`        | [`RenderZIndex`](README.md#renderzindex) |
-| `Planets`    | [`RenderZIndex`](README.md#renderzindex) |
-| `Text`       | [`RenderZIndex`](README.md#renderzindex) |
-| `UI`         | [`RenderZIndex`](README.md#renderzindex) |
-| `Voyages`    | [`RenderZIndex`](README.md#renderzindex) |
+| Name         | Type         |
+| :----------- | :----------- |
+| `Background` | RenderZIndex |
+| `DEFAULT`    | RenderZIndex |
+| `MAX`        | RenderZIndex |
+| `Planets`    | RenderZIndex |
+| `Text`       | RenderZIndex |
+| `UI`         | RenderZIndex |
+| `Voyages`    | RenderZIndex |
 
 ---
 
@@ -1271,34 +1933,34 @@ Mapping from PlanetType to pretty-printed names.
 
 #### Type declaration
 
-| Name            | Type                                     |
-| :-------------- | :--------------------------------------- |
-| `Asteroid`      | [`RendererType`](README.md#renderertype) |
-| `Background`    | [`RendererType`](README.md#renderertype) |
-| `Belt`          | [`RendererType`](README.md#renderertype) |
-| `BlackDomain`   | [`RendererType`](README.md#renderertype) |
-| `CaptureZone`   | [`RendererType`](README.md#renderertype) |
-| `Circle`        | [`RendererType`](README.md#renderertype) |
-| `Line`          | [`RendererType`](README.md#renderertype) |
-| `Mine`          | [`RendererType`](README.md#renderertype) |
-| `MineBody`      | [`RendererType`](README.md#renderertype) |
-| `Perlin`        | [`RendererType`](README.md#renderertype) |
-| `Planet`        | [`RendererType`](README.md#renderertype) |
-| `PlanetManager` | [`RendererType`](README.md#renderertype) |
-| `Quasar`        | [`RendererType`](README.md#renderertype) |
-| `QuasarBody`    | [`RendererType`](README.md#renderertype) |
-| `QuasarRay`     | [`RendererType`](README.md#renderertype) |
-| `Rect`          | [`RendererType`](README.md#renderertype) |
-| `Ring`          | [`RendererType`](README.md#renderertype) |
-| `Ruins`         | [`RendererType`](README.md#renderertype) |
-| `Space`         | [`RendererType`](README.md#renderertype) |
-| `SpacetimeRip`  | [`RendererType`](README.md#renderertype) |
-| `Sprite`        | [`RendererType`](README.md#renderertype) |
-| `Text`          | [`RendererType`](README.md#renderertype) |
-| `UI`            | [`RendererType`](README.md#renderertype) |
-| `Unmined`       | [`RendererType`](README.md#renderertype) |
-| `Voyager`       | [`RendererType`](README.md#renderertype) |
-| `Wormhole`      | [`RendererType`](README.md#renderertype) |
+| Name            | Type         |
+| :-------------- | :----------- |
+| `Asteroid`      | RendererType |
+| `Background`    | RendererType |
+| `Belt`          | RendererType |
+| `BlackDomain`   | RendererType |
+| `CaptureZone`   | RendererType |
+| `Circle`        | RendererType |
+| `Line`          | RendererType |
+| `Mine`          | RendererType |
+| `MineBody`      | RendererType |
+| `Perlin`        | RendererType |
+| `Planet`        | RendererType |
+| `PlanetManager` | RendererType |
+| `Quasar`        | RendererType |
+| `QuasarBody`    | RendererType |
+| `QuasarRay`     | RendererType |
+| `Rect`          | RendererType |
+| `Ring`          | RendererType |
+| `Ruins`         | RendererType |
+| `Space`         | RendererType |
+| `SpacetimeRip`  | RendererType |
+| `Sprite`        | RendererType |
+| `Text`          | RendererType |
+| `UI`            | RendererType |
+| `Unmined`       | RendererType |
+| `Voyager`       | RendererType |
+| `Wormhole`      | RendererType |
 
 ---
 
@@ -1311,42 +1973,42 @@ per instance of the dark forest contract that it's connected to.
 
 #### Type declaration
 
-| Name                                         | Type                           |
-| :------------------------------------------- | :----------------------------- |
-| `AutoApproveNonPurchaseTransactions`         | [`Setting`](README.md#setting) |
-| `AutoClearConfirmedTransactionsAfterSeconds` | [`Setting`](README.md#setting) |
-| `AutoClearRejectedTransactionsAfterSeconds`  | [`Setting`](README.md#setting) |
-| `DisableDefaultShortcuts`                    | [`Setting`](README.md#setting) |
-| `DisableEmojiRendering`                      | [`Setting`](README.md#setting) |
-| `DisableFancySpaceEffect`                    | [`Setting`](README.md#setting) |
-| `DisableHatRendering`                        | [`Setting`](README.md#setting) |
-| `DrawChunkBorders`                           | [`Setting`](README.md#setting) |
-| `ExperimentalFeatures`                       | [`Setting`](README.md#setting) |
-| `ForceReloadEmbeddedPlugins`                 | [`Setting`](README.md#setting) |
-| `FoundArtifact`                              | [`Setting`](README.md#setting) |
-| `FoundComet`                                 | [`Setting`](README.md#setting) |
-| `FoundDeepSpace`                             | [`Setting`](README.md#setting) |
-| `FoundPirates`                               | [`Setting`](README.md#setting) |
-| `FoundSilver`                                | [`Setting`](README.md#setting) |
-| `FoundSilverBank`                            | [`Setting`](README.md#setting) |
-| `FoundSpace`                                 | [`Setting`](README.md#setting) |
-| `FoundTradingPost`                           | [`Setting`](README.md#setting) |
-| `GasFeeGwei`                                 | [`Setting`](README.md#setting) |
-| `HasAcceptedPluginRisk`                      | [`Setting`](README.md#setting) |
-| `HighPerformanceRendering`                   | [`Setting`](README.md#setting) |
-| `IsMining`                                   | [`Setting`](README.md#setting) |
-| `MiningCores`                                | [`Setting`](README.md#setting) |
-| `MoveNotifications`                          | [`Setting`](README.md#setting) |
-| `NewPlayer`                                  | [`Setting`](README.md#setting) |
-| `OptOutMetrics`                              | [`Setting`](README.md#setting) |
-| `RendererColorDeadSpace`                     | [`Setting`](README.md#setting) |
-| `RendererColorDeepSpace`                     | [`Setting`](README.md#setting) |
-| `RendererColorInnerNebula`                   | [`Setting`](README.md#setting) |
-| `RendererColorNebula`                        | [`Setting`](README.md#setting) |
-| `RendererColorSpace`                         | [`Setting`](README.md#setting) |
-| `TerminalVisible`                            | [`Setting`](README.md#setting) |
-| `TutorialCompleted`                          | [`Setting`](README.md#setting) |
-| `TutorialOpen`                               | [`Setting`](README.md#setting) |
+| Name                                         | Type    |
+| :------------------------------------------- | :------ |
+| `AutoApproveNonPurchaseTransactions`         | Setting |
+| `AutoClearConfirmedTransactionsAfterSeconds` | Setting |
+| `AutoClearRejectedTransactionsAfterSeconds`  | Setting |
+| `DisableDefaultShortcuts`                    | Setting |
+| `DisableEmojiRendering`                      | Setting |
+| `DisableFancySpaceEffect`                    | Setting |
+| `DisableHatRendering`                        | Setting |
+| `DrawChunkBorders`                           | Setting |
+| `ExperimentalFeatures`                       | Setting |
+| `ForceReloadEmbeddedPlugins`                 | Setting |
+| `FoundArtifact`                              | Setting |
+| `FoundComet`                                 | Setting |
+| `FoundDeepSpace`                             | Setting |
+| `FoundPirates`                               | Setting |
+| `FoundSilver`                                | Setting |
+| `FoundSilverBank`                            | Setting |
+| `FoundSpace`                                 | Setting |
+| `FoundTradingPost`                           | Setting |
+| `GasFeeGwei`                                 | Setting |
+| `HasAcceptedPluginRisk`                      | Setting |
+| `HighPerformanceRendering`                   | Setting |
+| `IsMining`                                   | Setting |
+| `MiningCores`                                | Setting |
+| `MoveNotifications`                          | Setting |
+| `NewPlayer`                                  | Setting |
+| `OptOutMetrics`                              | Setting |
+| `RendererColorDeadSpace`                     | Setting |
+| `RendererColorDeepSpace`                     | Setting |
+| `RendererColorInnerNebula`                   | Setting |
+| `RendererColorNebula`                        | Setting |
+| `RendererColorSpace`                         | Setting |
+| `TerminalVisible`                            | Setting |
+| `TutorialCompleted`                          | Setting |
+| `TutorialOpen`                               | Setting |
 
 ---
 
@@ -1358,20 +2020,54 @@ Enumeration of the types of space in the game. NEBULA = 0, DEAD_SPACE = 3
 
 #### Type declaration
 
-| Name         | Type                               |
-| :----------- | :--------------------------------- |
-| `DEAD_SPACE` | [`SpaceType`](README.md#spacetype) |
-| `DEEP_SPACE` | [`SpaceType`](README.md#spacetype) |
-| `NEBULA`     | [`SpaceType`](README.md#spacetype) |
-| `SPACE`      | [`SpaceType`](README.md#spacetype) |
+| Name         | Type      |
+| :----------- | :-------- |
+| `DEAD_SPACE` | SpaceType |
+| `DEEP_SPACE` | SpaceType |
+| `NEBULA`     | SpaceType |
+| `SPACE`      | SpaceType |
 
 ---
 
 ### SpaceTypeNames
 
-• `Const` **SpaceTypeNames**: `Object`
+• `Const` **SpaceTypeNames**: Object
 
 Mapping from SpaceType to pretty-printed names.
+
+---
+
+### SpaceshipType
+
+• **SpaceshipType**: `Object`
+
+Enumeration of spaceships
+
+#### Type declaration
+
+| Name         | Type          |
+| :----------- | :------------ |
+| `Crescent`   | SpaceshipType |
+| `Gear`       | SpaceshipType |
+| `Mothership` | SpaceshipType |
+| `Titan`      | SpaceshipType |
+| `Whale`      | SpaceshipType |
+
+---
+
+### SpaceshipTypeDesc
+
+• `Const` **SpaceshipTypeDesc**: Object
+
+Mapping from Spaceships to pretty-printed descriptions.
+
+---
+
+### SpaceshipTypeNames
+
+• `Const` **SpaceshipTypeNames**: Object
+
+Mapping from Spaceships to pretty-printed names.
 
 ---
 
@@ -1381,11 +2077,11 @@ Mapping from SpaceType to pretty-printed names.
 
 #### Type declaration
 
-| Name     | Type                               |
-| :------- | :--------------------------------- |
-| `Center` | [`TextAlign`](README.md#textalign) |
-| `Left`   | [`TextAlign`](README.md#textalign) |
-| `Right`  | [`TextAlign`](README.md#textalign) |
+| Name     | Type      |
+| :------- | :-------- |
+| `Center` | TextAlign |
+| `Left`   | TextAlign |
+| `Right`  | TextAlign |
 
 ---
 
@@ -1395,11 +2091,11 @@ Mapping from SpaceType to pretty-printed names.
 
 #### Type declaration
 
-| Name     | Type                                 |
-| :------- | :----------------------------------- |
-| `Bottom` | [`TextAnchor`](README.md#textanchor) |
-| `Middle` | [`TextAnchor`](README.md#textanchor) |
-| `Top`    | [`TextAnchor`](README.md#textanchor) |
+| Name     | Type       |
+| :------- | :--------- |
+| `Bottom` | TextAnchor |
+| `Middle` | TextAnchor |
+| `Top`    | TextAnchor |
 
 ---
 
@@ -1409,77 +2105,80 @@ Mapping from SpaceType to pretty-printed names.
 
 #### Type declaration
 
-| Name                          | Type                                   |
-| :---------------------------- | :------------------------------------- |
-| `Abandon`                     | [`TooltipName`](README.md#tooltipname) |
-| `ActivateArtifact`            | [`TooltipName`](README.md#tooltipname) |
-| `ArtifactBuff`                | [`TooltipName`](README.md#tooltipname) |
-| `ArtifactStored`              | [`TooltipName`](README.md#tooltipname) |
-| `Bonus`                       | [`TooltipName`](README.md#tooltipname) |
-| `BonusDefense`                | [`TooltipName`](README.md#tooltipname) |
-| `BonusEnergyCap`              | [`TooltipName`](README.md#tooltipname) |
-| `BonusEnergyGro`              | [`TooltipName`](README.md#tooltipname) |
-| `BonusRange`                  | [`TooltipName`](README.md#tooltipname) |
-| `BonusSpaceJunk`              | [`TooltipName`](README.md#tooltipname) |
-| `BonusSpeed`                  | [`TooltipName`](README.md#tooltipname) |
-| `CancelTransaction`           | [`TooltipName`](README.md#tooltipname) |
-| `Capturable`                  | [`TooltipName`](README.md#tooltipname) |
-| `Clowntown`                   | [`TooltipName`](README.md#tooltipname) |
-| `CurrentMining`               | [`TooltipName`](README.md#tooltipname) |
-| `DeactivateArtifact`          | [`TooltipName`](README.md#tooltipname) |
-| `Defense`                     | [`TooltipName`](README.md#tooltipname) |
-| `DefenseMultiplier`           | [`TooltipName`](README.md#tooltipname) |
-| `DepositArtifact`             | [`TooltipName`](README.md#tooltipname) |
-| `Empty`                       | [`TooltipName`](README.md#tooltipname) |
-| `Energy`                      | [`TooltipName`](README.md#tooltipname) |
-| `EnergyCapMultiplier`         | [`TooltipName`](README.md#tooltipname) |
-| `EnergyGrowth`                | [`TooltipName`](README.md#tooltipname) |
-| `EnergyGrowthMultiplier`      | [`TooltipName`](README.md#tooltipname) |
-| `FindArtifact`                | [`TooltipName`](README.md#tooltipname) |
-| `HashesPerSec`                | [`TooltipName`](README.md#tooltipname) |
-| `HoverPlanet`                 | [`TooltipName`](README.md#tooltipname) |
-| `Invadable`                   | [`TooltipName`](README.md#tooltipname) |
-| `MaxLevel`                    | [`TooltipName`](README.md#tooltipname) |
-| `MinEnergy`                   | [`TooltipName`](README.md#tooltipname) |
-| `MiningPause`                 | [`TooltipName`](README.md#tooltipname) |
-| `MiningTarget`                | [`TooltipName`](README.md#tooltipname) |
-| `ModalFindArtifact`           | [`TooltipName`](README.md#tooltipname) |
-| `ModalHats`                   | [`TooltipName`](README.md#tooltipname) |
-| `ModalHelp`                   | [`TooltipName`](README.md#tooltipname) |
-| `ModalLeaderboard`            | [`TooltipName`](README.md#tooltipname) |
-| `ModalPlanetDetails`          | [`TooltipName`](README.md#tooltipname) |
-| `ModalPlanetDex`              | [`TooltipName`](README.md#tooltipname) |
-| `ModalPlugins`                | [`TooltipName`](README.md#tooltipname) |
-| `ModalSettings`               | [`TooltipName`](README.md#tooltipname) |
-| `ModalTwitterBroadcast`       | [`TooltipName`](README.md#tooltipname) |
-| `ModalTwitterVerification`    | [`TooltipName`](README.md#tooltipname) |
-| `ModalUpgradeDetails`         | [`TooltipName`](README.md#tooltipname) |
-| `ModalWithdrawSilver`         | [`TooltipName`](README.md#tooltipname) |
-| `ModalYourArtifacts`          | [`TooltipName`](README.md#tooltipname) |
-| `NetworkHealth`               | [`TooltipName`](README.md#tooltipname) |
-| `Pirates`                     | [`TooltipName`](README.md#tooltipname) |
-| `PlanetRank`                  | [`TooltipName`](README.md#tooltipname) |
-| `PrioritizeTransaction`       | [`TooltipName`](README.md#tooltipname) |
-| `Range`                       | [`TooltipName`](README.md#tooltipname) |
-| `RangeMultiplier`             | [`TooltipName`](README.md#tooltipname) |
-| `Rank`                        | [`TooltipName`](README.md#tooltipname) |
-| `RetryTransaction`            | [`TooltipName`](README.md#tooltipname) |
-| `Score`                       | [`TooltipName`](README.md#tooltipname) |
-| `SelectedSilver`              | [`TooltipName`](README.md#tooltipname) |
-| `Silver`                      | [`TooltipName`](README.md#tooltipname) |
-| `SilverCap`                   | [`TooltipName`](README.md#tooltipname) |
-| `SilverGrowth`                | [`TooltipName`](README.md#tooltipname) |
-| `SilverProd`                  | [`TooltipName`](README.md#tooltipname) |
-| `SpaceJunk`                   | [`TooltipName`](README.md#tooltipname) |
-| `Speed`                       | [`TooltipName`](README.md#tooltipname) |
-| `SpeedMultiplier`             | [`TooltipName`](README.md#tooltipname) |
-| `Time50`                      | [`TooltipName`](README.md#tooltipname) |
-| `Time90`                      | [`TooltipName`](README.md#tooltipname) |
-| `TimeUntilActivationPossible` | [`TooltipName`](README.md#tooltipname) |
-| `TwitterHandle`               | [`TooltipName`](README.md#tooltipname) |
-| `Upgrades`                    | [`TooltipName`](README.md#tooltipname) |
-| `WithdrawArtifact`            | [`TooltipName`](README.md#tooltipname) |
-| `WithdrawSilverButton`        | [`TooltipName`](README.md#tooltipname) |
+| Name                          | Type        | Description                                                                                                                                       |
+| :---------------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Abandon`                     | TooltipName | -                                                                                                                                                 |
+| `ActivateArtifact`            | TooltipName | -                                                                                                                                                 |
+| `ArtifactBuff`                | TooltipName | -                                                                                                                                                 |
+| `ArtifactStored`              | TooltipName | -                                                                                                                                                 |
+| `Blocked`                     | TooltipName | -                                                                                                                                                 |
+| `Bonus`                       | TooltipName | -                                                                                                                                                 |
+| `BonusDefense`                | TooltipName | -                                                                                                                                                 |
+| `BonusEnergyCap`              | TooltipName | -                                                                                                                                                 |
+| `BonusEnergyGro`              | TooltipName | -                                                                                                                                                 |
+| `BonusRange`                  | TooltipName | -                                                                                                                                                 |
+| `BonusSpaceJunk`              | TooltipName | -                                                                                                                                                 |
+| `BonusSpeed`                  | TooltipName | -                                                                                                                                                 |
+| `CancelTransaction`           | TooltipName | -                                                                                                                                                 |
+| `Capturable`                  | TooltipName | -                                                                                                                                                 |
+| `Clowntown`                   | TooltipName | -                                                                                                                                                 |
+| `CurrentMining`               | TooltipName | -                                                                                                                                                 |
+| `DeactivateArtifact`          | TooltipName | -                                                                                                                                                 |
+| `Defense`                     | TooltipName | -                                                                                                                                                 |
+| `DefenseMultiplier`           | TooltipName | -                                                                                                                                                 |
+| `DepositArtifact`             | TooltipName | -                                                                                                                                                 |
+| `Empty`                       | TooltipName | So that you can render a tooltip without anything, and control its contents entirely via the {@link TooltipTriggerProps#extraContent} prop field. |
+| `Energy`                      | TooltipName | -                                                                                                                                                 |
+| `EnergyCapMultiplier`         | TooltipName | -                                                                                                                                                 |
+| `EnergyGrowth`                | TooltipName | -                                                                                                                                                 |
+| `EnergyGrowthMultiplier`      | TooltipName | -                                                                                                                                                 |
+| `FindArtifact`                | TooltipName | -                                                                                                                                                 |
+| `HashesPerSec`                | TooltipName | -                                                                                                                                                 |
+| `HoverPlanet`                 | TooltipName | -                                                                                                                                                 |
+| `Invadable`                   | TooltipName | -                                                                                                                                                 |
+| `MaxLevel`                    | TooltipName | -                                                                                                                                                 |
+| `MinEnergy`                   | TooltipName | -                                                                                                                                                 |
+| `MiningPause`                 | TooltipName | -                                                                                                                                                 |
+| `MiningTarget`                | TooltipName | -                                                                                                                                                 |
+| `ModalFindArtifact`           | TooltipName | -                                                                                                                                                 |
+| `ModalHats`                   | TooltipName | -                                                                                                                                                 |
+| `ModalHelp`                   | TooltipName | -                                                                                                                                                 |
+| `ModalLeaderboard`            | TooltipName | -                                                                                                                                                 |
+| `ModalPlanetDetails`          | TooltipName | -                                                                                                                                                 |
+| `ModalPlanetDex`              | TooltipName | -                                                                                                                                                 |
+| `ModalPlugins`                | TooltipName | -                                                                                                                                                 |
+| `ModalSettings`               | TooltipName | -                                                                                                                                                 |
+| `ModalTwitterBroadcast`       | TooltipName | -                                                                                                                                                 |
+| `ModalTwitterVerification`    | TooltipName | -                                                                                                                                                 |
+| `ModalUpgradeDetails`         | TooltipName | -                                                                                                                                                 |
+| `ModalWithdrawSilver`         | TooltipName | -                                                                                                                                                 |
+| `ModalYourArtifacts`          | TooltipName | -                                                                                                                                                 |
+| `NetworkHealth`               | TooltipName | -                                                                                                                                                 |
+| `Pirates`                     | TooltipName | -                                                                                                                                                 |
+| `PlanetRank`                  | TooltipName | -                                                                                                                                                 |
+| `PrioritizeTransaction`       | TooltipName | -                                                                                                                                                 |
+| `Range`                       | TooltipName | -                                                                                                                                                 |
+| `RangeMultiplier`             | TooltipName | -                                                                                                                                                 |
+| `Rank`                        | TooltipName | -                                                                                                                                                 |
+| `RetryTransaction`            | TooltipName | -                                                                                                                                                 |
+| `Score`                       | TooltipName | -                                                                                                                                                 |
+| `SelectedSilver`              | TooltipName | -                                                                                                                                                 |
+| `Silver`                      | TooltipName | -                                                                                                                                                 |
+| `SilverCap`                   | TooltipName | -                                                                                                                                                 |
+| `SilverGrowth`                | TooltipName | -                                                                                                                                                 |
+| `SilverProd`                  | TooltipName | -                                                                                                                                                 |
+| `SpaceJunk`                   | TooltipName | -                                                                                                                                                 |
+| `SpawnPlanet`                 | TooltipName | -                                                                                                                                                 |
+| `Speed`                       | TooltipName | -                                                                                                                                                 |
+| `SpeedMultiplier`             | TooltipName | -                                                                                                                                                 |
+| `TargetPlanet`                | TooltipName | -                                                                                                                                                 |
+| `Time50`                      | TooltipName | -                                                                                                                                                 |
+| `Time90`                      | TooltipName | -                                                                                                                                                 |
+| `TimeUntilActivationPossible` | TooltipName | -                                                                                                                                                 |
+| `TwitterHandle`               | TooltipName | -                                                                                                                                                 |
+| `Upgrades`                    | TooltipName | -                                                                                                                                                 |
+| `WithdrawArtifact`            | TooltipName | -                                                                                                                                                 |
+| `WithdrawSilverButton`        | TooltipName | -                                                                                                                                                 |
 
 ---
 
@@ -1489,14 +2188,14 @@ Mapping from SpaceType to pretty-printed names.
 
 #### Type declaration
 
-| Name      | Type                                   |
-| :-------- | :------------------------------------- |
-| `Float`   | [`UniformType`](README.md#uniformtype) |
-| `Mat3`    | [`UniformType`](README.md#uniformtype) |
-| `Mat4`    | [`UniformType`](README.md#uniformtype) |
-| `Texture` | [`UniformType`](README.md#uniformtype) |
-| `UByte`   | [`UniformType`](README.md#uniformtype) |
-| `Vec3`    | [`UniformType`](README.md#uniformtype) |
+| Name      | Type        |
+| :-------- | :---------- |
+| `Float`   | UniformType |
+| `Mat3`    | UniformType |
+| `Mat4`    | UniformType |
+| `Texture` | UniformType |
+| `UByte`   | UniformType |
+| `Vec3`    | UniformType |
 
 ---
 
@@ -1508,26 +2207,177 @@ Enumeration of the three upgrade branches.
 
 #### Type declaration
 
-| Name      | Type                                               |
-| :-------- | :------------------------------------------------- |
-| `Defense` | [`UpgradeBranchName`](README.md#upgradebranchname) |
-| `Range`   | [`UpgradeBranchName`](README.md#upgradebranchname) |
-| `Speed`   | [`UpgradeBranchName`](README.md#upgradebranchname) |
+| Name      | Type              |
+| :-------- | :---------------- |
+| `Defense` | UpgradeBranchName |
+| `Range`   | UpgradeBranchName |
+| `Speed`   | UpgradeBranchName |
 
 ## Functions
 
+### array6
+
+▸ **array6**<`A`\>(`decoder`): Decoder<Tuple6<A\>, unknown\>
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+#### Parameters
+
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `decoder` | Decoder<A, unknown\> |
+
+#### Returns
+
+Decoder<Tuple6<A\>, unknown\>
+
+---
+
 ### artifactNameFromArtifact
 
-▸ **artifactNameFromArtifact**(`artifact`): `string`
+▸ **artifactNameFromArtifact**(`artifact`): string
 
 Deterministically generates the name of the artifact from its ID.
 
 #### Parameters
 
-| Name       | Type                             | Description                         |
-| :--------- | :------------------------------- | :---------------------------------- |
-| `artifact` | [`Artifact`](README.md#artifact) | The artifact to generate a name for |
+| Name       | Type     | Description                         |
+| :--------- | :------- | :---------------------------------- |
+| `artifact` | Artifact | The artifact to generate a name for |
 
 #### Returns
 
-`string`
+string
+
+---
+
+### between
+
+▸ **between**(`decoder`, `min`, `max`): Decoder<number, unknown\>
+
+#### Parameters
+
+| Name      | Type                      |
+| :-------- | :------------------------ |
+| `decoder` | Decoder<number, unknown\> |
+| `min`     | number                    |
+| `max`     | number                    |
+
+#### Returns
+
+Decoder<number, unknown\>
+
+---
+
+### exactArray10
+
+▸ **exactArray10**<`A`\>(`decoder`): Decoder<ExactArray10<A\>, unknown\>
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+#### Parameters
+
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `decoder` | Decoder<A, unknown\> |
+
+#### Returns
+
+Decoder<ExactArray10<A\>, unknown\>
+
+---
+
+### exactArray4
+
+▸ **exactArray4**<`A`\>(`decoder`): Decoder<ExactArray4<A\>, unknown\>
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+#### Parameters
+
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `decoder` | Decoder<A, unknown\> |
+
+#### Returns
+
+Decoder<ExactArray4<A\>, unknown\>
+
+---
+
+### exactArray5
+
+▸ **exactArray5**<`A`\>(`decoder`): Decoder<ExactArray5<A\>, unknown\>
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+#### Parameters
+
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `decoder` | Decoder<A, unknown\> |
+
+#### Returns
+
+Decoder<ExactArray5<A\>, unknown\>
+
+---
+
+### exactArray8
+
+▸ **exactArray8**<`A`\>(`decoder`): Decoder<ExactArray8<A\>, unknown\>
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+#### Parameters
+
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `decoder` | Decoder<A, unknown\> |
+
+#### Returns
+
+Decoder<ExactArray8<A\>, unknown\>
+
+---
+
+### withDefault
+
+▸ **withDefault**<`A`\>(`decoder`, `def`): Decoder<A, unknown\>
+
+#### Type parameters
+
+| Name |
+| :--- |
+| `A`  |
+
+#### Parameters
+
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `decoder` | Decoder<A, unknown\> |
+| `def`     | A                    |
+
+#### Returns
+
+Decoder<A, unknown\>

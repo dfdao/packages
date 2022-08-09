@@ -1,11 +1,14 @@
 import * as decoders from 'decoders';
-import type { ExactArray10, ExactArray4, ExactArray5, ExactArray8, Tuple6 } from '@darkforest_eth/types';
+import type { ExactArray10, ExactArray4, ExactArray5, ExactArray8, Tuple6 } from '@dfdao/types';
 import {
   array6,
   between,
-  exactArray10, exactArray4,
-  exactArray5, exactArray8, withDefault
-} from '@darkforest_eth/types';
+  exactArray10,
+  exactArray4,
+  exactArray5,
+  exactArray8,
+  withDefault,
+} from '@dfdao/types';
 import { decodeArenaPlanet, ArenaPlanets } from './planets';
 
 type PlanetTypeWeights = ExactArray4<ExactArray10<ExactArray5<number>>>;
@@ -148,21 +151,24 @@ export const decodeInitializers = decoders.guard(
     MANUAL_SPAWN: withDefault(decoders.boolean, false),
 
     TARGET_PLANETS: withDefault(decoders.boolean, false),
-    CLAIM_VICTORY_ENERGY_PERCENT : withDefault(decoders.number, 50),
+    CLAIM_VICTORY_ENERGY_PERCENT: withDefault(decoders.number, 50),
     MODIFIERS: withDefault<ExactArray8<number>>(
       exactArray8(decoders.number),
-      [100,100,100,100,100,100,100,100]
+      [100, 100, 100, 100, 100, 100, 100, 100]
     ),
 
-    SPACESHIPS: withDefault<ExactArray5<boolean>>(
-      exactArray5(decoders.boolean),
-      [true, true, true, true, true]
-    ),
+    SPACESHIPS: withDefault<ExactArray5<boolean>>(exactArray5(decoders.boolean), [
+      true,
+      true,
+      true,
+      true,
+      true,
+    ]),
 
-    RANDOM_ARTIFACTS : withDefault(decoders.boolean, true),
+    RANDOM_ARTIFACTS: withDefault(decoders.boolean, true),
 
     NO_ADMIN: withDefault(decoders.boolean, false),
-    
+
     INIT_PLANETS: withDefault<ArenaPlanets>(decoders.array(decodeArenaPlanet), []),
 
     CONFIRM_START: withDefault(decoders.boolean, false),
@@ -178,7 +184,6 @@ export const decodeInitializers = decoders.guard(
     NUM_TEAMS: withDefault(decoders.number, 0),
 
     RANKED: withDefault(decoders.boolean, false),
-
   }),
   { style: 'simple' }
 );

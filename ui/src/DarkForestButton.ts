@@ -93,7 +93,7 @@ export class DarkForestButton extends LitElement {
 
       .portal {
         background: ${unsafeCSS(dfstyles.colors.textLight)};
-        color: #423F3F;
+        color: #423f3f;
         font-weight: 500;
         border: 1px solid ${unsafeCSS(dfstyles.colors.borderDarker)};
       }

@@ -1,51 +1,51 @@
-# @darkforest_eth/procedural
+# @dfdao/procedural
 
 ## Table of contents
 
 ### Type aliases
 
-- [PixelCoords](README.md#pixelcoords)
-- [QuoteData](README.md#quotedata)
+- [PixelCoords](undefined)
+- [QuoteData](undefined)
 
 ### Variables
 
-- [grayColors](README.md#graycolors)
-- [mockCommon](README.md#mockcommon)
-- [mockEpic](README.md#mockepic)
-- [mockLegendary](README.md#mocklegendary)
-- [mockRare](README.md#mockrare)
+- [grayColors](undefined)
+- [mockCommon](undefined)
+- [mockEpic](undefined)
+- [mockLegendary](undefined)
+- [mockRare](undefined)
 
 ### Functions
 
-- [artifactName](README.md#artifactname)
-- [artifactRandom](README.md#artifactrandom)
-- [artifactRandomInt](README.md#artifactrandomint)
-- [getBiomeRgbStr](README.md#getbiomergbstr)
-- [getHatSizeName](README.md#gethatsizename)
-- [getOwnerColor](README.md#getownercolor)
-- [getOwnerColorVec](README.md#getownercolorvec)
-- [getPlanetBlurb](README.md#getplanetblurb)
-- [getPlanetBlurb2](README.md#getplanetblurb2)
-- [getPlanetClass](README.md#getplanetclass)
-- [getPlanetCosmetic](README.md#getplanetcosmetic)
-- [getPlanetName](README.md#getplanetname)
-- [getPlanetNameHash](README.md#getplanetnamehash)
-- [getPlanetTagline](README.md#getplanettagline)
-- [getPlanetTitle](README.md#getplanettitle)
-- [getPlayerColor](README.md#getplayercolor)
-- [getPlayerColorVec](README.md#getplayercolorvec)
-- [getRuinsInfo](README.md#getruinsinfo)
-- [hashToHue](README.md#hashtohue)
-- [hatTypeFromHash](README.md#hattypefromhash)
-- [hslStr](README.md#hslstr)
-- [hslToRgb](README.md#hsltorgb)
-- [mockArtifact](README.md#mockartifact)
-- [mockArtifactWithRarity](README.md#mockartifactwithrarity)
-- [planetPerlin](README.md#planetperlin)
-- [planetRandom](README.md#planetrandom)
-- [planetRandomInt](README.md#planetrandomint)
-- [rgbStr](README.md#rgbstr)
-- [titleCase](README.md#titlecase)
+- [artifactName](undefined)
+- [artifactRandom](undefined)
+- [artifactRandomInt](undefined)
+- [configRandom](undefined)
+- [getBiomeRgbStr](undefined)
+- [getConfigName](undefined)
+- [getHatSizeName](undefined)
+- [getPlanetBlurb](undefined)
+- [getPlanetBlurb2](undefined)
+- [getPlanetClass](undefined)
+- [getPlanetCosmetic](undefined)
+- [getPlanetName](undefined)
+- [getPlanetNameHash](undefined)
+- [getPlanetTagline](undefined)
+- [getPlanetTitle](undefined)
+- [getPlayerColor](undefined)
+- [getPlayerColorVec](undefined)
+- [getRuinsInfo](undefined)
+- [hashToHue](undefined)
+- [hatTypeFromHash](undefined)
+- [hslStr](undefined)
+- [hslToRgb](undefined)
+- [mockArtifact](undefined)
+- [mockArtifactWithRarity](undefined)
+- [planetPerlin](undefined)
+- [planetRandom](undefined)
+- [planetRandomInt](undefined)
+- [rgbStr](undefined)
+- [titleCase](undefined)
 
 ## Type aliases
 
@@ -55,10 +55,10 @@
 
 #### Type declaration
 
-| Name | Type     |
-| :--- | :------- |
-| `x`  | `number` |
-| `y`  | `number` |
+| Name | Type   |
+| :--- | :----- |
+| `x`  | number |
+| `y`  | number |
 
 ---
 
@@ -68,543 +68,551 @@
 
 #### Type declaration
 
-| Name     | Type     |
-| :------- | :------- |
-| `author` | `string` |
-| `quote`  | `string` |
+| Name     | Type   |
+| :------- | :----- |
+| `author` | string |
+| `quote`  | string |
 
 ## Variables
 
 ### grayColors
 
-• `Const` **grayColors**: `PlanetCosmeticInfo`
+• **grayColors**: PlanetCosmeticInfo
 
 ---
 
 ### mockCommon
 
-• `Const` **mockCommon**: `Artifact`
+• **mockCommon**: Artifact
 
 ---
 
 ### mockEpic
 
-• `Const` **mockEpic**: `Artifact`
+• **mockEpic**: Artifact
 
 ---
 
 ### mockLegendary
 
-• `Const` **mockLegendary**: `Artifact`
+• **mockLegendary**: Artifact
 
 ---
 
 ### mockRare
 
-• `Const` **mockRare**: `Artifact`
+• **mockRare**: Artifact
 
 ## Functions
 
 ### artifactName
 
-▸ **artifactName**(`artifact`): `string`
+▸ `Const` **artifactName**(`artifact`): string
 
 #### Parameters
 
-| Name       | Type                      |
-| :--------- | :------------------------ |
-| `artifact` | `undefined` \| `Artifact` |
+| Name       | Type                  |
+| :--------- | :-------------------- |
+| `artifact` | undefined \| Artifact |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### artifactRandom
 
-▸ **artifactRandom**(`loc`): () => `number`
+▸ **artifactRandom**(`loc`): Function
 
 #### Parameters
 
-| Name  | Type         |
-| :---- | :----------- |
-| `loc` | `ArtifactId` |
+| Name  | Type       |
+| :---- | :--------- |
+| `loc` | ArtifactId |
 
 #### Returns
 
-`fn`
+Function
 
-▸ (): `number`
+▸ (): number
 
 ##### Returns
 
-`number`
+number
 
 ---
 
 ### artifactRandomInt
 
-▸ **artifactRandomInt**(`loc`): () => `number`
+▸ **artifactRandomInt**(`loc`): Function
 
 #### Parameters
 
-| Name  | Type         |
-| :---- | :----------- |
-| `loc` | `ArtifactId` |
+| Name  | Type       |
+| :---- | :--------- |
+| `loc` | ArtifactId |
 
 #### Returns
 
-`fn`
+Function
 
-▸ (): `number`
+▸ (): number
 
 ##### Returns
 
-`number`
+number
+
+---
+
+### configRandom
+
+▸ **configRandom**(`config`): Function
+
+#### Parameters
+
+| Name     | Type   |
+| :------- | :----- |
+| `config` | string |
+
+#### Returns
+
+Function
+
+▸ (): number
+
+##### Returns
+
+number
 
 ---
 
 ### getBiomeRgbStr
 
-▸ **getBiomeRgbStr**(`biome`): `string`
+▸ **getBiomeRgbStr**(`biome`): string
 
 #### Parameters
 
-| Name    | Type    |
-| :------ | :------ |
-| `biome` | `Biome` |
+| Name    | Type  |
+| :------ | :---- |
+| `biome` | Biome |
 
 #### Returns
 
-`string`
+string
+
+---
+
+### getConfigName
+
+▸ **getConfigName**(`config`): string
+
+#### Parameters
+
+| Name     | Type   |
+| :------- | :----- |
+| `config` | string |
+
+#### Returns
+
+string
 
 ---
 
 ### getHatSizeName
 
-▸ **getHatSizeName**(`planet`): `string`
+▸ **getHatSizeName**(`planet`): string
 
 #### Parameters
 
-| Name     | Type     |
-| :------- | :------- |
-| `planet` | `Planet` |
+| Name     | Type   |
+| :------- | :----- |
+| `planet` | Planet |
 
 #### Returns
 
-`string`
-
----
-
-### getOwnerColor
-
-▸ **getOwnerColor**(`planet`): `string`
-
-#### Parameters
-
-| Name     | Type     |
-| :------- | :------- |
-| `planet` | `Planet` |
-
-#### Returns
-
-`string`
-
----
-
-### getOwnerColorVec
-
-▸ **getOwnerColorVec**(`planet`): `RGBAVec`
-
-#### Parameters
-
-| Name     | Type     |
-| :------- | :------- |
-| `planet` | `Planet` |
-
-#### Returns
-
-`RGBAVec`
+string
 
 ---
 
 ### getPlanetBlurb
 
-▸ **getPlanetBlurb**(`planet`): `string`
+▸ **getPlanetBlurb**(`planet`): string
 
 #### Parameters
 
-| Name     | Type                    |
-| :------- | :---------------------- |
-| `planet` | `undefined` \| `Planet` |
+| Name     | Type                |
+| :------- | :------------------ |
+| `planet` | undefined \| Planet |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### getPlanetBlurb2
 
-▸ **getPlanetBlurb2**(`planet`): `string`
+▸ **getPlanetBlurb2**(`planet`): string
 
 #### Parameters
 
-| Name     | Type                    |
-| :------- | :---------------------- |
-| `planet` | `undefined` \| `Planet` |
+| Name     | Type                |
+| :------- | :------------------ |
+| `planet` | undefined \| Planet |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### getPlanetClass
 
-▸ **getPlanetClass**(`planet`): `UpgradeBranchName`
+▸ **getPlanetClass**(`planet`): UpgradeBranchName
 
 #### Parameters
 
-| Name     | Type     |
-| :------- | :------- |
-| `planet` | `Planet` |
+| Name     | Type   |
+| :------- | :----- |
+| `planet` | Planet |
 
 #### Returns
 
-`UpgradeBranchName`
+UpgradeBranchName
 
 ---
 
 ### getPlanetCosmetic
 
-▸ **getPlanetCosmetic**(`planet`): `PlanetCosmeticInfo`
+▸ **getPlanetCosmetic**(`planet`): PlanetCosmeticInfo
 
 #### Parameters
 
-| Name     | Type                    |
-| :------- | :---------------------- |
-| `planet` | `undefined` \| `Planet` |
+| Name     | Type                |
+| :------- | :------------------ |
+| `planet` | undefined \| Planet |
 
 #### Returns
 
-`PlanetCosmeticInfo`
+PlanetCosmeticInfo
 
 ---
 
 ### getPlanetName
 
-▸ **getPlanetName**(`planet`): `string`
+▸ **getPlanetName**(`planet`): string
 
 #### Parameters
 
-| Name     | Type                    |
-| :------- | :---------------------- |
-| `planet` | `undefined` \| `Planet` |
+| Name     | Type                |
+| :------- | :------------------ |
+| `planet` | undefined \| Planet |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### getPlanetNameHash
 
-▸ **getPlanetNameHash**(`locId`): `string`
+▸ **getPlanetNameHash**(`locId`): string
 
 #### Parameters
 
-| Name    | Type         |
-| :------ | :----------- |
-| `locId` | `LocationId` |
+| Name    | Type       |
+| :------ | :--------- |
+| `locId` | LocationId |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### getPlanetTagline
 
-▸ **getPlanetTagline**(`planet`): `string`
+▸ **getPlanetTagline**(`planet`): string
 
 #### Parameters
 
-| Name     | Type                    |
-| :------- | :---------------------- |
-| `planet` | `undefined` \| `Planet` |
+| Name     | Type                |
+| :------- | :------------------ |
+| `planet` | undefined \| Planet |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### getPlanetTitle
 
-▸ **getPlanetTitle**(`planet`): `string`
+▸ **getPlanetTitle**(`planet`): string
 
 #### Parameters
 
-| Name     | Type                    |
-| :------- | :---------------------- |
-| `planet` | `undefined` \| `Planet` |
+| Name     | Type                |
+| :------- | :------------------ |
+| `planet` | undefined \| Planet |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### getPlayerColor
 
-▸ **getPlayerColor**(`player`): `string`
+▸ **getPlayerColor**(`player`, `teamsEnabled`): string
 
 #### Parameters
 
-| Name     | Type         |
-| :------- | :----------- |
-| `player` | `EthAddress` |
+| Name           | Type                |
+| :------------- | :------------------ |
+| `player`       | undefined \| Player |
+| `teamsEnabled` | boolean             |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### getPlayerColorVec
 
-▸ **getPlayerColorVec**(`player`): `RGBAVec`
+▸ **getPlayerColorVec**(`player`, `teamsEnabled`): RGBAVec
 
 #### Parameters
 
-| Name     | Type         |
-| :------- | :----------- |
-| `player` | `EthAddress` |
+| Name           | Type                |
+| :------------- | :------------------ |
+| `player`       | undefined \| Player |
+| `teamsEnabled` | boolean             |
 
 #### Returns
 
-`RGBAVec`
+RGBAVec
 
 ---
 
 ### getRuinsInfo
 
-▸ **getRuinsInfo**(`loc`): `RuinsInfo`
+▸ **getRuinsInfo**(`loc`): RuinsInfo
 
 #### Parameters
 
-| Name  | Type         |
-| :---- | :----------- |
-| `loc` | `LocationId` |
+| Name  | Type       |
+| :---- | :--------- |
+| `loc` | LocationId |
 
 #### Returns
 
-`RuinsInfo`
+RuinsInfo
 
 ---
 
 ### hashToHue
 
-▸ **hashToHue**(`hash`): `number`
+▸ **hashToHue**(`hash`): number
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
-| `hash` | `string` |
+| Name   | Type   |
+| :----- | :----- |
+| `hash` | string |
 
 #### Returns
 
-`number`
+number
 
 ---
 
 ### hatTypeFromHash
 
-▸ **hatTypeFromHash**(`hash`): `HatType`
+▸ **hatTypeFromHash**(`hash`): HatType
 
 #### Parameters
 
-| Name   | Type         |
-| :----- | :----------- |
-| `hash` | `LocationId` |
+| Name   | Type       |
+| :----- | :--------- |
+| `hash` | LocationId |
 
 #### Returns
 
-`HatType`
+HatType
 
 ---
 
 ### hslStr
 
-▸ **hslStr**(`h`, `s`, `l`): `string`
+▸ **hslStr**(`h`, `s`, `l`): string
 
 #### Parameters
 
-| Name | Type     |
-| :--- | :------- |
-| `h`  | `number` |
-| `s`  | `number` |
-| `l`  | `number` |
+| Name | Type   |
+| :--- | :----- |
+| `h`  | number |
+| `s`  | number |
+| `l`  | number |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### hslToRgb
 
-▸ **hslToRgb**(`__namedParameters`): `RGBVec`
+▸ **hslToRgb**(`__namedParameters`): RGBVec
 
 #### Parameters
 
-| Name                | Type     |
-| :------------------ | :------- |
-| `__namedParameters` | `HSLVec` |
+| Name                | Type   |
+| :------------------ | :----- |
+| `__namedParameters` | HSLVec |
 
 #### Returns
 
-`RGBVec`
+RGBVec
 
 ---
 
 ### mockArtifact
 
-▸ **mockArtifact**(`rarity`, `artifactType?`, `planetBiome?`): `Artifact`
+▸ `Const` **mockArtifact**(`rarity`, `artifactType?`, `planetBiome?`): Artifact
 
 #### Parameters
 
-| Name           | Type             | Default value            |
-| :------------- | :--------------- | :----------------------- |
-| `rarity`       | `ArtifactRarity` | `undefined`              |
-| `artifactType` | `ArtifactType`   | `ArtifactType.Spaceship` |
-| `planetBiome`  | `Biome`          | `Biome.WASTELAND`        |
+| Name           | Type           | Default value            |
+| :------------- | :------------- | :----------------------- |
+| `rarity`       | ArtifactRarity | `undefined`              |
+| `artifactType` | ArtifactType   | `ArtifactType.Spaceship` |
+| `planetBiome`  | Biome          | `Biome.WASTELAND`        |
 
 #### Returns
 
-`Artifact`
+Artifact
 
 ---
 
 ### mockArtifactWithRarity
 
-▸ **mockArtifactWithRarity**(`rarity`, `artifactType?`, `planetBiome?`): `Artifact`
+▸ `Const` **mockArtifactWithRarity**(`rarity`, `artifactType?`, `planetBiome?`): Artifact
 
 #### Parameters
 
-| Name           | Type             | Default value            |
-| :------------- | :--------------- | :----------------------- |
-| `rarity`       | `ArtifactRarity` | `undefined`              |
-| `artifactType` | `ArtifactType`   | `ArtifactType.Spaceship` |
-| `planetBiome`  | `Biome`          | `Biome.WASTELAND`        |
+| Name           | Type           | Default value            |
+| :------------- | :------------- | :----------------------- |
+| `rarity`       | ArtifactRarity | `undefined`              |
+| `artifactType` | ArtifactType   | `ArtifactType.Spaceship` |
+| `planetBiome`  | Biome          | `Biome.WASTELAND`        |
 
 #### Returns
 
-`Artifact`
+Artifact
 
 ---
 
 ### planetPerlin
 
-▸ **planetPerlin**(`loc`): (`coords`: [`PixelCoords`](README.md#pixelcoords)) => `number`
+▸ **planetPerlin**(`loc`): Function
 
 #### Parameters
 
-| Name  | Type         |
-| :---- | :----------- |
-| `loc` | `LocationId` |
+| Name  | Type       |
+| :---- | :--------- |
+| `loc` | LocationId |
 
 #### Returns
 
-`fn`
+Function
 
-▸ (`coords`): `number`
+▸ (`coords`): number
 
 ##### Parameters
 
-| Name     | Type                                   |
-| :------- | :------------------------------------- |
-| `coords` | [`PixelCoords`](README.md#pixelcoords) |
+| Name     | Type        |
+| :------- | :---------- |
+| `coords` | PixelCoords |
 
 ##### Returns
 
-`number`
+number
 
 ---
 
 ### planetRandom
 
-▸ **planetRandom**(`loc`): () => `number`
+▸ **planetRandom**(`loc`): Function
 
 #### Parameters
 
-| Name  | Type         |
-| :---- | :----------- |
-| `loc` | `LocationId` |
+| Name  | Type       |
+| :---- | :--------- |
+| `loc` | LocationId |
 
 #### Returns
 
-`fn`
+Function
 
-▸ (): `number`
+▸ (): number
 
 ##### Returns
 
-`number`
+number
 
 ---
 
 ### planetRandomInt
 
-▸ **planetRandomInt**(`loc`): () => `number`
+▸ **planetRandomInt**(`loc`): Function
 
 #### Parameters
 
-| Name  | Type         |
-| :---- | :----------- |
-| `loc` | `LocationId` |
+| Name  | Type       |
+| :---- | :--------- |
+| `loc` | LocationId |
 
 #### Returns
 
-`fn`
+Function
 
-▸ (): `number`
+▸ (): number
 
 ##### Returns
 
-`number`
+number
 
 ---
 
 ### rgbStr
 
-▸ **rgbStr**(`rgb`): `string`
+▸ **rgbStr**(`rgb`): string
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
-| `rgb` | `RGBVec` |
+| Name  | Type   |
+| :---- | :----- |
+| `rgb` | RGBVec |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### titleCase
 
-▸ **titleCase**(`title`): `string`
+▸ `Const` **titleCase**(`title`): string
 
 #### Parameters
 
-| Name    | Type     |
-| :------ | :------- |
-| `title` | `string` |
+| Name    | Type   |
+| :------ | :----- |
+| `title` | string |
 
 #### Returns
 
-`string`
+string

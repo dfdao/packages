@@ -1,7 +1,7 @@
 import { css, html, LitElement, nothing, PropertyValues, unsafeCSS } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { styleMap } from 'lit/directives/style-map.js';
-import dfstyles, {zIndex} from './styles';
+import dfstyles, { zIndex } from './styles';
 
 type Coords = { x: number; y: number };
 type Contain = 'left' | 'right' | 'top' | 'bottom' | 'horizontal' | 'vertical';

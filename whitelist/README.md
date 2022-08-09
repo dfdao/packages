@@ -1,4 +1,4 @@
-# @darkforest_eth/whitelist
+# @dfdao/whitelist
 
 This package contains utilities for working with DarkForest whitelist keys.
 
@@ -8,92 +8,92 @@ You can install this package using [`npm`](https://www.npmjs.com) or
 [`yarn`](https://classic.yarnpkg.com/lang/en/) by running:
 
 ```bash
-npm install --save @darkforest_eth/whitelist
+npm install --save @dfdao/whitelist
 ```
 
 ```bash
-yarn add @darkforest_eth/whitelist
+yarn add @dfdao/whitelist
 ```
 
 When using this in a plugin, you might want to load it with [skypack](https://www.skypack.dev)
 
 ```js
-import * as whitelist from 'http://cdn.skypack.dev/@darkforest_eth/whitelist';
+import * as whitelist from 'http://cdn.skypack.dev/@dfdao/whitelist';
 ```
 
 ## Table of contents
 
 ### Variables
 
-- [keysPerTx](README.md#keyspertx)
+- [keysPerTx](undefined)
 
 ### Functions
 
-- [bigIntFromKey](README.md#bigintfromkey)
-- [generateKey](README.md#generatekey)
-- [generateKeys](README.md#generatekeys)
-- [keyHash](README.md#keyhash)
+- [bigIntFromKey](undefined)
+- [generateKey](undefined)
+- [generateKeys](undefined)
+- [keyHash](undefined)
 
 ## Variables
 
 ### keysPerTx
 
-• `Const` **keysPerTx**: `400`
+• `Const` **keysPerTx**: 400 = `400`
 
 ## Functions
 
 ### bigIntFromKey
 
-▸ **bigIntFromKey**(`key`): `BigInteger`
+▸ **bigIntFromKey**(`key`): BigInteger
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
-| `key` | `string` |
+| Name  | Type   |
+| :---- | :----- |
+| `key` | string |
 
 #### Returns
 
-`BigInteger`
+BigInteger
 
 ---
 
 ### generateKey
 
-▸ **generateKey**(): `string`
+▸ **generateKey**(): string
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### generateKeys
 
-▸ **generateKeys**(`count`): `string`[]
+▸ **generateKeys**(`count`): string[]
 
 #### Parameters
 
-| Name    | Type     |
-| :------ | :------- |
-| `count` | `number` |
+| Name    | Type   |
+| :------ | :----- |
+| `count` | number |
 
 #### Returns
 
-`string`[]
+string[]
 
 ---
 
 ### keyHash
 
-▸ **keyHash**(`key`): `string`
+▸ **keyHash**(`key`): string
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
-| `key` | `string` |
+| Name  | Type   |
+| :---- | :----- |
+| `key` | string |
 
 #### Returns
 
-`string`
+string

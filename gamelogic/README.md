@@ -1,55 +1,57 @@
-# @darkforest_eth/gamelogic
+# @dfdao/gamelogic
 
 ## Table of contents
 
 ### Type aliases
 
-- [ArtifactFileColor](README.md#artifactfilecolor)
+- [ArtifactFileColor](undefined)
 
 ### Variables
 
-- [ArtifactFileColor](README.md#artifactfilecolor)
-- [RelicsList](README.md#relicslist)
+- [ArtifactFileColor](undefined)
+- [RelicsList](undefined)
 
 ### Functions
 
-- [artifactAvailableTimestamp](README.md#artifactavailabletimestamp)
-- [artifactBiomeName](README.md#artifactbiomename)
-- [artifactFileName](README.md#artifactfilename)
-- [artifactRoll](README.md#artifactroll)
-- [biomeName](README.md#biomename)
-- [canActivateArtifact](README.md#canactivateartifact)
-- [canDepositArtifact](README.md#candepositartifact)
-- [canWithdrawArtifact](README.md#canwithdrawartifact)
-- [dateMintedAt](README.md#datemintedat)
-- [durationUntilArtifactAvailable](README.md#durationuntilartifactavailable)
-- [formatNumber](README.md#formatnumber)
-- [getActivatedArtifact](README.md#getactivatedartifact)
-- [getActiveBlackDomain](README.md#getactiveblackdomain)
-- [getArtifactDebugName](README.md#getartifactdebugname)
-- [getPlanetRank](README.md#getplanetrank)
-- [getPlayerControlledSpaceships](README.md#getplayercontrolledspaceships)
-- [getRange](README.md#getrange)
-- [hasOwner](README.md#hasowner)
-- [hasStatBoost](README.md#hasstatboost)
-- [isActivated](README.md#isactivated)
-- [isAncient](README.md#isancient)
-- [isBasic](README.md#isbasic)
-- [isEmojiFlagMessage](README.md#isemojiflagmessage)
-- [isLocatable](README.md#islocatable)
-- [isRelic](README.md#isrelic)
-- [isSpaceShip](README.md#isspaceship)
-- [levelFromRarity](README.md#levelfromrarity)
-- [rarityName](README.md#rarityname)
-- [rarityNameFromArtifact](README.md#raritynamefromartifact)
-- [setForceAncient](README.md#setforceancient)
-- [timeUntilNextBroadcastAvailable](README.md#timeuntilnextbroadcastavailable)
+- [artifactAvailableTimestamp](undefined)
+- [artifactBiomeName](undefined)
+- [artifactFileName](undefined)
+- [artifactRoll](undefined)
+- [biomeName](undefined)
+- [canActivateArtifact](undefined)
+- [canDepositArtifact](undefined)
+- [canWithdrawArtifact](undefined)
+- [dateMintedAt](undefined)
+- [durationUntilArtifactAvailable](undefined)
+- [formatNumber](undefined)
+- [getActivatedArtifact](undefined)
+- [getActiveBlackDomain](undefined)
+- [getArtifactDebugName](undefined)
+- [getPlanetRank](undefined)
+- [getPlayerControlledSpaceships](undefined)
+- [getRange](undefined)
+- [hasOwner](undefined)
+- [hasStatBoost](undefined)
+- [isActivated](undefined)
+- [isAncient](undefined)
+- [isBasic](undefined)
+- [isEmojiFlagMessage](undefined)
+- [isLocatable](undefined)
+- [isRelic](undefined)
+- [isSpaceShip](undefined)
+- [isSpawnPlanet](undefined)
+- [isTargetPlanet](undefined)
+- [levelFromRarity](undefined)
+- [rarityName](undefined)
+- [rarityNameFromArtifact](undefined)
+- [setForceAncient](undefined)
+- [timeUntilNextBroadcastAvailable](undefined)
 
 ## Type aliases
 
 ### ArtifactFileColor
 
-Ƭ **ArtifactFileColor**: `Abstract`<`number`, `"ArtifactFileColor"`\>
+Ƭ **ArtifactFileColor**: Abstract<number, "ArtifactFileColor"\>
 
 ## Variables
 
@@ -59,384 +61,384 @@
 
 #### Type declaration
 
-| Name             | Type                                               |
-| :--------------- | :------------------------------------------------- |
-| `APP_BACKGROUND` | [`ArtifactFileColor`](README.md#artifactfilecolor) |
-| `BLUE`           | [`ArtifactFileColor`](README.md#artifactfilecolor) |
+| Name             | Type              |
+| :--------------- | :---------------- |
+| `APP_BACKGROUND` | ArtifactFileColor |
+| `BLUE`           | ArtifactFileColor |
 
 ---
 
 ### RelicsList
 
-• `Const` **RelicsList**: `ArtifactType`[]
+• **RelicsList**: ArtifactType[]
 
 ## Functions
 
 ### artifactAvailableTimestamp
 
-▸ **artifactAvailableTimestamp**(`artifact`): `number`
+▸ **artifactAvailableTimestamp**(`artifact`): number
 
 #### Parameters
 
-| Name       | Type       |
-| :--------- | :--------- |
-| `artifact` | `Artifact` |
+| Name       | Type     |
+| :--------- | :------- |
+| `artifact` | Artifact |
 
 #### Returns
 
-`number`
+number
 
 ---
 
 ### artifactBiomeName
 
-▸ **artifactBiomeName**(`artifact`): `string`
+▸ **artifactBiomeName**(`artifact`): string
 
 #### Parameters
 
-| Name       | Type       |
-| :--------- | :--------- |
-| `artifact` | `Artifact` |
+| Name       | Type     |
+| :--------- | :------- |
+| `artifact` | Artifact |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### artifactFileName
 
-▸ **artifactFileName**(`videoMode`, `thumb`, `artifact`, `color`, `debugProps?`): `string`
+▸ **artifactFileName**(`videoMode`, `thumb`, `artifact`, `color`, `debugProps?`): string
 
 #### Parameters
 
-| Name         | Type                                                                    | Default value |
-| :----------- | :---------------------------------------------------------------------- | :------------ |
-| `videoMode`  | `boolean`                                                               | `undefined`   |
-| `thumb`      | `boolean`                                                               | `undefined`   |
-| `artifact`   | `RenderedArtifact`                                                      | `undefined`   |
-| `color`      | [`ArtifactFileColor`](README.md#artifactfilecolor)                      | `undefined`   |
-| `debugProps` | `undefined` \| { `forceAncient`: `boolean` ; `skipCaching`: `boolean` } | `undefined`   |
+| Name         | Type                | Default value |
+| :----------- | :------------------ | :------------ |
+| `videoMode`  | boolean             | `undefined`   |
+| `thumb`      | boolean             | `undefined`   |
+| `artifact`   | RenderedArtifact    | `undefined`   |
+| `color`      | ArtifactFileColor   | `undefined`   |
+| `debugProps` | undefined \| Object | `undefined`   |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### artifactRoll
 
-▸ **artifactRoll**(`id`): `number`
-
-#### Parameters
-
-| Name | Type         |
-| :--- | :----------- |
-| `id` | `ArtifactId` |
-
-#### Returns
-
-`number`
-
----
-
-### biomeName
-
-▸ **biomeName**(`biome`): `string`
-
-#### Parameters
-
-| Name    | Type    |
-| :------ | :------ |
-| `biome` | `Biome` |
-
-#### Returns
-
-`string`
-
----
-
-### canActivateArtifact
-
-▸ **canActivateArtifact**(`artifact`, `planet`, `artifactsOnPlanet`): `undefined` \| `boolean`
-
-#### Parameters
-
-| Name                | Type                    |
-| :------------------ | :---------------------- |
-| `artifact`          | `Artifact`              |
-| `planet`            | `undefined` \| `Planet` |
-| `artifactsOnPlanet` | `Artifact`[]            |
-
-#### Returns
-
-`undefined` \| `boolean`
-
----
-
-### canDepositArtifact
-
-▸ **canDepositArtifact**(`account`, `artifact`, `planet?`): `undefined` \| `boolean`
-
-#### Parameters
-
-| Name       | Type         |
-| :--------- | :----------- |
-| `account`  | `EthAddress` |
-| `artifact` | `Artifact`   |
-| `planet?`  | `Planet`     |
-
-#### Returns
-
-`undefined` \| `boolean`
-
----
-
-### canWithdrawArtifact
-
-▸ **canWithdrawArtifact**(`account`, `artifact`, `planet?`): `undefined` \| `boolean`
-
-#### Parameters
-
-| Name       | Type         |
-| :--------- | :----------- |
-| `account`  | `EthAddress` |
-| `artifact` | `Artifact`   |
-| `planet?`  | `Planet`     |
-
-#### Returns
-
-`undefined` \| `boolean`
-
----
-
-### dateMintedAt
-
-▸ **dateMintedAt**(`artifact`): `string`
-
-#### Parameters
-
-| Name       | Type                      |
-| :--------- | :------------------------ |
-| `artifact` | `undefined` \| `Artifact` |
-
-#### Returns
-
-`string`
-
----
-
-### durationUntilArtifactAvailable
-
-▸ **durationUntilArtifactAvailable**(`artifact`): `number`
-
-#### Parameters
-
-| Name       | Type       |
-| :--------- | :--------- |
-| `artifact` | `Artifact` |
-
-#### Returns
-
-`number`
-
----
-
-### formatNumber
-
-▸ **formatNumber**(`num`, `smallDec?`): `string`
-
-#### Parameters
-
-| Name       | Type     | Default value |
-| :--------- | :------- | :------------ |
-| `num`      | `number` | `undefined`   |
-| `smallDec` | `number` | `0`           |
-
-#### Returns
-
-`string`
-
----
-
-### getActivatedArtifact
-
-▸ **getActivatedArtifact**(`artifacts`): `Artifact` \| `undefined`
-
-#### Parameters
-
-| Name        | Type         |
-| :---------- | :----------- |
-| `artifacts` | `Artifact`[] |
-
-#### Returns
-
-`Artifact` \| `undefined`
-
----
-
-### getActiveBlackDomain
-
-▸ **getActiveBlackDomain**(`artifacts`): `Artifact` \| `undefined`
-
-#### Parameters
-
-| Name        | Type         |
-| :---------- | :----------- |
-| `artifacts` | `Artifact`[] |
-
-#### Returns
-
-`Artifact` \| `undefined`
-
----
-
-### getArtifactDebugName
-
-▸ **getArtifactDebugName**(`a?`): `string`
+▸ **artifactRoll**(`id`): number
 
 #### Parameters
 
 | Name | Type       |
 | :--- | :--------- |
-| `a?` | `Artifact` |
+| `id` | ArtifactId |
 
 #### Returns
 
-`string`
+number
+
+---
+
+### biomeName
+
+▸ `Const` **biomeName**(`biome`): string
+
+#### Parameters
+
+| Name    | Type  |
+| :------ | :---- |
+| `biome` | Biome |
+
+#### Returns
+
+string
+
+---
+
+### canActivateArtifact
+
+▸ **canActivateArtifact**(`artifact`, `planet`, `artifactsOnPlanet`): undefined \| boolean
+
+#### Parameters
+
+| Name                | Type                |
+| :------------------ | :------------------ |
+| `artifact`          | Artifact            |
+| `planet`            | undefined \| Planet |
+| `artifactsOnPlanet` | Artifact[]          |
+
+#### Returns
+
+undefined \| boolean
+
+---
+
+### canDepositArtifact
+
+▸ **canDepositArtifact**(`account`, `artifact`, `planet?`): undefined \| boolean
+
+#### Parameters
+
+| Name       | Type       |
+| :--------- | :--------- |
+| `account`  | EthAddress |
+| `artifact` | Artifact   |
+| `planet?`  | Planet     |
+
+#### Returns
+
+undefined \| boolean
+
+---
+
+### canWithdrawArtifact
+
+▸ **canWithdrawArtifact**(`account`, `artifact`, `planet?`): undefined \| boolean
+
+#### Parameters
+
+| Name       | Type       |
+| :--------- | :--------- |
+| `account`  | EthAddress |
+| `artifact` | Artifact   |
+| `planet?`  | Planet     |
+
+#### Returns
+
+undefined \| boolean
+
+---
+
+### dateMintedAt
+
+▸ `Const` **dateMintedAt**(`artifact`): string
+
+#### Parameters
+
+| Name       | Type                  |
+| :--------- | :-------------------- |
+| `artifact` | undefined \| Artifact |
+
+#### Returns
+
+string
+
+---
+
+### durationUntilArtifactAvailable
+
+▸ **durationUntilArtifactAvailable**(`artifact`): number
+
+#### Parameters
+
+| Name       | Type     |
+| :--------- | :------- |
+| `artifact` | Artifact |
+
+#### Returns
+
+number
+
+---
+
+### formatNumber
+
+▸ `Const` **formatNumber**(`num`, `smallDec?`): string
+
+#### Parameters
+
+| Name       | Type   | Default value |
+| :--------- | :----- | :------------ |
+| `num`      | number | `undefined`   |
+| `smallDec` | number | `0`           |
+
+#### Returns
+
+string
+
+---
+
+### getActivatedArtifact
+
+▸ **getActivatedArtifact**(`artifacts`): Artifact \| undefined
+
+#### Parameters
+
+| Name        | Type       |
+| :---------- | :--------- |
+| `artifacts` | Artifact[] |
+
+#### Returns
+
+Artifact \| undefined
+
+---
+
+### getActiveBlackDomain
+
+▸ **getActiveBlackDomain**(`artifacts`): Artifact \| undefined
+
+#### Parameters
+
+| Name        | Type       |
+| :---------- | :--------- |
+| `artifacts` | Artifact[] |
+
+#### Returns
+
+Artifact \| undefined
+
+---
+
+### getArtifactDebugName
+
+▸ **getArtifactDebugName**(`a?`): string
+
+#### Parameters
+
+| Name | Type     |
+| :--- | :------- |
+| `a?` | Artifact |
+
+#### Returns
+
+string
 
 ---
 
 ### getPlanetRank
 
-▸ **getPlanetRank**(`planet`): `number`
+▸ `Const` **getPlanetRank**(`planet`): number
 
 #### Parameters
 
-| Name     | Type                    |
-| :------- | :---------------------- |
-| `planet` | `undefined` \| `Planet` |
+| Name     | Type                |
+| :------- | :------------------ |
+| `planet` | undefined \| Planet |
 
 #### Returns
 
-`number`
+number
 
 ---
 
 ### getPlayerControlledSpaceships
 
-▸ **getPlayerControlledSpaceships**(`artifacts`, `owner`): (`undefined` \| `Artifact`)[]
+▸ **getPlayerControlledSpaceships**(`artifacts`, `owner`): (undefined \| Artifact)[]
 
 #### Parameters
 
-| Name        | Type                                         |
-| :---------- | :------------------------------------------- |
-| `artifacts` | `undefined` \| (`undefined` \| `Artifact`)[] |
-| `owner`     | `undefined` \| `EthAddress`                  |
+| Name        | Type                                   |
+| :---------- | :------------------------------------- |
+| `artifacts` | undefined \| (undefined \| Artifact)[] |
+| `owner`     | undefined \| EthAddress                |
 
 #### Returns
 
-(`undefined` \| `Artifact`)[]
+(undefined \| Artifact)[]
 
 ---
 
 ### getRange
 
-▸ **getRange**(`planet`, `percentEnergySending?`, `rangeBoost?`): `number`
+▸ **getRange**(`planet`, `percentEnergySending?`, `rangeBoost?`): number
 
 **`todo`** - planet class
 
 #### Parameters
 
-| Name                   | Type     | Default value | Description                                                                                                                  |
-| :--------------------- | :------- | :------------ | :--------------------------------------------------------------------------------------------------------------------------- |
-| `planet`               | `Planet` | `undefined`   | -                                                                                                                            |
-| `percentEnergySending` | `number` | `100`         | -                                                                                                                            |
-| `rangeBoost`           | `number` | `1`           | A multiplier to be applied to the resulting range. Currently used for calculating boost associated with abandoning a planet. |
+| Name                   | Type   | Default value | Description                                                                                                                  |
+| :--------------------- | :----- | :------------ | :--------------------------------------------------------------------------------------------------------------------------- |
+| `planet`               | Planet | `undefined`   | -                                                                                                                            |
+| `percentEnergySending` | number | `100`         | -                                                                                                                            |
+| `rangeBoost`           | number | `1`           | A multiplier to be applied to the resulting range. Currently used for calculating boost associated with abandoning a planet. |
 
 #### Returns
 
-`number`
+number
 
 ---
 
 ### hasOwner
 
-▸ **hasOwner**(`planet`): `boolean`
+▸ **hasOwner**(`planet`): boolean
 
 #### Parameters
 
-| Name     | Type     |
-| :------- | :------- |
-| `planet` | `Planet` |
+| Name     | Type   |
+| :------- | :----- |
+| `planet` | Planet |
 
 #### Returns
 
-`boolean`
+boolean
 
 ---
 
 ### hasStatBoost
 
-▸ **hasStatBoost**(`type`): `boolean`
+▸ **hasStatBoost**(`type`): boolean
 
 #### Parameters
 
-| Name   | Type                          |
-| :----- | :---------------------------- |
-| `type` | `undefined` \| `ArtifactType` |
+| Name   | Type                      |
+| :----- | :------------------------ |
+| `type` | undefined \| ArtifactType |
 
 #### Returns
 
-`boolean`
+boolean
 
 ---
 
 ### isActivated
 
-▸ **isActivated**(`artifact`): `boolean`
+▸ **isActivated**(`artifact`): boolean
 
 #### Parameters
 
-| Name       | Type                      |
-| :--------- | :------------------------ |
-| `artifact` | `undefined` \| `Artifact` |
+| Name       | Type                  |
+| :--------- | :-------------------- |
+| `artifact` | undefined \| Artifact |
 
 #### Returns
 
-`boolean`
+boolean
 
 ---
 
 ### isAncient
 
-▸ **isAncient**(`artifact`): `boolean`
+▸ **isAncient**(`artifact`): boolean
 
 #### Parameters
 
-| Name       | Type               |
-| :--------- | :----------------- |
-| `artifact` | `RenderedArtifact` |
+| Name       | Type             |
+| :--------- | :--------------- |
+| `artifact` | RenderedArtifact |
 
 #### Returns
 
-`boolean`
+boolean
 
 ---
 
 ### isBasic
 
-▸ **isBasic**(`type`): `boolean`
+▸ **isBasic**(`type`): boolean
 
 #### Parameters
 
-| Name   | Type           |
-| :----- | :------------- |
-| `type` | `ArtifactType` |
+| Name   | Type         |
+| :----- | :----------- |
+| `type` | ArtifactType |
 
 #### Returns
 
-`boolean`
+boolean
 
 ---
 
@@ -446,9 +448,9 @@
 
 #### Parameters
 
-| Name            | Type                        |
-| :-------------- | :-------------------------- |
-| `planetMessage` | `PlanetMessage`<`unknown`\> |
+| Name            | Type                    |
+| :-------------- | :---------------------- |
+| `planetMessage` | PlanetMessage<unknown\> |
 
 #### Returns
 
@@ -462,9 +464,9 @@ planetMessage is PlanetMessage<EmojiFlagBody\>
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
-| `planet?` | `Planet` |
+| Name      | Type   |
+| :-------- | :----- |
+| `planet?` | Planet |
 
 #### Returns
 
@@ -474,113 +476,145 @@ planet is LocatablePlanet
 
 ### isRelic
 
-▸ **isRelic**(`type`): `boolean`
+▸ **isRelic**(`type`): boolean
 
 #### Parameters
 
-| Name   | Type           |
-| :----- | :------------- |
-| `type` | `ArtifactType` |
+| Name   | Type         |
+| :----- | :----------- |
+| `type` | ArtifactType |
 
 #### Returns
 
-`boolean`
+boolean
 
 ---
 
 ### isSpaceShip
 
-▸ **isSpaceShip**(`type`): `boolean`
+▸ **isSpaceShip**(`type`): boolean
 
 #### Parameters
 
-| Name   | Type                          |
-| :----- | :---------------------------- |
-| `type` | `undefined` \| `ArtifactType` |
+| Name   | Type                      |
+| :----- | :------------------------ |
+| `type` | undefined \| ArtifactType |
 
 #### Returns
 
-`boolean`
+boolean
+
+---
+
+### isSpawnPlanet
+
+▸ **isSpawnPlanet**(`planet?`): boolean
+
+#### Parameters
+
+| Name      | Type   |
+| :-------- | :----- |
+| `planet?` | Planet |
+
+#### Returns
+
+boolean
+
+---
+
+### isTargetPlanet
+
+▸ **isTargetPlanet**(`planet?`): boolean
+
+#### Parameters
+
+| Name      | Type   |
+| :-------- | :----- |
+| `planet?` | Planet |
+
+#### Returns
+
+boolean
 
 ---
 
 ### levelFromRarity
 
-▸ **levelFromRarity**(`rarity`): `PlanetLevel`
+▸ `Const` **levelFromRarity**(`rarity`): PlanetLevel
 
 #### Parameters
 
-| Name     | Type             |
-| :------- | :--------------- |
-| `rarity` | `ArtifactRarity` |
+| Name     | Type           |
+| :------- | :------------- |
+| `rarity` | ArtifactRarity |
 
 #### Returns
 
-`PlanetLevel`
+PlanetLevel
 
 ---
 
 ### rarityName
 
-▸ **rarityName**(`rarity`): `string`
+▸ `Const` **rarityName**(`rarity`): string
 
 #### Parameters
 
-| Name     | Type             |
-| :------- | :--------------- |
-| `rarity` | `ArtifactRarity` |
+| Name     | Type           |
+| :------- | :------------- |
+| `rarity` | ArtifactRarity |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### rarityNameFromArtifact
 
-▸ **rarityNameFromArtifact**(`a`): `string`
+▸ `Const` **rarityNameFromArtifact**(`a`): string
 
 #### Parameters
 
-| Name | Type       |
-| :--- | :--------- |
-| `a`  | `Artifact` |
+| Name | Type     |
+| :--- | :------- |
+| `a`  | Artifact |
 
 #### Returns
 
-`string`
+string
 
 ---
 
 ### setForceAncient
 
-▸ **setForceAncient**(`force`): `void`
+▸ **setForceAncient**(`force`): void
 
 #### Parameters
 
-| Name    | Type      |
-| :------ | :-------- |
-| `force` | `boolean` |
+| Name    | Type    |
+| :------ | :------ |
+| `force` | boolean |
 
 #### Returns
 
-`void`
+void
 
 ---
 
 ### timeUntilNextBroadcastAvailable
 
-▸ **timeUntilNextBroadcastAvailable**(`lastRevealTimestamp`, `locationRevealCooldown`): `number`
+▸ **timeUntilNextBroadcastAvailable**(`lastRevealTimestamp`, `locationRevealCooldown`): number
 
 Gets the time (ms) until we can broadcast the coordinates of a planet.
 
 #### Parameters
 
-| Name                     | Type                    |
-| :----------------------- | :---------------------- |
-| `lastRevealTimestamp`    | `undefined` \| `number` |
-| `locationRevealCooldown` | `number`                |
+| Name                     | Type                |
+| :----------------------- | :------------------ |
+| `lastRevealTimestamp`    | undefined \| number |
+| `locationRevealCooldown` | number              |
 
 #### Returns
 
-`number`
+number

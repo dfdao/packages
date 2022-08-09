@@ -27,12 +27,11 @@ export type ContractMethodName =
   | 'createLobby'
   | 'invadePlanet'
   | 'capturePlanet'
-  | "claimVictory"
-  | "createPlanet"
-  | "createArenaPlanet"
-  | "ready"
-  | "notReady";
-
+  | 'claimVictory'
+  | 'createPlanet'
+  | 'createArenaPlanet'
+  | 'ready'
+  | 'notReady';
 
 export type EthTxStatus =
   | 'Init'
@@ -227,27 +226,26 @@ export type UnconfirmedCapturePlanet = TxIntent & {
 /**
  * @hidden
  */
- export declare type UnconfirmedClaimVictory = TxIntent & {
+export declare type UnconfirmedClaimVictory = TxIntent & {
   methodName: 'claimVictory';
 };
 /**
  * @hidden
  */
- export declare type UnconfirmedCreateArenaPlanet = TxIntent & {
+export declare type UnconfirmedCreateArenaPlanet = TxIntent & {
   methodName: 'createArenaPlanet';
 };
 
 /**
  * @hidden
  */
- export declare type UnconfirmedReady = TxIntent & {
+export declare type UnconfirmedReady = TxIntent & {
   methodName: 'ready';
 };
 
 /**
  * @hidden
  */
- export declare type UnconfirmedNotReady = TxIntent & {
+export declare type UnconfirmedNotReady = TxIntent & {
   methodName: 'notReady';
 };
-

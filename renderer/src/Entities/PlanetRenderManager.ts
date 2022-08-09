@@ -1,13 +1,7 @@
-import { EMPTY_ADDRESS } from '@darkforest_eth/constants';
-import {
-  formatNumber,
-  getRange,
-  hasOwner,
-  isLocatable,
-  isSpaceShip,
-} from '@darkforest_eth/gamelogic';
-import { getPlanetCosmetic, getPlayerColorVec } from '@darkforest_eth/procedural';
-import { isUnconfirmedMoveTx } from '@darkforest_eth/serde';
+import { EMPTY_ADDRESS } from '@dfdao/constants';
+import { formatNumber, getRange, hasOwner, isLocatable, isSpaceShip } from '@dfdao/gamelogic';
+import { getPlanetCosmetic, getPlayerColorVec } from '@dfdao/procedural';
+import { isUnconfirmedMoveTx } from '@dfdao/serde';
 import {
   Artifact,
   HatType,
@@ -21,7 +15,7 @@ import {
   TextAlign,
   TextAnchor,
   WorldCoords,
-} from '@darkforest_eth/types';
+} from '@dfdao/types';
 import { engineConsts } from '../EngineConsts';
 import { Renderer } from '../Renderer';
 import { GameGLManager } from '../WebGL/GameGLManager';
@@ -256,7 +250,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
 
     if (!fromPlanet || !toPlanet) return undefined;
     const player = context.getAccount();
-    if(context.playerMoveBlocked(player || EMPTY_ADDRESS, toPlanet.locationId)) return 'blocked';
+    if (context.playerMoveBlocked(player || EMPTY_ADDRESS, toPlanet.locationId)) return 'blocked';
 
     let effectiveEnergy = fromPlanet.energy;
     for (const unconfirmedMove of fromPlanet.transactions?.getTransactions(isUnconfirmedMoveTx) ??
@@ -426,9 +420,13 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     const isOwnedByTeam = sender?.team == recipient?.team;
     if (moveHereInProgress && myAtk && toPlanet) {
       let atkString = '';
-      if(myAtk == 'blocked') {
+      if (myAtk == 'blocked') {
         atkString = 'BLOCKED';
-      } else if (uiManager.isOwnedByMe(planet) || planet.energy === 0 || (teamsEnabled && isOwnedByTeam)) {
+      } else if (
+        uiManager.isOwnedByMe(planet) ||
+        planet.energy === 0 ||
+        (teamsEnabled && isOwnedByTeam)
+      ) {
         atkString += ` (+${formatNumber(myAtk)})`;
       } else {
         atkString += ` (-${formatNumber((myAtk * 100) / toPlanet.defense)})`;

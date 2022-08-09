@@ -15,12 +15,11 @@ export const decodeAdminPlanets = decoders.guard(decoders.array(decodeAdminPlane
   style: 'simple',
 });
 
-
 // Arena
 
 export const decodeArenaPlanet = decoders.exact({
   location: decoders.string,
-  x: decoders.string, /* string bc converting to uint, but input can be negative */
+  x: decoders.string /* string bc converting to uint, but input can be negative */,
   y: decoders.string,
   perlin: decoders.number,
   level: decoders.number,
@@ -36,4 +35,3 @@ export const decodeArenaPlanets = decoders.guard(decoders.array(decodeArenaPlane
 });
 
 export type ArenaPlanets = ReturnType<typeof decodeArenaPlanets>;
-

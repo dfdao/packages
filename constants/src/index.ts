@@ -8,16 +8,16 @@
  * [`yarn`](https://classic.yarnpkg.com/lang/en/) by running:
  *
  * ```bash
- * npm install --save @darkforest_eth/constants
+ * npm install --save @dfdao/constants
  * ```
  * ```bash
- * yarn add @darkforest_eth/constants
+ * yarn add @dfdao/constants
  * ```
  *
  * When using this in a plugin, you might want to load it with [skypack](https://www.skypack.dev)
  *
  * ```js
- * import * as constants from 'http://cdn.skypack.dev/@darkforest_eth/constants'
+ * import * as constants from 'http://cdn.skypack.dev/@dfdao/constants'
  * ```
  *
  * @packageDocumentation
@@ -30,8 +30,8 @@ import {
   EthAddress,
   GasPrices,
   LocationId,
-  PlanetLevel
-} from '@darkforest_eth/types';
+  PlanetLevel,
+} from '@dfdao/types';
 import bigInt, { BigInteger } from 'big-integer';
 
 /**
@@ -207,6 +207,4 @@ export const LOCAL_OPTIMISM_CHAIN_ID = 17 as const;
 /**
  * This should be updated every round.
  */
-export const THEGRAPH_API_URL =
-  'https://graph-optimism.gnosischain.com/subgraphs/name/arena/test';
-  
+export const THEGRAPH_API_URL = 'https://graph-optimism.gnosischain.com/subgraphs/name/arena/test';
