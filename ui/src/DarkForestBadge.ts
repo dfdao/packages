@@ -164,7 +164,7 @@ export function getBadgeElement(badge: BadgeType | undefined): BadgeElement | un
 
 const Dfdao: BadgeElement = {
   name: 'dfdao',
-  description: 'You are the king of the inner city!',
+  description: ':|',
   color: 'violet',
   badge: svg`
   
