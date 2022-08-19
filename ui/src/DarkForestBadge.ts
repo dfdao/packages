@@ -13,7 +13,17 @@ export type BadgeElement = {
   name: string;
   description: string;
   badge: TemplateResult<2>;
-  color?: string;
+  color:
+    | 'gold'
+    | 'silver'
+    | 'bronze'
+    | 'red'
+    | 'yellow'
+    | 'orange'
+    | 'green'
+    | 'blue'
+    | 'indigo'
+    | 'violet';
 };
 
 export class DarkForestBadge extends LitElement {
@@ -33,6 +43,8 @@ export class DarkForestBadge extends LitElement {
       div {
         background: gray;
         margin: auto;
+        border: 1px solid white;
+        box-shadow: 3px 3px 5px black; 
         border-radius: 50%;
         padding: 5px;
       }
@@ -59,6 +71,40 @@ export class DarkForestBadge extends LitElement {
         height: 120px;
         width: 120px;
       }
+      
+      .gold {
+        background: ${unsafeCSS(dfstyles.colors.dfgold)}
+      }
+      .silver {
+        background: ${unsafeCSS(dfstyles.colors.dfsilver)}
+      }
+     .bronze {
+        background: ${unsafeCSS(dfstyles.colors.dfbronze)}
+      }
+     .red{
+        background: ${unsafeCSS(dfstyles.colors.dfred)}
+      }
+     .orange{
+        background: ${unsafeCSS(dfstyles.colors.dforange)}
+      }
+     .yellow{
+        background: ${unsafeCSS(dfstyles.colors.dfyellow)}
+      }
+     .green{
+        background: ${unsafeCSS(dfstyles.colors.dfgreen)}
+      }
+     .blue{
+        background: ${unsafeCSS(dfstyles.colors.dfblue)}
+      }
+     .indigo {
+        background: ${unsafeCSS('#4B0082')}
+      }
+     .violet {
+        background: ${unsafeCSS(dfstyles.colors.dfpurple)}
+      }
+
+ 
+      .
     `,
   ];
 
@@ -78,13 +124,23 @@ export class DarkForestBadge extends LitElement {
   size: 'small' | 'medium' | 'large' = 'medium';
 
   render() {
+    const badgeElement = getBadgeElement(this.type);
+    if (!badgeElement) return nothing;
     const classes = {
       small: this.size === 'small',
       medium: this.size === 'medium',
       large: this.size === 'large',
+      gold: badgeElement.color == 'gold',
+      silver: badgeElement.color == 'silver',
+      bronze: badgeElement.color == 'bronze',
+      red: badgeElement.color == 'red',
+      orange: badgeElement.color == 'orange',
+      yellow: badgeElement.color == 'yellow',
+      green: badgeElement.color == 'green',
+      blue: badgeElement.color == 'blue',
+      indigo: badgeElement.color == 'indigo',
+      violet: badgeElement.color == 'violet',
     };
-    const badgeElement = getBadgeElement(this.type);
-    if (!badgeElement) return nothing;
 
     return html`<div class=${classMap(classes)}>${badgeElement.badge}</div> `;
   }
@@ -108,8 +164,8 @@ export function getBadgeElement(badge: BadgeType | undefined): BadgeElement | un
 
 const Dfdao: BadgeElement = {
   name: 'dfdao',
-  description: 'dfdao',
-  color: 'gray',
+  description: 'You are the king of the inner city!',
+  color: 'violet',
   badge: svg`
   
 <svg
