@@ -1,13 +1,7 @@
-import { Abstract } from '@darkforest_eth/types';
+import { Abstract, BadgeType } from '@darkforest_eth/types';
 import { css, html, LitElement, nothing, svg, TemplateResult, unsafeCSS } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import dfstyles from './styles';
-
-export type BadgeType = Abstract<string, 'BadgeType'>;
-
-export const BadgeType = {
-  Dfdao: 'Dfdao' as BadgeType,
-} as const;
 
 export type BadgeElement = {
   name: string;
