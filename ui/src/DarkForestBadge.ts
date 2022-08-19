@@ -1,5 +1,6 @@
 import { Abstract } from '@darkforest_eth/types';
-import { css, LitElement, nothing, svg, TemplateResult, unsafeCSS } from 'lit';
+import { css, html, LitElement, nothing, svg, TemplateResult, unsafeCSS } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
 import dfstyles from './styles';
 
 export type BadgeType = Abstract<string, 'BadgeType'>;
@@ -12,6 +13,7 @@ export type BadgeElement = {
   name: string;
   description: string;
   badge: TemplateResult<2>;
+  color?: string;
 };
 
 export class DarkForestBadge extends LitElement {
@@ -20,29 +22,52 @@ export class DarkForestBadge extends LitElement {
 
   // Defining element styles without a decorator
   // These are injected into the shadowRoot so they aren't applied globally
-  static styles = css`
-    :host {
-      width: 1em;
-      height: 1em;
-      display: inline-flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-    }
+  static styles = [
+    css`
+      :host {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
 
-    svg {
-      width: 100%;
-      height: 100%;
-    }
+      div {
+        background: gray;
+        margin: auto;
+        border-radius: 50%;
+        padding: 5px;
+      }
 
-    path {
-      fill: var(--df-icon-color, ${unsafeCSS(dfstyles.colors.text)});
-    }
-  `;
+      svg {
+        width: inherit;
+        height: inherit;
+      }
+
+      path {
+        fill: var(--df-icon-color, ${unsafeCSS(dfstyles.colors.text)});
+      }
+
+      .small {
+        height: 50px;
+        width: 50px;
+      }
+
+      .medium {
+        height: 80px;
+        width: 80px;
+      }
+      .large {
+        height: 120px;
+        width: 120px;
+      }
+    `,
+  ];
 
   // Defining element properties without a decorator
   static properties = {
     type: {
+      type: String,
+    },
+    size: {
       type: String,
     },
   };
@@ -50,10 +75,18 @@ export class DarkForestBadge extends LitElement {
   // Properties defined above will have a getter/setter created on the component,
   // but we want to define their type and/or defaults on the component
   type?: BadgeType;
+  size: 'small' | 'medium' | 'large' = 'medium';
 
   render() {
+    const classes = {
+      small: this.size === 'small',
+      medium: this.size === 'medium',
+      large: this.size === 'large',
+    };
     const badgeElement = getBadgeElement(this.type);
-    return badgeElement ? badgeElement.badge : nothing;
+    if (!badgeElement) return nothing;
+
+    return html`<div class=${classMap(classes)}>${badgeElement.badge}</div> `;
   }
 }
 
@@ -76,6 +109,7 @@ export function getBadgeElement(badge: BadgeType | undefined): BadgeElement | un
 const Dfdao: BadgeElement = {
   name: 'dfdao',
   description: 'dfdao',
+  color: 'gray',
   badge: svg`
   
 <svg
