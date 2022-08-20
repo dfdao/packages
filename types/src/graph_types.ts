@@ -158,6 +158,11 @@ export interface ConfigPlayer {
   gamesStarted: number;
 }
 
+export interface ConfigBadges {
+  configHash: string;
+  badge: BadgeSet;
+}
+
 export interface SeasonPlayers {
   [address: string]: GrandPrixResult[];
 }

@@ -6,3 +6,9 @@ export const BadgeType = {
   Dfdao: 'Dfdao' as BadgeType,
   StartYourEngine: 'StartYourEngine' as BadgeType
 } as const;
+
+export type GrandPrixBadge = {
+  configHash: string;
+  badge: BadgeType;
+} 
+
