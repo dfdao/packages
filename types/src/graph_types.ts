@@ -152,6 +152,8 @@ export interface ConfigPlayer {
     winners: {
       moves: number;
     }[];
+    startTime: number;
+    endTime: number;
   };
   badge: BadgeSet;
   configHash: string;
