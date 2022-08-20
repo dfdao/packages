@@ -156,6 +156,7 @@ export interface ConfigPlayer {
   badge: BadgeSet;
   configHash: string;
   gamesStarted: number;
+  gamesFinished: number;
 }
 
 export interface ConfigBadges {
