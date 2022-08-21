@@ -1,4 +1,5 @@
 import { BigNumber } from 'ethers';
+import { BadgeType } from './badges';
 import { ExactArray10, ExactArray5, ExactArray8, Tuple6 } from './decoder-helpers';
 import { EthAddress } from './identifier';
 
@@ -161,13 +162,32 @@ export interface ConfigPlayer {
   gamesFinished: number;
 }
 
+export interface CleanConfigPlayer {
+  id: string;
+  address: string;
+  duration: number;
+  moves: number;
+  startTime: number;
+  endTime: number;
+  badges: BadgeType[];
+  configHash: string;
+  gamesStarted: number;
+  gamesFinished: number;
+  score: number;
+}
+
+
 export interface ConfigBadges {
   configHash: string;
   badge: BadgeSet;
 }
 
 export interface SeasonPlayers {
-  [address: string]: GrandPrixResult[];
+  [address: string]: CleanConfigPlayer[];
+}
+
+export interface GrandPrixPlayers {
+  [configHash: string]: CleanConfigPlayer[];
 }
 
 export interface SeasonScore {
