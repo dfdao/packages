@@ -139,12 +139,6 @@ export interface BadgeSet {
   wallBreaker: boolean; // Synthetic Value added after data is loaded.
 }
 
-export interface GrandPrixResult {
-  bestTime: number;
-  moves: number;
-  badges: BadgeSet;
-}
-
 export interface ConfigPlayer {
   id: string;
   address: string;
@@ -162,38 +156,6 @@ export interface ConfigPlayer {
   gamesFinished: number;
 }
 
-export interface CleanConfigPlayer {
-  id: string;
-  address: string;
-  duration: number;
-  moves: number;
-  startTime: number;
-  endTime: number;
-  badges: BadgeType[];
-  configHash: string;
-  gamesStarted: number;
-  gamesFinished: number;
-  score: number;
-}
-
-
-export interface ConfigBadges {
-  configHash: string;
-  badge: BadgeSet;
-}
-
-export interface SeasonPlayers {
-  [address: string]: CleanConfigPlayer[];
-}
-
-export interface GrandPrixPlayers {
-  [configHash: string]: CleanConfigPlayer[];
-}
-
-export interface SeasonScore {
-  player: string;
-  score: number;
-}
 
 export interface WallbreakerArena {
   configHash: string;
@@ -204,9 +166,4 @@ export interface WallbreakerArena {
   duration: number;
 }
 
-export interface Wallbreaker {
-  configHash: string;
-  player: string;
-  duration: number;
-  arenaAddress: string;
-}
+

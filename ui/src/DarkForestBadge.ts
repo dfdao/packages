@@ -408,7 +408,7 @@ sodipodi:docname="dfdao logo.ai"><metadata
 
 const Wallbreaker: BadgeElement = {
   name: 'Wallbreaker',
-  description: 'You won a Grand Prix',
+  description: 'First Place in a Grand Prix',
   color: 'gold',
   badge: svg`
   
