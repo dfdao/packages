@@ -190,6 +190,17 @@ export interface ExtendedMatchEntry extends LiveMatchEntry {
   duration: number;
 }
 
+export interface CleanMatchEntry {
+  player: EthAddress;
+  lobbyAddress: EthAddress;
+  moves: number;
+  configHash: string;
+  numSpawn: number;
+  gameOver: boolean;
+  duration: number;
+  startTime: number;
+  endTime: number;
+}
 export interface LiveMatch {
   entries: ExtendedMatchEntry[];
 }
