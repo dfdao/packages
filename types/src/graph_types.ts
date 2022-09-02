@@ -200,9 +200,10 @@ export interface CleanMatchEntry {
   duration: number;
   startTime: number;
   endTime: number;
+  players: string[];
 }
 export interface LiveMatch {
-  entries: ExtendedMatchEntry[];
+  entries: CleanMatchEntry[];
 }
 
 
