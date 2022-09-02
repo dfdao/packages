@@ -187,6 +187,7 @@ export interface ExtendedMatchEntry extends LiveMatchEntry {
   planets: { spawnPlanet: boolean }[];
   gameOver: boolean;
   duration: number;
+  moves: number;
 }
 
 export interface LiveMatch {
