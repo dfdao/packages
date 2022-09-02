@@ -182,12 +182,12 @@ export interface ExtendedMatchEntry extends LiveMatchEntry {
   lobbyAddress: EthAddress;
   players?: {
     address: string;
+    moves: number;
   }[];
   configHash: string;
   planets: { spawnPlanet: boolean }[];
   gameOver: boolean;
   duration: number;
-  moves: number;
 }
 
 export interface LiveMatch {
