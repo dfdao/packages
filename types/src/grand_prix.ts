@@ -16,7 +16,7 @@ export interface GrandPrixHistory {
   rank: number;
   score: number;
   players: number;
-  badges: BadgeType[];
+  badges: ConfigBadge[];
 }
 
 export interface CleanConfigPlayer {
@@ -26,17 +26,30 @@ export interface CleanConfigPlayer {
   moves: number;
   startTime: number;
   endTime: number;
-  badges: BadgeType[];
+  badges: ConfigBadge[];
   configHash: string;
   gamesStarted: number;
   gamesFinished: number;
   score: number;
 }
 
-export interface ConfigBadges {
+export interface ConfigBadge {
   configHash: string;
-  badge: BadgeSet;
+  type: BadgeType;
 }
+
+export interface SeasonBadge {
+  // Where badge was won
+  configHash: string;
+  badge: BadgeType;
+  // If it counts for score
+  scoringConfigHash: string
+}
+
+export interface UniquePlayerBadges {
+  [type: BadgeType]: ConfigBadge;
+}
+
 
 export interface SeasonPlayers {
   [address: string]: CleanConfigPlayer[];
