@@ -29,6 +29,7 @@ export interface LeaderboardEntry {
   twitter?: string;
   startTime: number;
   endTime: number;
+  wallBreaker?: boolean;
 }
 
 export interface ArenaLeaderboard {

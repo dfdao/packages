@@ -150,8 +150,9 @@ export interface ConfigPlayer {
     }[];
     startTime: number;
     endTime: number;
-  };
-  badge: BadgeSet;
+    gameOver: boolean;
+  } | undefined;
+  badge: BadgeSet | undefined;
   configHash: string;
   gamesStarted: number;
   gamesFinished: number;
@@ -191,7 +192,7 @@ export interface ExtendedMatchEntry extends LiveMatchEntry {
 }
 
 export interface CleanMatchEntry {
-  player: EthAddress;
+  creator: EthAddress;
   lobbyAddress: EthAddress;
   moves: number;
   configHash: string;
