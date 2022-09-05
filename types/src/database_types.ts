@@ -29,6 +29,7 @@ export interface LeaderboardEntry {
   twitter?: string;
   startTime: number;
   endTime: number;
+  wallBreaker?: boolean;
 }
 
 export interface ArenaLeaderboard {
@@ -42,24 +43,3 @@ export interface ArenaLeaderboardEntry {
   wins: number;
 }
 
-export interface LiveMatch {
-  entries: ExtendedMatchEntry[];
-}
-
-export interface LiveMatchEntry {
-  firstMover: {
-    address: string;
-  };
-  id: string;
-  startTime: number;
-  twitter?: string;
-}
-
-export interface ExtendedMatchEntry extends LiveMatchEntry {
-  creator: EthAddress;
-  players?: {
-    address: string;
-  }[];
-  configHash: string;
-  planets: { spawnPlanet: boolean }[];
-}

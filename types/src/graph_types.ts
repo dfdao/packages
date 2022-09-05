@@ -150,8 +150,9 @@ export interface ConfigPlayer {
     }[];
     startTime: number;
     endTime: number;
-  };
-  badge: BadgeSet;
+    gameOver: boolean;
+  } | undefined;
+  badge: BadgeSet | undefined;
   configHash: string;
   gamesStarted: number;
   gamesFinished: number;
@@ -165,6 +166,45 @@ export interface WallbreakerArena {
   }[];
   lobbyAddress: string;
   duration: number;
+}
+
+export interface LiveMatchEntry {
+  firstMover: {
+    address: string;
+  };
+  id: string;
+  startTime: number;
+  endTime: number;
+  twitter?: string;
+}
+
+export interface ExtendedMatchEntry extends LiveMatchEntry {
+  creator: EthAddress;
+  lobbyAddress: EthAddress;
+  players?: {
+    address: string;
+    moves: number;
+  }[];
+  configHash: string;
+  planets: { spawnPlanet: boolean }[];
+  gameOver: boolean;
+  duration: number;
+}
+
+export interface CleanMatchEntry {
+  creator: EthAddress;
+  lobbyAddress: EthAddress;
+  moves: number;
+  configHash: string;
+  numSpawn: number;
+  gameOver: boolean;
+  duration: number;
+  startTime: number;
+  endTime: number;
+  players: string[];
+}
+export interface LiveMatch {
+  entries: CleanMatchEntry[];
 }
 
 
