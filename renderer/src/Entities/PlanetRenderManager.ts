@@ -256,7 +256,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
 
     if (!fromPlanet || !toPlanet) return undefined;
     const player = context.getAccount();
-    if(context.playerMoveBlocked(player || EMPTY_ADDRESS, toPlanet.locationId)) return 'blocked';
+    if (context.playerMoveBlocked(player || EMPTY_ADDRESS, toPlanet.locationId)) return 'blocked';
 
     let effectiveEnergy = fromPlanet.energy;
     for (const unconfirmedMove of fromPlanet.transactions?.getTransactions(isUnconfirmedMoveTx) ??
@@ -422,13 +422,25 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
       fromPlanet?.locationId !== toPlanet?.locationId &&
       toPlanet?.locationId === planet.locationId &&
       !uiManager.getIsChoosingTargetPlanet();
+    const planetJunk = planet.spaceJunk;
+    const playerJunk = sender?.spaceJunk;
+    const limit = sender?.spaceJunkLimit;
 
+    const junkLimitReached =
+      uiManager.getSpaceJunkEnabled() && playerJunk && limit && planetJunk + playerJunk >= limit;
+    console.log('playerjunk:', playerJunk, 'limit ', limit, 'planetJunk ', planetJunk);
     const isOwnedByTeam = sender?.team == recipient?.team;
     if (moveHereInProgress && myAtk && toPlanet) {
       let atkString = '';
-      if(myAtk == 'blocked') {
+      if (myAtk == 'blocked') {
         atkString = 'BLOCKED';
-      } else if (uiManager.isOwnedByMe(planet) || planet.energy === 0 || (teamsEnabled && isOwnedByTeam)) {
+      } else if (junkLimitReached) {
+        atkString = 'SPACE JUNK LIMIT REACHED';
+      } else if (
+        uiManager.isOwnedByMe(planet) ||
+        planet.energy === 0 ||
+        (teamsEnabled && isOwnedByTeam)
+      ) {
         atkString += ` (+${formatNumber(myAtk)})`;
       } else {
         atkString += ` (-${formatNumber((myAtk * 100) / toPlanet.defense)})`;
