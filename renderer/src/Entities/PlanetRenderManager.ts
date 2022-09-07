@@ -428,7 +428,6 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
 
     const junkLimitReached =
       uiManager.getSpaceJunkEnabled() && playerJunk && limit && planetJunk + playerJunk >= limit;
-    console.log('playerjunk:', playerJunk, 'limit ', limit, 'planetJunk ', planetJunk);
     const isOwnedByTeam = sender?.team == recipient?.team;
     if (moveHereInProgress && myAtk && toPlanet) {
       let atkString = '';
