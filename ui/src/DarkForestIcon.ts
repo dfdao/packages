@@ -57,6 +57,7 @@ export const IconType = {
   Maximize: 'Maximize' as IconType,
   Minimize: 'Minimize' as IconType,
   Dfdao: 'Dfdao' as IconType,
+  Exit: 'Exit' as IconType,
 } as const;
 
 export class DarkForestIcon extends LitElement {
@@ -198,10 +199,12 @@ export class DarkForestIcon extends LitElement {
         return Blocked();
       case IconType.Maximize:
         return Maximize();
-        case IconType.Minimize:
-          return Minimize();
+      case IconType.Minimize:
+        return Minimize();
       case IconType.Dfdao:
         return Dfdao();
+      case IconType.Exit:
+        return Exit();
       default:
         console.warn(`Invalid icon name: ${this.type}`);
         return nothing;
@@ -658,7 +661,7 @@ function Maximize() {
 function Minimize() {
   return svg`
   <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.0735 2L21.4877 3.41421L15.6378 9.26416H18.1824V11.2642H12.1824V5.26416H14.1824V7.89111L20.0735 2Z" fill="currentColor"/><path d="M11.1824 12.2642V18.2642H9.1824V15.8422L3.41421 21.6104L2 20.1962L7.93203 14.2642H5.1824V12.2642H11.1824Z" fill="currentColor"/></svg>
-  `
+  `;
 }
 function Dfdao() {
   return svg`
@@ -778,4 +781,26 @@ sodipodi:docname="dfdao logo.ai"><metadata
         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
         id="path82" /></g></g></g></svg>
 `;
+}
+
+function Exit() {
+  return svg`
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 560 560" style="enable-background:new 0 0 560 560;" xml:space="preserve">
+<path d="M377.8,537.7c-48.8-58.3-97-117.4-146.9-174.8c-19.3-22.3-24.6-42.5-10.1-69.5c14.6-27.2,25.8-56.3,38.3-84.2
+	c-33.9-10.8-53.5,0.4-64,32.3c-5.7,17.2-15.5,33.1-24.3,49.2c-6.3,11.3-15.7,18.9-29.4,12.7c-14.8-6.7-16.5-19.3-10-32.4
+	c15.7-32.1,32.2-63.8,48.6-95.5c4.6-8.8,12.1-13.5,22.4-13.3c10.1,0.2,20.2,0,30.4,0c120.3,1.2,96.5-12.9,184.3,75.6
+	c13,13.1,27,14.2,42.2,12.5c17.7-2,19.4,7,18.2,20.9c-1.1,12.1,3.6,22.9-17.8,24.7c-36.2,3-62.3-9-82.9-36.9
+	c-10.1-13.6-17.7-14.7-27.7,1.2c-14.2,22.4-40.5,41.9-43.9,65.2c-3.4,23.4,21.9,46.3,34.7,69.2c26.9,48,54.7,95.3,82.2,142.9
+	C407.2,537.7,392.5,537.7,377.8,537.7z"/>
+<path d="M421.8,96.2c-0.7,30.5-27.5,55.3-57.9,53.8c-29.4-1.6-53.1-27-52.4-56.4c0.7-30.5,27.4-55.3,57.7-53.8
+	C398.8,41.2,422.5,66.8,421.8,96.2z"/>
+<path d="M207.7,363.3c13.1,15.2,23,26,32.1,37.5c12.3,15.4,6.3,30.4-14.1,30.9c-45.1,1.2-90.1,0.1-135.1,0.6
+	c-11.2,0.1-11.8-5.9-10.6-13.9c2.9-18.9,14.2-29.6,33.4-30.3c22.1-0.7,44.2-1.6,66.2,0.2C196.5,389.7,205.1,383.6,207.7,363.3z"/>
+<path d="M489.7,552.5H93c-10.6,0-19.3-8.4-19.3-18.7v-91.3h20v90H489V23.9H93.7v363.8h-20V22.6c0-10.3,8.7-18.7,19.3-18.7h396.7
+	c10.6,0,19.3,8.4,19.3,18.7v511.2C509,544.1,500.3,552.5,489.7,552.5z"/>
+</svg>
+
+
+  `;
 }
