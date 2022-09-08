@@ -26,6 +26,8 @@ export interface LeaderboardEntry {
   moves: number;
   time: number;
   ethAddress: EthAddress;
+  gamesStarted: number;
+  gamesFinished: number;
   twitter?: string;
   startTime: number;
   endTime: number;
