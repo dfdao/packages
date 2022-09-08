@@ -62,6 +62,7 @@ export interface GrandPrixPlayers {
 export interface SeasonScore {
   player: string;
   score: number;
+  grandPrixsFinished: number;
 }
 
 export interface Wallbreaker {
