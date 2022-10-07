@@ -153,6 +153,7 @@ export type Planet = {
   isTargetPlanet: boolean;
   isSpawnPlanet: boolean;
   blockedPlanetIds: LocationId[];
+  team: number;
 };
 
 /**
