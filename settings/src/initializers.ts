@@ -179,6 +179,7 @@ export const decodeInitializers = decoders.guard(
 
     RANKED: withDefault(decoders.boolean, false),
 
+    RANGE_DOUBLING_SECS: withDefault(decoders.number, 0),
   }),
   { style: 'simple' }
 );

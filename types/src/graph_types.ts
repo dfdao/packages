@@ -50,6 +50,7 @@ export interface GraphConfig {
   PLANETHASH_KEY: BigNumber;
   RANDOM_ARTIFACTS: boolean;
   RANKED: boolean;
+  RANGE_DOUBLING_SECS: number;
   SILVER_SCORE_VALUE: BigNumber;
   SPACE_JUNK_ENABLED: boolean;
   SPACE_JUNK_LIMIT: BigNumber;

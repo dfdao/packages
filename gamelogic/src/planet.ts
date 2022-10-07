@@ -19,12 +19,18 @@ export const getPlanetRank = (planet: Planet | undefined): number => {
  */
 export function getRange(
   planet: Planet,
+  rangeDoublingTime: number,
   percentEnergySending = 100,
   rangeBoost = 1,
   startTime: number | undefined = undefined
 ): number {
   if (percentEnergySending === 0) return 0;
-  const timeBuff = startTime ? (Date.now() / 1000 - startTime) / 360 + 1 : 1;
+  let timeBuff = 1;
+
+  if (startTime !== undefined && startTime !== 0 && rangeDoublingTime > 0) {
+    timeBuff = (Date.now() / 1000 - startTime) / rangeDoublingTime + 1;
+  }
+
   const timeBuffedRange = planet.range * timeBuff;
   return Math.max(Math.log2(percentEnergySending / 5), 0) * timeBuffedRange * rangeBoost;
 }
