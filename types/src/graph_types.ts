@@ -78,10 +78,11 @@ export interface GraphPlanet {
   targetPlanet: boolean;
   spawnPlanet: boolean;
   blockedPlanetIds: {
-    locationDec: BigNumber
-    x: number,
-    y: number
-  }[]
+    locationDec: BigNumber;
+    x: number;
+    y: number;
+  }[];
+  team: number;
 }
 
 export interface RawAccount {
@@ -207,5 +208,3 @@ export interface CleanMatchEntry {
 export interface LiveMatch {
   entries: CleanMatchEntry[];
 }
-
-
