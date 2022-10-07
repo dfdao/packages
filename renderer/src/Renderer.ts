@@ -157,7 +157,7 @@ export interface RendererGameContext extends DiagnosticUpdater {
   getCaptureZones(): Iterable<CaptureZone>;
   getTeamsEnabled() : boolean;
   getSpaceJunkEnabled(): boolean;
-  playerMoveBlocked(player: EthAddress, planet: LocationId) : boolean;
+  getStartTime(): number | undefined;
 }
 
 export class Renderer {
