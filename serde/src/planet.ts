@@ -106,7 +106,10 @@ export function decodePlanet(
 
     isTargetPlanet: rawPlanetArenaInfo.targetPlanet,
     isSpawnPlanet: rawPlanetArenaInfo.spawnPlanet,
-    blockedPlanetIds: rawPlanetArenaInfo.blockedPlanetIds.map(v => locationIdFromDecStr(v.toString())),
+    blockedPlanetIds: rawPlanetArenaInfo.blockedPlanetIds.map((v) =>
+      locationIdFromDecStr(v.toString())
+    ),
+    team: rawPlanetArenaInfo.team.toNumber(),
   };
 
   return planet;
