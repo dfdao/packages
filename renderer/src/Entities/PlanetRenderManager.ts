@@ -10,6 +10,7 @@ import { getPlanetCosmetic, getPlayerColorVec } from '@darkforest_eth/procedural
 import { isUnconfirmedMoveTx } from '@darkforest_eth/serde';
 import {
   Artifact,
+  ArtifactType,
   HatType,
   LocatablePlanet,
   LocationId,
@@ -491,6 +492,11 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     if (sendingSpaceShip) return;
 
     const abandonRangeBoost = this.renderer.context.getAbandonRangeChangePercent() / 100;
+    const cubeDecrease = 0.5
+    let rangeBoost = context.isAbandoning() ? abandonRangeBoost : 1
+    if(sendingArtifact?.artifactType === ArtifactType.AntiMatterCube) {
+      rangeBoost = cubeDecrease;
+    }
 
     if (!context.isAbandoning()) {
       this.drawRangeAtPercent(planet, 100);
@@ -503,7 +509,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     const percentForces = context.getForcesSending(planet.locationId); // [0, 100]
     const forces = (percentForces / 100) * planet.energy;
     const scaledForces = (percentForces * planet.energy) / planet.energyCap;
-    const range = getRange(planet, scaledForces, context.isAbandoning() ? abandonRangeBoost : 1);
+    const range = getRange(planet, scaledForces, rangeBoost);
 
     if (range > 1) {
       cR.queueCircleWorld({ x, y }, range, [...energy, 255], 1, 1, true);
