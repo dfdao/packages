@@ -20,6 +20,7 @@ import {
   UnconfirmedUpgrade,
   UnconfirmedWithdrawArtifact,
   UnconfirmedWithdrawSilver,
+  UnconfirmedBulkWithdrawSilver,
 } from '@darkforest_eth/types';
 
 // @todo:
@@ -93,6 +94,12 @@ export function isUnconfirmedWithdrawSilver(
   txIntent: TxIntent
 ): txIntent is UnconfirmedWithdrawSilver {
   return txIntent.methodName === 'withdrawSilver';
+}
+
+export function isUnconfirmedBulkWithdrawSilver(
+  txIntent: TxIntent
+): txIntent is UnconfirmedBulkWithdrawSilver {
+  return txIntent.methodName === 'bulkWithdrawSilver';
 }
 
 export function isUnconfirmedGetShips(txIntent: TxIntent): txIntent is UnconfirmedGetShips {
@@ -191,6 +198,12 @@ export function isUnconfirmedWithdrawSilverTx(
   tx: Transaction
 ): tx is Transaction<UnconfirmedWithdrawSilver> {
   return isUnconfirmedWithdrawSilver(tx.intent);
+}
+
+export function isUnconfirmedBulkWithdrawSilverTx(
+  tx: Transaction
+): tx is Transaction<UnconfirmedBulkWithdrawSilver> {
+  return isUnconfirmedBulkWithdrawSilver(tx.intent);
 }
 
 export function isUnconfirmedGetShipsTx(tx: Transaction): tx is Transaction<UnconfirmedGetShips> {
