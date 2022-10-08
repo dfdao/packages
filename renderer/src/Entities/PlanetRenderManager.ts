@@ -463,9 +463,9 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
    * Renders rings around planet that show how far sending the given percentage of this planet's
    * energy would be able to travel.
    */
-  drawRangeAtPercent(planet: LocatablePlanet, pct: number) {
+  drawRangeAtPercent(planet: LocatablePlanet, pct: number, boost: number) {
     const { circleRenderer: cR, textRenderer: tR } = this.renderer;
-    const range = getRange(planet, pct);
+    const range = getRange(planet, pct, boost);
     const {
       range: { dash },
     } = engineConsts.colors;
@@ -491,17 +491,19 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
 
     if (sendingSpaceShip) return;
 
+    let rangeBoost = 1;
+
     const abandonRangeBoost = this.renderer.context.getAbandonRangeChangePercent() / 100;
-    const cubeDecrease = 0.5
-    let rangeBoost = context.isAbandoning() ? abandonRangeBoost : 1
-    if(sendingArtifact?.artifactType === ArtifactType.AntiMatterCube) {
-      rangeBoost = cubeDecrease;
+    const cubeDecrease = 0.5;
+    rangeBoost *= context.isAbandoning() ? abandonRangeBoost : 1;
+    if (sendingArtifact?.artifactType === ArtifactType.AntiMatterCube) {
+      rangeBoost *= cubeDecrease;
     }
 
     if (!context.isAbandoning()) {
-      this.drawRangeAtPercent(planet, 100);
-      this.drawRangeAtPercent(planet, 50);
-      this.drawRangeAtPercent(planet, 25);
+      this.drawRangeAtPercent(planet, 100, rangeBoost);
+      this.drawRangeAtPercent(planet, 50, rangeBoost);
+      this.drawRangeAtPercent(planet, 25, rangeBoost);
     }
 
     if (planet.owner === EMPTY_ADDRESS) return;
