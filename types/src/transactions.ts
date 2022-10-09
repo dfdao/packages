@@ -27,12 +27,11 @@ export type ContractMethodName =
   | 'createLobby'
   | 'invadePlanet'
   | 'capturePlanet'
-  | "claimVictory"
-  | "createPlanet"
-  | "createArenaPlanet"
-  | "ready"
-  | "notReady";
-
+  | 'claimVictory'
+  | 'createPlanet'
+  | 'createArenaPlanet'
+  | 'ready'
+  | 'notReady';
 
 export type EthTxStatus =
   | 'Init'
@@ -161,7 +160,14 @@ export type UnconfirmedDeactivateArtifact = TxIntent & {
 export type UnconfirmedWithdrawSilver = TxIntent & {
   methodName: 'withdrawSilver';
   locationId: LocationId;
-  amount: number;
+};
+
+/**
+ * @hidden
+ */
+export type UnconfirmedBulkWithdrawSilver = TxIntent & {
+  methodName: 'bulkWithdrawSilver';
+  locationIds: LocationId[];
 };
 
 /**
