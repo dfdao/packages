@@ -25,14 +25,14 @@ export function getRange(
   startTime: number | undefined = undefined
 ): number {
   if (percentEnergySending === 0) return 0;
-  let timeBuff = 1;
+  let newRange = planet.range;
 
   if (startTime !== undefined && startTime !== 0 && rangeDoublingTime > 0) {
-    timeBuff = (Date.now() / 1000 - startTime) / rangeDoublingTime + 1;
+
+    newRange += (planet.range * (Date.now() / 1000 - startTime) / rangeDoublingTime);
   }
 
-  const timeBuffedRange = planet.range * timeBuff;
-  return Math.max(Math.log2(percentEnergySending / 5), 0) * timeBuffedRange * rangeBoost;
+  return Math.max(Math.log2(percentEnergySending / 5), 0) * newRange * rangeBoost;
 }
 
 export function hasOwner(planet: Planet) {
