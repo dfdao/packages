@@ -7,6 +7,7 @@ const decodeAdminPlanet = decoders.exact({
   planetType: decoders.number,
   requireValidLocationId: decoders.boolean,
   revealLocation: decoders.boolean,
+  team: decoders.number,
 });
 
 export type AdminPlanets = ReturnType<typeof decodeAdminPlanets>;
@@ -29,6 +30,7 @@ export const decodeArenaPlanet = decoders.exact({
   isTargetPlanet: decoders.boolean,
   isSpawnPlanet: decoders.boolean,
   blockedPlanetIds: decoders.array(decoders.string),
+  team: decoders.number,
 });
 
 export const decodeArenaPlanets = decoders.guard(decoders.array(decodeArenaPlanet), {
