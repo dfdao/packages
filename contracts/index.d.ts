@@ -33,7 +33,7 @@
 /**
  * The name of the network where these contracts are deployed.
  */
-export declare const NETWORK = "gnosis_optimism";
+export declare const NETWORK = 'gnosis_optimism';
 /**
  * The id of the network where these contracts are deployed.
  */
@@ -41,30 +41,29 @@ export declare const NETWORK_ID = 300;
 /**
  * The block in which the DarkForest contract was initialized.
  */
-export declare const START_BLOCK = 1309111;
+export declare const START_BLOCK = 1506005;
 /**
  * The address for the DarkForest contract.
  */
-export declare const CONTRACT_ADDRESS = "0xf4597e9dCF55dC0fb7c3C36a7D56c39568582aC2";
+export declare const CONTRACT_ADDRESS = '0xE830daa0A695b2f1bFd8F85814f9eD0c67377aB0';
 /**
  * The address for the initalizer contract. Useful for lobbies.
  */
-export declare const INIT_ADDRESS = "0x523419D12bF3Ed7460B7cdE708c9C8953b95547D";
+export declare const INIT_ADDRESS = '0x77D89b9e8aa2fCaae5e852B4F7822110e66EbC06';
 /**
  * The address for the Verifier library. Useful for lobbies.
  */
-export declare const VERIFIER_ADDRESS = "0x885E92C27b15883498e7DbB7d6230fd562214fBF";
+export declare const VERIFIER_ADDRESS = '0x37780b15aDe05366b84f4e1Ec96472cB510D7dc0';
 /**
  * The address for the LibGameUtils library. Useful for lobbies.
  */
-export declare const LIB_GAME_UTILS_ADDRESS = "0x3A63Ff08bA39C4e940e0B5043bcE279E4d248890";
+export declare const LIB_GAME_UTILS_ADDRESS = '0x35F779499756049AB78eDBc927c92B7D5955aC21';
 /**
  * The address for the LibPlanet library. Useful for lobbies.
  */
-export declare const LIB_PLANET_ADDRESS = "0x4170639cD9Ab0494c4f4835b4B5d05320C8dc120";
+export declare const LIB_PLANET_ADDRESS = '0x4daB11Ab6b1C38ea1Fa589126C4c323784138b2C';
 /**
  * The address for the LibArtifacts library. Useful for lobbies.
  */
-export declare const LIB_ARTIFACT_UTILS_ADDRESS = "0x99123645dF64D7CD1a38FC7b9cD5092Ad32DB974";
-export declare const FAUCET_ADDRESS = "0xEb1E97445A9E8042a5120ECE339aB70b07307edf";
+export declare const LIB_ARTIFACT_UTILS_ADDRESS = '0xdCfd22CE0C462670d733fda3290d9883cc313639';
 //# sourceMappingURL=index.d.ts.map
