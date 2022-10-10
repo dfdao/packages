@@ -465,7 +465,13 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
    */
   drawRangeAtPercent(planet: LocatablePlanet, pct: number, boost: number) {
     const { circleRenderer: cR, textRenderer: tR } = this.renderer;
-    const range = getRange(planet, pct, boost);
+    const range = getRange(
+      planet,
+      this.renderer.context.getRangeDoublingSeconds(),
+      pct,
+      undefined,
+      this.renderer.context.getStartTime()
+    );
     const {
       range: { dash },
     } = engineConsts.colors;
@@ -511,7 +517,13 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     const percentForces = context.getForcesSending(planet.locationId); // [0, 100]
     const forces = (percentForces / 100) * planet.energy;
     const scaledForces = (percentForces * planet.energy) / planet.energyCap;
-    const range = getRange(planet, scaledForces, rangeBoost);
+    const range = getRange(
+      planet,
+      this.renderer.context.getRangeDoublingSeconds(),
+      scaledForces,
+      context.isAbandoning() ? abandonRangeBoost : 1,
+      this.renderer.context.getStartTime()
+    );
 
     if (range > 1) {
       cR.queueCircleWorld({ x, y }, range, [...energy, 255], 1, 1, true);

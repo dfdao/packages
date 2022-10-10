@@ -155,9 +155,11 @@ export interface RendererGameContext extends DiagnosticUpdater {
   getArtifactSending(planetId: LocationId): Artifact | undefined;
   getAbandonRangeChangePercent(): number;
   getCaptureZones(): Iterable<CaptureZone>;
-  getTeamsEnabled() : boolean;
+  getTeamsEnabled(): boolean;
   getSpaceJunkEnabled(): boolean;
-  playerMoveBlocked(player: EthAddress, planet: LocationId) : boolean;
+  playerMoveBlocked(player: EthAddress, planet: LocationId): boolean;
+  getStartTime(): number | undefined;
+  getRangeDoublingSeconds(): number;
 }
 
 export class Renderer {

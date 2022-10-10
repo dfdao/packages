@@ -17,9 +17,22 @@ export const getPlanetRank = (planet: Planet | undefined): number => {
  * @param rangeBoost A multiplier to be applied to the resulting range.
  * Currently used for calculating boost associated with abandoning a planet.
  */
-export function getRange(planet: Planet, percentEnergySending = 100, rangeBoost = 1): number {
+export function getRange(
+  planet: Planet,
+  rangeDoublingTime: number,
+  percentEnergySending = 100,
+  rangeBoost = 1,
+  startTime: number | undefined = undefined
+): number {
   if (percentEnergySending === 0) return 0;
-  return Math.max(Math.log2(percentEnergySending / 5), 0) * planet.range * rangeBoost;
+  let newRange = planet.range;
+
+  if (startTime !== undefined && startTime !== 0 && rangeDoublingTime > 0) {
+
+    newRange += (planet.range * (Date.now() / 1000 - startTime) / rangeDoublingTime);
+  }
+
+  return Math.max(Math.log2(percentEnergySending / 5), 0) * newRange * rangeBoost;
 }
 
 export function hasOwner(planet: Planet) {
