@@ -502,7 +502,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     const abandonRangeBoost = this.renderer.context.getAbandonRangeChangePercent() / 100;
     const cubeDecrease = 0.5;
     rangeBoost *= context.isAbandoning() ? abandonRangeBoost : 1;
-    if (sendingArtifact?.artifactType === ArtifactType.AntiMatterCube) {
+    if (sendingArtifact?.artifactType === ArtifactType.AntimatterCube) {
       rangeBoost *= cubeDecrease;
     }
 

@@ -167,8 +167,8 @@ export function artifactFileName(
 ): string {
   const { artifactType: type, rarity, planetBiome: biome, id } = artifact;
 
-  if(type === ArtifactType.AntiMatterCube) return '64-titan.png';
-  
+  if (type === ArtifactType.AntimatterCube) return '64-titan.png';
+
   if (isSpaceShip(type)) {
     switch (type) {
       case ArtifactType.ShipWhale:
