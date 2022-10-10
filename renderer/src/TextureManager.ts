@@ -165,7 +165,7 @@ export function spriteFromArtifact(artifact: RenderedArtifact): SpriteRectangle 
   const { id, artifactType: type, planetBiome: biome, rarity } = artifact;
 
   if (artifactSpriteMap.has(id)) return artifactSpriteMap.get(id) || EMPTY_SPRITE;
-  else if (artifact.artifactType == ArtifactType.AntiMatterCube) {
+  else if (artifact.artifactType == ArtifactType.AntimatterCube) {
     return spriteRectangleFromIndex(0, 12);
   } else if (isSpaceShip(artifact.artifactType)) {
     const idx = {
