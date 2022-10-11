@@ -180,6 +180,9 @@ export const decodeInitializers = decoders.guard(
     RANKED: withDefault(decoders.boolean, false),
 
     RANGE_DOUBLING_SECS: withDefault(decoders.number, 0),
+  
+    CUBE_RANGE_MODIFIER: withDefault(decoders.number, 100),
+
   }),
   { style: 'simple' }
 );
