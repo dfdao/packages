@@ -168,7 +168,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
       const y =
         Math.sin(anglePerArtifact * i + startingAngle + nowAngle) * (20 + radiusW * 2) + centerW.y;
       if (artifacts[i].artifactType == ArtifactType.AntimatterCube) {
-        const artifactSizePixels = Math.max(25, artifactSize);
+        const artifactSizePixels = Math.max(50, artifactSize);
         this.renderer.spriteRenderer.queueArtifactWorld(
           artifacts[i],
           { x, y },
