@@ -486,7 +486,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
       planet,
       this.renderer.context.getRangeDoublingSeconds(),
       pct,
-      undefined,
+      boost,
       this.renderer.context.getStartTime()
     );
     const {
@@ -517,7 +517,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
     let rangeBoost = 1;
 
     const abandonRangeBoost = this.renderer.context.getAbandonRangeChangePercent() / 100;
-    const cubeDecrease = 0.5;
+    const cubeDecrease = this.renderer.context.getCubeRangeModifier() / 100;
     rangeBoost *= context.isAbandoning() ? abandonRangeBoost : 1;
     if (sendingArtifact?.artifactType === ArtifactType.AntimatterCube) {
       rangeBoost *= cubeDecrease;
@@ -538,7 +538,7 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
       planet,
       this.renderer.context.getRangeDoublingSeconds(),
       scaledForces,
-      context.isAbandoning() ? abandonRangeBoost : 1,
+      rangeBoost,
       this.renderer.context.getStartTime()
     );
 

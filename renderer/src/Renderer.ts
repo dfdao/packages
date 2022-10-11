@@ -160,6 +160,7 @@ export interface RendererGameContext extends DiagnosticUpdater {
   playerMoveBlocked(player: EthAddress, planet: LocationId): boolean;
   getStartTime(): number | undefined;
   getRangeDoublingSeconds(): number;
+  getCubeRangeModifier(): number;
 }
 
 export class Renderer {
