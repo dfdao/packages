@@ -44,30 +44,30 @@ exports.NETWORK_ID = 300;
 /**
  * The block in which the DarkForest contract was initialized.
  */
-exports.START_BLOCK = 1506005;
+exports.START_BLOCK = 1509087;
 /**
  * The address for the DarkForest contract.
  */
-exports.CONTRACT_ADDRESS = '0xE830daa0A695b2f1bFd8F85814f9eD0c67377aB0';
+exports.CONTRACT_ADDRESS = '0xdC2e31677084108C58875EA60F717cfd995F2EDB';
 /**
  * The address for the initalizer contract. Useful for lobbies.
  */
-exports.INIT_ADDRESS = '0x77D89b9e8aa2fCaae5e852B4F7822110e66EbC06';
+exports.INIT_ADDRESS = '0x6b21bb9F99e2Da8A098A5156bAaCC9b65913da5F';
 /**
  * The address for the Verifier library. Useful for lobbies.
  */
-exports.VERIFIER_ADDRESS = '0x37780b15aDe05366b84f4e1Ec96472cB510D7dc0';
+exports.VERIFIER_ADDRESS = '0x0e70022b4Ab726A864dF3f97A38F8dAd195C6969';
 /**
  * The address for the LibGameUtils library. Useful for lobbies.
  */
-exports.LIB_GAME_UTILS_ADDRESS = '0x35F779499756049AB78eDBc927c92B7D5955aC21';
+exports.LIB_GAME_UTILS_ADDRESS = '0xaA67cAa9b650E526ade69E92536Cd5e6AeD17229';
 /**
  * The address for the LibPlanet library. Useful for lobbies.
  */
-exports.LIB_PLANET_ADDRESS = '0x4daB11Ab6b1C38ea1Fa589126C4c323784138b2C';
+exports.LIB_PLANET_ADDRESS = '0x54A07D6BD5A97c31B41F73Dfad4c9dd4E8BfE9BF';
 /**
  * The address for the LibArtifacts library. Useful for lobbies.
  */
-exports.LIB_ARTIFACT_UTILS_ADDRESS = '0xdCfd22CE0C462670d733fda3290d9883cc313639';
+exports.LIB_ARTIFACT_UTILS_ADDRESS = '0xDD2fc4Cbfc0a26638cDFe1c1D0fe9461c870741D';
 exports.FAUCET_ADDRESS = '0xEb1E97445A9E8042a5120ECE339aB70b07307edf';
 //# sourceMappingURL=index.js.map
