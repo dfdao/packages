@@ -164,22 +164,39 @@ export class PlanetRenderManager implements PlanetRenderManagerType {
 
     for (let i = 0; i < artifacts.length; i++) {
       const x =
-        Math.cos(anglePerArtifact * i + startingAngle + nowAngle) * distanceFromCenterOfPlanet +
-        centerW.x;
+        Math.cos(anglePerArtifact * i + startingAngle + nowAngle) * (20 + radiusW * 2) + centerW.x;
       const y =
-        Math.sin(anglePerArtifact * i + startingAngle + nowAngle) * distanceFromCenterOfPlanet +
-        centerW.y;
-
-      this.renderer.spriteRenderer.queueArtifactWorld(
-        artifacts[i],
-        { x, y },
-        artifactSize,
-        alpha,
-        undefined,
-        undefined,
-        undefined,
-        this.renderer.getViewport()
-      );
+        Math.sin(anglePerArtifact * i + startingAngle + nowAngle) * (20 + radiusW * 2) + centerW.y;
+      if (artifacts[i].artifactType == ArtifactType.AntimatterCube) {
+        const artifactSizePixels = Math.max(25, artifactSize);
+        this.renderer.spriteRenderer.queueArtifactWorld(
+          artifacts[i],
+          { x, y },
+          artifactSizePixels,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          this.renderer.getViewport()
+        );
+      } else {
+        const x =
+          Math.cos(anglePerArtifact * i + startingAngle + nowAngle) * distanceFromCenterOfPlanet +
+          centerW.x;
+        const y =
+          Math.sin(anglePerArtifact * i + startingAngle + nowAngle) * distanceFromCenterOfPlanet +
+          centerW.y;
+        this.renderer.spriteRenderer.queueArtifactWorld(
+          artifacts[i],
+          { x, y },
+          artifactSize,
+          alpha,
+          undefined,
+          undefined,
+          undefined,
+          this.renderer.getViewport()
+        );
+      }
     }
   }
 
