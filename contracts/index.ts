@@ -67,3 +67,5 @@ export const LIB_PLANET_ADDRESS = '0x4daB11Ab6b1C38ea1Fa589126C4c323784138b2C';
  * The address for the LibArtifacts library. Useful for lobbies.
  */
 export const LIB_ARTIFACT_UTILS_ADDRESS = '0xdCfd22CE0C462670d733fda3290d9883cc313639';
+
+export const FAUCET_ADDRESS = '0xEb1E97445A9E8042a5120ECE339aB70b07307edf';
